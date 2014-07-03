@@ -4,10 +4,7 @@ Table of Contents:
 
 1.1	Executive Summary
 1.2	High Concept
-1.3	Core Gameplay
-1.4	Genre
 1.5	Target Audience
-1.6	Team Members / Jobs / Contact Info
 
 2: Game Overview
 
@@ -19,9 +16,9 @@ Table of Contents:
 
 3: Gameplay
 
-3.1	Combat
-3.2	Abilities
-3.3	Score
+3.1	buildings
+3.2	crew
+3.3	combat
 3.4	Power-ups
 
 4: Menu Layout
@@ -44,3 +41,68 @@ Table of Contents:
 5.3	Game Mode(s)
 5.4	Player Count
 5.5	Hours of Gameplay
+
+
+
+//  ------------   PROJECT OVERVIEW-----------
+{
+1.1  ------- EXECUTIVE SUMMARY-----
+	{
+single player sci-fi 2D top-down management simulation  game where the player fills the role of a single spaceship 
+captain where his role is to manage his crew and keep them happy by building and maintaining the
+infrastructure in the spaceship, keep them safe in combat and spplying ship policy and discipline.
+	}
+
+1.2 ------------ HIGH CONCEPT --------
+	{
+
+	the game is centered in the crew and the simulation of their needs and how those affect their preformance
+of the spaceship partially designed by the captain, while giving the captain combat objectives and random 
+encounters while he flies in space. those missions will enhance the experience of the crew simulation and will not
+drive the attention of the gameplay ealseware.
+	}	
+1.5 ----------- TARGET AUDIENCE----
+	{
+management sims fans
+}
+	}
+
+
+//-----------------GAME OVERVIEW--------------------------
+{
+2.1 ------------ GENERAL OVERVIEW ---------
+	{
+	the whole games goes arround the crew, building facilities and enforcing policies to make them efficient
+	and happy/affraid. the Maslow's hierarchy of needs will model basic crew needs. randomly given perks will
+	determine where and what things crewmen do in their free time with the given infrastructure the player provides
+	
+	the player will not directly control the crew, he will appoint officers, assign duty roasters, ect
+	
+	}
+
+2.2 ------------- STORY ----------
+		{
+	in a random region of space, an old relic lies, an old ship lost for millenia.
+	 after an unknown accident killed your crew complement, you wake up only to find dead bodies within your hull
+	 as you, an AI commanding a now long abbandoned space vessel, encounter this scene and yourself in a state of
+	 almost total destruction, a few unlucky visitors knock your door. pirates are trying to open your hatch.
+	 with a quick shot from your starboard cannon you blow up their petty excuse of a ship, leaving them stranded
+	 and with no place to go.
+	 }
+	 this are your first crew memebers
+2.3 ------------ CHARACTER ----------
+	the player represented as the AI is not important
+2.5 ----------- LEVELS ------------
+		{
+	the spaceship will originally be wrecked and will have multiple levels, it will have to be restored
+	by the player to it's original glory
+	}
+}	
+
+
+//-----------------GAMEPLAY---------------
+{
+
+
+}
+
