@@ -276,6 +276,7 @@ management sims fans
 	3.3-------- SCHEDULE SHIFTS AND RANKS ----
 	    {
 		3.3.1 SCHEDULE
+			{
 		the player will be able to modify the schedule for 3 shifts
 		each shift has it's own independent 24h schedule where they sleep, stations, get free time, eat meals, excercise,
 		education, drills
@@ -291,9 +292,10 @@ management sims fans
 		
 		multiple shifts may be on "stations" at the same time, the "extra" shifts will get assigned any remaining 
 		jobs.
-		
+		}
 		
 		3.3.2 RANKS and positions
+			{
 			crewmen have ranks, they depend of superiors and are depended on by others
 			efficiency of the jobs of people directly below a crewmen will be better or worse depending
 			of his level of technical specific skill AND his skill and commanding people, boosted by certain
@@ -324,7 +326,7 @@ management sims fans
 			EMT -> emergency squad member, brings wounded people to sickbay
 			hazenv -> emergency squad member, seals hull, repairs critical systems with spacesuite, puts out fires
 			bartender -> tends the bar
-			
+			}
 			
 			
 		
