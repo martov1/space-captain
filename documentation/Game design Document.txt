@@ -44,7 +44,7 @@ Table of Contents:
 
 
 
-//  ------------   PROJECT OVERVIEW-----------
+1//  ------------   PROJECT OVERVIEW-----------
 {
 1.1  ------- EXECUTIVE SUMMARY-----
 	{
@@ -68,7 +68,7 @@ management sims fans
 	}
 
 
-//-----------------GAME OVERVIEW--------------------------
+2//-----------------GAME OVERVIEW--------------------------
 {
 2.1 ------------ GENERAL OVERVIEW ---------
 	{
@@ -100,7 +100,7 @@ management sims fans
 }	
 
 
-//-----------------GAMEPLAY---------------
+3//-----------------GAMEPLAY---------------
 {
 	3.1-----------BUILDING-----
 	{
@@ -108,46 +108,120 @@ management sims fans
 	}
 
 	3.2---------- CREW -----
-	{
+		3.2.1-------crews needs:
+		{
 	the general crew needs are the following, in order of importance
 	  1 physiological: [1.1 breathe] [1.2 food] [1.3 sleep] [1.4 excrete] 
 	  2 safety:        [2.1 phisycal integrity] [2.2 healthcare] [2.3 hygene] [2.4 send money to family] 
-					   [2.5 not get robed] [2.6 get money to spare offshore]
-	  3 love/belonging:[3.1 friends] [3.2 sex] [3.3 talk to family] [3.4 offshore vacations]
-	  4 esteem:         [4.1 be respected by others/stand out][4.2 respect others] [4.3 achive things]
+					   [2.5 not get robed] [2.6 get money to spare offshore] [2.7 exersice] [2.8 recreation] [3.4 offshore vacations]
+	  3 love/belonging:[3.1 talk to people] [3.2 sex] [3.3 talk to family] 
+	  4 esteem:         [4.1 have friends][4.2 respect others] [4.3 achive things]
 	  5 self-actualization: desire to do something or be good at something, dictated by random perks each crewman
 	  some perks may produce produce crewmen to dislike other crewmen.
 				perks {
-				athlete: works out and wants to be muscular
-				reader:  enjoys reading books in calm places
-				movie junkie: enjoys watching movies
+				
+				//social
+				{
 				army man: enojys having a high rank and people under his command
 				leader: enjoys having people under his command
-				geek: enjoys attending technical courses and dismantelling things
-				social: enjoys having conversations
-				popular: enjoys having many friends relationships
 				mysterious: enjoys lonely places in your ship
+                social: enjoys having conversations
+				popular: enjoys having many friends relationships
+				cheerer: enjoys talking to people who are in a bad mood and make them feel better.
+				conflictive: enjoys making arguments with people he deslikes
+				fighter: enjoys fighting people he dislikes and other fighters
+				teamplayer: enjoys working with other people in the room
+				tycoon: enjoys having higher pay than his friends
+				inferiority complex: enjoys having higher rank than others.
+				loner: enjoys not holding conversations with others
+				connections: enjoys beeing friends with higher ranks than him
+				man of the people: enjoys beeing friends with lower ranks than him
+				brother in arms: enjoys beeing friends with combat personel
+				weakling hater: dislikes non-muscular people
+				weakling: dislikes to excersice.
+				social junkie: likes to use recreational drugs with others
+				social smoker: likes to smoke with others
+				social drinker: likes to drink with others
+				rebel: dislikes to have high ranks in his room and talking to them
+				}
+				//knowledge  related
+				{
+				know about tech: enjoys attending and giving technical courses, knowing tech stuff and dismantelling things
+				know about tactics: enjoys attending and giving combat training and beeing good at combat
+				know about art: enjoys attending and teaching art clases and knowing about art.
+				know about biology: enjoys knowing, teaching and attending biology courses
+				know about social ciences: enjoys knowing and teaching social ciences.
+				know about math and physics: enjoys knowing and teaching math and physics
+				know about chemistery: enjoys knowing and teaching chemistery
+				dislike tech: dislikes to learn about it
+				dislike tactics:dislikes to learn about it 
+				dislike art:dislikes to learn about it
+				dislike medicina:dislikes to learn about it
+				dislike social ciences:dislikes to learn about it
+				dislike math and physics:dislikes to learn about it
+				}
+				//hobbie
+				{
+				self-learner: enjoys taking courses by reading
+				cook: enjoys cooking
+				artist: enjoys painting
+				reader:  enjoys reading books in calm places
+				movie junkie: enjoys watching movies
+				athlete: works out and wants to be muscular
+				martial artist: enjoys practicig martial arts and sparring
+				}
+				//habbits
+				{
 				sight-seer: enjoys watching space out of the window
 				drinker: enjoys drinking alcohol
 				heavy drinker: NEEDS drinking, enjoys geting drunk
 				smoker: enjoys smoking
 				heavy smoker: NEEDS smoking, enjoys smoking a lot
 				smoke hater: enjoys not having people smoking in the same room.
-				rescuer: enjoys dragging people to sickbay, heal wounds and putting out fires
-				cheerer: enjoys talking to people who are in a bad mood and make them feel better.
-				artist: enjoys painting
 				eater: enjoys snacking and eating
 				gourmet eater: enjoys having above-average meals
-				cook: enjoys cooking
+				healthy eater: enjoys above-average meals
+				vegetarian: enjoys eating vegetables, dislikes eating meat.
+				meditator: enjoys meditating in lonely places.
+				junkie:  enjoys light recreational drugs
+				hard junkie: enjoys using hard drugs.
+				}
+				//work related
+				{
+				rescuer: enjoys dragging people to sickbay, heal wounds and putting out fires
 				techie: enjoys having a tech related job
-				conflictive: enjoys making arguments with people he deslikes
-				fighter: enjoys fighting people he dislikes and other fighters
-				
+				dirty hands: enjoys working with machines and non-commisioned-officer ranks
+				teacher: enjoys teaching
+				}
 				
 				
 				}
 	}
 	
-	
+		3.2.2-------crew members interaction
+		{
+		crew interaction is dominated by a number of variables
+		
+		1 the well-beeing coeficient: this number is calculated using the physiological needs, if it's not beyond
+		a certain number, social interaction will not take place.
+		2 friendlyness-coeficient: this is calculated using the safety needs, a crewman interactions will be
+		affected by this number, below a certain number interactions can only be unfriendly, a high number will
+		benefit friendliness, but it does not guarantee friendship.
+		3 off duty talking-time: this number is the amount of time two crewmen talked outside of duty,
+		the bigger this number, the friendship will get stronger
+		4 on duty talking-time: counts toward friendship as 1/20th of the "off duty" talking time
+		5 friendship-coeficient: calculated using the talked time that was above the friendliness coeficient and
+		subtracting the talk time below the friendshipness coeficient. gets a determined amount subtracted 
+		at certine long intervals to prevent everyone to become friends and make only close people friends.
+		6 friendship-coeficient modifier: modifies the coeficient if the perks of the crewmen dictate so, may
+		produce bad relationships.
+		7 sex chance: a friendship with a pre-determined sex along time generates a sex-chance
+		8 once sex takes place, those crewmen will became sex partners until one of them dies or their friendship
+		stops.
+		9 random fight: while talking, there is a small random chance of a disagreement that will randomly
+		hurt the friendship
+		10 crew member prefer to satisfy their needs with their friends unless a perk makes them prefer other
+		people for that need
+		
 }
 
