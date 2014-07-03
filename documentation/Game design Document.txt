@@ -18,7 +18,7 @@ Table of Contents:
 
 3.1	buildings and items
 3.2	crew
-3.3 schedule
+3.3 schedule shifts and ranks
 3.5 alarms
 3.6 squads
 3.7	combat
@@ -111,12 +111,12 @@ management sims fans
 	}
 
 	3.2---------- CREW -----
-		3.2.1-------crews needs:
+							3.2.1-------crews needs:
 		{
 	    the general crew needs are the following, in order of importance
 	  1 physiological: [1.1 breathe] [1.2 food] [1.3 sleep] [1.4 excrete] 
 	  2 safety:        [2.1 phisycal integrity] [2.3 hygene] [2.4 send money to family] 
-					   [2.5 morale] [2.6 get money to spare offshore] [2.7 exersice] [2.8 recreation] 
+					   [2.5 morale] [2.6 get money to spare offshore] [2.7 exersice] [2.8 recreation] [2.9 cleanness]
 	  3 love/belonging:[3.1 talk to people] [3.2 sex] [3.3 talk to family] 
 	  4 esteem:         [4.1 have friends] 
 	  5 self-actualization: desire to do something or be good at something, dictated by random perks each crewman
@@ -207,7 +207,7 @@ management sims fans
 	
 	}
 	
-		3.2.2-------crew members interaction
+							3.2.2-------crew members interaction
 		{
 		crew interaction is dominated by a number of variables
 		
@@ -241,10 +241,12 @@ management sims fans
 		10 crew member prefer to satisfy their needs with their friends unless a perk makes them prefer other
 		people for that need
 		
+		11 crewmen will avoid other crewmen their perks tells them to avoid, if they get too close their friendship
+		will go negative and they will be prone to fights.
 }
 		
-		3.2.3-------need's satisfaction
-		
+							3.2.3-------need's satisfaction
+			{
 			MOST NEEDS INCREASE DIFFERENTLY FROM CREWMEN TO CREWMEN, some want to excersice or eat more than others
 		
 			this is how needs are satisfied:
@@ -266,7 +268,66 @@ management sims fans
 			sex: this need increases over time slowly and drops while having sex
 			talk to family: this need increases over time and decreases while ashore or by using the comms-array
 			have friends: this need is met if the number of friends is above a certain number
+			cleanness: clean environment.
 			self-actualization: is met by complying to the specific crew perks. may start fights.
+			}
 
 
-
+	3.3-------- SCHEDULE SHIFTS AND RANKS ----
+	    {
+		3.3.1 SCHEDULE
+		the player will be able to modify the schedule for 3 shifts
+		each shift has it's own independent 24h schedule where they sleep, stations, get free time, eat meals, excercise,
+		education, drills
+				schedule options:
+				{
+		sleep: shift restricted to quarters
+		stations: crew restricted to stations 
+		free time: crew unrestricted
+		meals: crew moves to bar if hungry, chefs serve food, ealse free time
+		excecise: crew preformes excercise, uses gym and runs arround the ship
+		education: crew preformes and recibes lectures, soldiers drill, people who do not attend behave as if in  "stations"
+				}
+		
+		multiple shifts may be on "stations" at the same time, the "extra" shifts will get assigned any remaining 
+		jobs.
+		
+		
+		3.3.2 RANKS and positions
+			crewmen have ranks, they depend of superiors and are depended on by others
+			efficiency of the jobs of people directly below a crewmen will be better or worse depending
+			of his level of technical specific skill AND his skill and commanding people, boosted by certain
+			perks, efficiency will be lower if his direct subordinates dislike their direct superior.
+			
+			the ranks are as follows:
+			captain-->senior officer-->petty officer-->able crewman-->crewman
+			
+			the positions are as following:
+			armory officer -> commands the armory
+			security officer -> commands security teams and dispatch
+			tactical officer ->bridge
+			maintainance officer ->commands groups of cleaning, laundry, fix non-essential machinery
+			chef ->cooks meals
+			captain -> bridge, boosts morale
+			squad leader ->commands an emergency response squad
+			squad member ->is part of an emergency response squad
+			first officer ->commands the morning shift
+			second officer ->commands the afternoon shift
+			third officer  ->commands the night shift
+			helmsman ->bridge 
+			cleaner ->cleans and does loundry
+			chief engeneer -> commands engeneering (those who build and repair)
+			engeneer -> builds and repairs
+			soldier -> professional emergency squad member and combatant
+			chief medical officer -> commands sickbay
+			medical assistant -> treats people in sickbay
+			EMT -> emergency squad member, brings wounded people to sickbay
+			hazenv -> emergency squad member, seals hull, repairs critical systems with spacesuite, puts out fires
+			bartender -> tends the bar
+			
+			
+			
+		
+		
+		}
+	
