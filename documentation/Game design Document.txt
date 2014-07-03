@@ -204,22 +204,31 @@ management sims fans
 		
 		1 the well-beeing coeficient: this number is calculated using the physiological needs, if it's not beyond
 		a certain number, social interaction will not take place.
+		
 		2 friendlyness-coeficient: this is calculated using the safety needs, a crewman interactions will be
 		affected by this number, below a certain number interactions can only be unfriendly, a high number will
 		benefit friendliness, but it does not guarantee friendship.
+		
 		3 off duty talking-time: this number is the amount of time two crewmen talked outside of duty,
 		the bigger this number, the friendship will get stronger
+		
 		4 on duty talking-time: counts toward friendship as 1/20th of the "off duty" talking time
+		
 		5 friendship-coeficient: calculated using the talked time that was above the friendliness coeficient and
 		subtracting the talk time below the friendshipness coeficient. gets a determined amount subtracted 
 		at certine long intervals to prevent everyone to become friends and make only close people friends.
+		
 		6 friendship-coeficient modifier: modifies the coeficient if the perks of the crewmen dictate so, may
 		produce bad relationships.
+		
 		7 sex chance: a friendship with a pre-determined sex along time generates a sex-chance
+		
 		8 once sex takes place, those crewmen will became sex partners until one of them dies or their friendship
 		stops.
+		
 		9 random fight: while talking, there is a small random chance of a disagreement that will randomly
 		hurt the friendship
+		
 		10 crew member prefer to satisfy their needs with their friends unless a perk makes them prefer other
 		people for that need
 		
