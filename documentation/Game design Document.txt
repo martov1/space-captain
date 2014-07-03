@@ -16,10 +16,13 @@ Table of Contents:
 
 3: Gameplay
 
-3.1	buildings
+3.1	buildings and items
 3.2	crew
-3.3	combat
-3.4	Power-ups
+3.3 schedule
+3.5 alarms
+3.6 squads
+3.7	combat
+3.5	Power-ups
 
 4: Menu Layout
 
@@ -104,18 +107,18 @@ management sims fans
 {
 	3.1-----------BUILDING-----
 	{
-	
+	storage room
 	}
 
 	3.2---------- CREW -----
 		3.2.1-------crews needs:
 		{
-	the general crew needs are the following, in order of importance
+	    the general crew needs are the following, in order of importance
 	  1 physiological: [1.1 breathe] [1.2 food] [1.3 sleep] [1.4 excrete] 
-	  2 safety:        [2.1 phisycal integrity] [2.2 healthcare] [2.3 hygene] [2.4 send money to family] 
-					   [2.5 not get robed] [2.6 get money to spare offshore] [2.7 exersice] [2.8 recreation] [3.4 offshore vacations]
+	  2 safety:        [2.1 phisycal integrity] [2.3 hygene] [2.4 send money to family] 
+					   [2.5 morale] [2.6 get money to spare offshore] [2.7 exersice] [2.8 recreation] 
 	  3 love/belonging:[3.1 talk to people] [3.2 sex] [3.3 talk to family] 
-	  4 esteem:         [4.1 have friends][4.2 respect others] [4.3 achive things]
+	  4 esteem:         [4.1 have friends] 
 	  5 self-actualization: desire to do something or be good at something, dictated by random perks each crewman
 	  some perks may produce produce crewmen to dislike other crewmen.
 				perks {
@@ -196,6 +199,12 @@ management sims fans
 				
 				
 				}
+	  
+		
+	
+	
+	
+	
 	}
 	
 		3.2.2-------crew members interaction
@@ -233,4 +242,31 @@ management sims fans
 		people for that need
 		
 }
+		
+		3.2.3-------need's satisfaction
+		
+			MOST NEEDS INCREASE DIFFERENTLY FROM CREWMEN TO CREWMEN, some want to excersice or eat more than others
+		
+			this is how needs are satisfied:
+			breathe: be in an O2=true room
+			food: snack during work time, use mess hall at eating time or use protein secuencer during eat or free time
+			sleep: sleep in a bed at sleep time or free time
+			excrete: use bathroom at any time
+			physical integrity: subtracted constantly when in combat or brawl or beeing injured, added very slowly when safe
+			hygine: subtracted with time, added when shower
+			send money to family: if family=true then there is a percentage of cash to be given to the family. the 
+									need is fulfilled proportionally with the amount of cash sent.
+			morale: if the general needs of the population are not met, the "morale" need will drop and general social
+					unrest may be generated, fight chance increase.
+			money to spare: have money, crewmen will spend money inside the ship and ashore to meet their needs, if
+			                they get short of money before payday this need will increase.
+			exersice: this need increases with time and is met exercising in the gym
+			recreation: this need increases over time and is met using recreational items.
+			talk to people: this met increases over time and is met talking.
+			sex: this need increases over time slowly and drops while having sex
+			talk to family: this need increases over time and decreases while ashore or by using the comms-array
+			have friends: this need is met if the number of friends is above a certain number
+			self-actualization: is met by complying to the specific crew perks. may start fights.
+
+
 
