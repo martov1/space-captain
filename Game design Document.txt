@@ -1,0 +1,46 @@
+Table of Contents:
+
+1: Project Overview
+
+1.1	Executive Summary
+1.2	High Concept
+1.3	Core Gameplay
+1.4	Genre
+1.5	Target Audience
+1.6	Team Members / Jobs / Contact Info
+
+2: Game Overview
+
+2.1	Overview
+2.2	Story
+2.3	Character
+2.4	Environment
+2.5	Level Overview(s)
+
+3: Gameplay
+
+3.1	Combat
+3.2	Abilities
+3.3	Score
+3.4	Power-ups
+
+4: Menu Layout
+
+4.1	Color Scheme
+4.2	Game Title Screen
+4.3	Legal info
+4.4	Menu Screen
+4.5	Tutorial/Instructions Screen
+4.6	Credits Screen
+4.7	Game Win Screen
+4.8	Game Over Screen
+4.9	High Score Layout
+4.10	Level Select Screen
+
+5: Game Layout
+
+5.1	Camera Setup
+5.2	Game Controls
+5.3	Game Mode(s)
+5.4	Player Count
+5.5	Hours of Gameplay
