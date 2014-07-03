@@ -102,7 +102,52 @@ management sims fans
 
 //-----------------GAMEPLAY---------------
 {
+	3.1-----------BUILDING-----
+	{
+	
+	}
 
-
+	3.2---------- CREW -----
+	{
+	the general crew needs are the following, in order of importance
+	  1 physiological: [1.1 breathe] [1.2 food] [1.3 sleep] [1.4 excrete] 
+	  2 safety:        [2.1 phisycal integrity] [2.2 healthcare] [2.3 hygene] [2.4 send money to family] 
+					   [2.5 not get robed] [2.6 get money to spare offshore]
+	  3 love/belonging:[3.1 friends] [3.2 sex] [3.3 talk to family] [3.4 offshore vacations]
+	  4 esteem:         [4.1 be respected by others/stand out][4.2 respect others] [4.3 achive things]
+	  5 self-actualization: desire to do something or be good at something, dictated by random perks each crewman
+	  some perks may produce produce crewmen to dislike other crewmen.
+				perks {
+				athlete: works out and wants to be muscular
+				reader:  enjoys reading books in calm places
+				movie junkie: enjoys watching movies
+				army man: enojys having a high rank and people under his command
+				leader: enjoys having people under his command
+				geek: enjoys attending technical courses and dismantelling things
+				social: enjoys having conversations
+				popular: enjoys having many friends relationships
+				mysterious: enjoys lonely places in your ship
+				sight-seer: enjoys watching space out of the window
+				drinker: enjoys drinking alcohol
+				heavy drinker: NEEDS drinking, enjoys geting drunk
+				smoker: enjoys smoking
+				heavy smoker: NEEDS smoking, enjoys smoking a lot
+				smoke hater: enjoys not having people smoking in the same room.
+				rescuer: enjoys dragging people to sickbay, heal wounds and putting out fires
+				cheerer: enjoys talking to people who are in a bad mood and make them feel better.
+				artist: enjoys painting
+				eater: enjoys snacking and eating
+				gourmet eater: enjoys having above-average meals
+				cook: enjoys cooking
+				techie: enjoys having a tech related job
+				conflictive: enjoys making arguments with people he deslikes
+				fighter: enjoys fighting people he dislikes and other fighters
+				
+				
+				
+				}
+	}
+	
+	
 }
 
