@@ -45,6 +45,12 @@ Table of Contents:
 5.4	Player Count
 5.5	Hours of Gameplay
 
+//--------- OTRAS IDEAS TEMPORALES
+sistema de heridas, concecuencias de larga duracion
+sistema diciplinario, gente castigada se pelea menos por tiempo limitado
+sistema de cobertura en combate
+
+
 
 
 1//  ------------   PROJECT OVERVIEW-----------
