@@ -113,10 +113,196 @@ management sims fans
 {
 	3.1-----------BUILDING-----
 	{
-	storage room
+	
+	OBJECTS:
+	{
 	}
-
+	ROOMS:
+	{
+			bridge 
+				{
+			navegation console
+			tactical console
+			commanding officer's chair
+			communications console
+			engeneering console
+			executive officer's chair
+			dispatch
+				}
+			cargo hold
+				{
+				shelf
+				}
+			any room
+				{
+				 sonic shower (surrounded by walls)
+				 water treatment
+ 				 oxygen recycler
+ 				 shield generator
+				 auxiliary generator
+				 water tank
+				 garbaje ejector (must be near edge of ship)
+				 armour locker
+				 large TV
+				 large window
+				 toilet (must be surrounded by walls)
+				 bookshelf
+				 protein resecuencer
+				 portrait
+				 air pipes
+				whater pipes
+				electric cabling
+				non-smoking sign
+				hammock (amaca paraguaya, para que los crewmen duerman tipo como en los barcos)
+				}
+			kitchen
+				{
+					freezer
+					stove
+					grill
+					sonic sink
+					kitchen utensills
+					leftovers fridge
+					garbage compressor
+					LED sign with the number of meals made and number of meals needed
+					}
+			mess hall
+				{
+				tables
+				benches
+				seats
+				counter
+				}
+			sickbay
+				{
+				 sickbay bed
+				 pharmatheutic shelf
+				 crash-cart
+				 MRI machinery
+				 desk
+				 chair
+				 emergency kit shelf
+				 console
+				 }
+				 
+			staffroom
+				{
+				large TV 
+				bookshelf
+				tables
+				chairs
+				soda bottle dispenser
+				coffe machinery
+				protein dispenser
+				sofa
+				ping-pong table
+				personal terminal
+				}
+			bar
+				{
+				 bar counter
+				 drinks shelf
+				 TV room
+				 dance pole
+				 dancing stage
+				 sound subwoofer
+				 sofa
+				 tables
+				 chairs
+				 DJ post
+				 color lights
+				 stage
+				 }
+			hydrophonics bay
+				{
+				 hydrophonics shelf		 
+				 }
+			brigg
+				{ 
+				 cell
+				 warden
+				}
+			reactor room
+				{
+				 Main reactor
+				 cooling tanks
+				 cooling vents
+				 cooling pipes
+				 engeneering console
+				
+				}
+			armoury
+				{
+				 table
+				 tool's drawer
+				 shelf
+				 torpedo depot
+				 ammo depot
+				 console
+				}
+			torpedo bay
+				{
+				 torpedo launcher
+				}
+			chemistery lab
+				{
+				 table
+				 drawer
+				 chemical element holding tank
+				 chemistery set
+				 autoclave
+				}
+			crewman quarters
+				{
+				 bed
+				 protein secuencer
+				 sonic shower
+				 toilet
+				 window
+					self placing object:
+										portrait
+										rug
+										bookshelf
+										poker table
+										minibar
+										trash can
+										TV
+										PC
+										plant pot
+										sofa
+										small table
+										wall clock
+										excercise machine
+										desk & chair
+										mini stove
+										drawer
+										
+				}
+			engeneering building bay
+				{
+				 table
+				 tool's drawer
+				 wheight lifting droid
+				 raw material depot
+				 shelf (to store finished product)
+				 
+				}
+			shuttle bay
+				{
+				 shuttle bay door
+				 
+				}
+			captain's quarters
+			outside floor
+				{
+				 turret
+				}
+			
+	}
+	}
+			}
 	3.2---------- CREW -----
+	{	
 							3.2.1-------crews needs:
 		{
 	    the general crew needs are the following, in order of importance
@@ -338,4 +524,11 @@ management sims fans
 		
 		
 		}
+	}
+	
+	
+	
+	
+	
+	
 	
