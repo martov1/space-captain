@@ -56,7 +56,7 @@ sistema de cobertura en combate
 1//  ------------   PROJECT OVERVIEW-----------
 {
 1.1  ------- EXECUTIVE SUMMARY-----
-	{
+    {
 single player sci-fi 2D top-down management simulation  game where the player fills the role of a single spaceship 
 captain where his role is to manage his crew and keep them happy by building and maintaining the
 infrastructure in the spaceship, keep them safe in combat and spplying ship policy and discipline.
@@ -73,8 +73,8 @@ drive the attention of the gameplay ealseware.
 1.5 ----------- TARGET AUDIENCE----
 	{
 management sims fans
+    }
 }
-	}
 
 
 2//-----------------GAME OVERVIEW--------------------------
@@ -97,12 +97,13 @@ management sims fans
 	 almost total destruction, a few unlucky visitors knock your door. pirates are trying to open your hatch.
 	 with a quick shot from your starboard cannon you blow up their petty excuse of a ship, leaving them stranded
 	 and with no place to go.
-	 }
 	 this are your first crew memebers
+	 }
+	 
 2.3 ------------ CHARACTER ----------
 	the player represented as the AI is not important
 2.5 ----------- LEVELS ------------
-		{
+	{
 	the spaceship will originally be wrecked and will have multiple levels, it will have to be restored
 	by the player to it's original glory
 	}
@@ -301,14 +302,15 @@ management sims fans
 	}
 		3.1.2 ROOM AND ITEMS DESCRIPTION
 		{
-	
+			1 bridge
+			
 		}
 	
 	}
 			
 	3.2---------- CREW -----
 	{	
-							3.2.1-------crews needs:
+		3.2.1-------crews needs:
 		{
 	    the general crew needs are the following, in order of importance
 	  1 physiological: [1.1 breathe] [1.2 food] [1.3 sleep] [1.4 excrete] 
@@ -404,7 +406,7 @@ management sims fans
 	
 	}
 	
-							3.2.2-------crew members interaction
+		3.2.2-------crew members interaction
 		{
 		crew interaction is dominated by a number of variables
 		
@@ -442,7 +444,7 @@ management sims fans
 		will go negative and they will be prone to fights.
 }
 		
-							3.2.3-------need's satisfaction
+		3.2.3-------need's satisfaction
 			{
 			MOST NEEDS INCREASE DIFFERENTLY FROM CREWMEN TO CREWMEN, some want to excersice or eat more than others
 		
