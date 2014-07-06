@@ -46,11 +46,11 @@ Table of Contents:
 5.4	Player Count
 5.5	Hours of Gameplay
 
-//--------- OTRAS IDEAS TEMPORALES
+//--------- OTRAS IDEAS TEMPORALES y TODOs
 sistema de heridas, concecuencias de larga duracion
 sistema diciplinario, gente castigada se pelea menos por tiempo limitado
 sistema de cobertura en combate
-
+crew skills and knowledge
 
 
 
@@ -307,6 +307,20 @@ management sims fans
 				 oxygen tank
 				 water tank
 				}
+			21 training room
+				{
+				excercise machines
+				weights
+				target practice
+				bench
+				}
+			22 briefing room
+				{
+				class benches
+				desk
+				chairs
+				large tv
+				}
 	}
 		3.1.2 ROOM AND ITEMS DESCRIPTION
 		{
@@ -463,6 +477,14 @@ management sims fans
 				almost constant all the time, without them there will be a constant drain on the tanks.
 				
 				}
+			21 training room
+				{
+				 this is where crewmen may excercise and practice in the shooting gallery
+				}
+			22 briefing room
+			{
+			 this is where crewmen get knowledge and unblock new skills
+			}
 	
 	}
 			
@@ -638,6 +660,10 @@ management sims fans
 			the psycological disorder, there is a chance that the perk gained wount go away
 			
 			
+			}
+		3.2.5-------crew skills, habilities and training
+			{
+			 
 			}
 	
 	}
