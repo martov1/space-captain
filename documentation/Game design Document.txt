@@ -22,7 +22,7 @@ Table of Contents:
 3.5 alarms
 3.6 squads
 3.7	combat
-3.5	Power-ups
+3.5	electric power, water and O2
 
 4: Menu Layout
 
@@ -115,9 +115,6 @@ management sims fans
 	3.1-----------BUILDING-----
 	{
 	
-	OBJECTS:
-	
-	
 		3.1.1 ROOMS AND ITEMS IN THEM
 		{
 			1 bridge 
@@ -137,11 +134,8 @@ management sims fans
 			3 any room
 				{
 				 sonic shower (surrounded by walls)
-				 water treatment
- 				 oxygen recycler
- 				 shield generator
+				 shield generator
 				 auxiliary generator
-				 water tank
 				 garbaje ejector (must be near edge of ship)
 				 armour locker
 				 large TV
@@ -151,10 +145,10 @@ management sims fans
 				 protein resecuencer
 				 portrait
 				 air pipes
-				whater pipes
-				electric cabling
-				non-smoking sign
-				hammock (amaca paraguaya, para que los crewmen duerman tipo como en los barcos)
+				 whater pipes
+				 electric cabling
+				 non-smoking sign
+				 hammock (amaca paraguaya, para que los crewmen duerman tipo como en los barcos)
 				}
 			4 kitchen
 				{
@@ -184,6 +178,8 @@ management sims fans
 				 chair
 				 emergency kit shelf
 				 console
+				 morgue shelf (contains dead bodies)
+				 
 				 }
 				 
 			7 staffroom
@@ -198,6 +194,7 @@ management sims fans
 				sofa
 				ping-pong table
 				personal terminal
+				poker table
 				}
 			8 bar
 				{
@@ -213,6 +210,7 @@ management sims fans
 				 DJ post
 				 color lights
 				 stage
+				 poker table
 				 }
 			9 hydrophonics bay
 				{
@@ -294,20 +292,181 @@ management sims fans
 				 
 				}
 			18 captain's quarters
+				{
+			
+			}
 			19 outside floor
 				{
 				 turret
 				}
-			
+			20 services and life support
+				{
+				 water treatment
+ 				 oxygen recycler
+				 oxygen tank
+				 water tank
+				}
 	}
 		3.1.2 ROOM AND ITEMS DESCRIPTION
 		{
 			1 bridge
+				{
+				 inside the bridge the shift's senior officers take stations in
+				 their corresponding consoles, if the consoles are not manned all the 
+				 rooms that depend on that department goes offline within a small amount of time
+				}
+			2 cargo hold
+				{
+				this is where stuff is stored
+				}
+			3 any room
+				{
+				no special room requirements 
+				-could be a bathroom containing sonic shower for bathing or toilet, both need to be
+				surrounded by walls. the shield generator must be adjacent to the ship's hull, the auxiliary
+				
+				-generator adds to the total power output or the connected power grid
+				
+				-the garbaje ejector eject's garbaje into outer space
+ 				 
+				-the armour locker keeps combat armours and will be used on an alert
+				 
+				-the large TV displays display shows and idle crewmen may watching
+				-large windows allow crewmen to look outside, fills recreation 
+				-bookshelf fills recreation
+				-protein resecuencer provides snacks when on duty
+				-portrait no function
+				-air pipes take oxigen to oxigen dispencers, those must be on every room
+				whater pipes distribute water, needs to reach toilets, coffe machines, protein resecuencers, 
+							the bar and the counter
+				-electric cabling needs to be near every appliance, light and must touch important items
+				-non-smoking sign prevents crewmen from smoking in a certain room
+				-hammock (amaca paraguaya, para que los crewmen duerman tipo como en los barcos):
+					allows crewmen to sleep when no quarters are aviable.
+				}
+				
+			4 kitchen 
+				{
+				 this is where the cooks make the necesary meals, the number of meals is calculated
+				 based on the ammount of people in the shift/s that will eat and the meal preparation 
+				 starts a few hours before eating time
+				}
+			5 mess hall
+				{
+				 this is where crewmen eat their meals (cooks eat too after all the food is served)
+				 crewmen prefer to eat with friends and will search the room for people who are their
+				 friends before sitting in another table. some may want to eat near windows or stay reading
+				 after they eat in a far appart place from the other crewmen.
+				}
+			6 sickbay
+				{
+				 this is where injured crewmen go to get healed and where the doctor and medics
+				 spend their time working, random health checks may ocurr on off-duty crewmembers
+				 just for the kicks. 
+				 - very injured patients will get on the medical bay and get worked on by the doctor at
+				 random intervals, health regeneration is very slow and the crewman may need to
+				 stay in sickbay for a few days, there is a random chance of going into "near death"
+				 state if health is beyond a certain threshhold
+				 -lightly injured patients will stay in the medical bed for only a few seconds
+				 while the doctor heals them
+				 -near death patients will get a coundown and will need defibrilation with a 
+				 crashcart and after will be treated as very injured patient
+				 -after a predetermined random amount of defib's the patient dies
+				 
+				 paramedics bring patients to sickbay and place them in medical beds, if no medical beds
+				 are aviable the patients will be placed on the floor, aviable crewmen will bring hammocks
+				 and place them on sickbay to accomodate for extra patients, but they have x2 chance of 
+				 "near death" on hammocks
+				 
+				 dead bodies are stored here too
+				}
+			7 staffroom
+				{
+				 in this room crewmen relax, read, talk to their families on the comm consoles
+				 and buy soda can's and other luxuries, crewmen prefer to spend time with their friends 
+				 here.
+				}
+			8 bar
+				{
+				 crewmen who do not have duty between current time and sleep time may choose to stay 
+				 at the bar, there they may dance, drink alcohol, talk with other crewmen or smoke
+				 crewmen with high sex needs may rally here to look for a partner or to socialize in 
+				 order to find another crewman with a high sex need.
+				}
+			9 hidrophonics bay
+				{
+				food may be grown here, hidrophonic shelfss have a growth cycle for food production
+				}
+			10 brigg
+				{
+				fighting or mutining crewmen may be thrown here as punishment, 
+				after beeing in the brigg crewmen will cool down for a few days
+				}
+			11 reactor room
+				{
+				 this is where main propultion is, it has a main reactor and pipes that come
+				 out of it and into a cooling tank and cooling vent's that are in the ships hull,
+				 if the pipes are broken the reactor will shut down, the ship wount move and the power
+				 generated by the reactor will be null
+				}
+			12 armoury
+				{
+				 this is where ammo, torpedos and extra weapons are stored and where weapons are mantained
+				 weapons stored in lockers have a maintenence coeficient and need to be serviced after a certain
+				 amount of time. used weapons in combat need to be reloaded at the armoury too.
+				 
+				 people assigned at the armoury will search the ship looking for guns that need servicing, moving
+				 torpedoes to torpedo launchers and keep a small amount of them stored there.
+				}
+			13 torpedo bay
+				{
+				 this is where torpedos are launched
+				}
 			
-		}
+			14 chemistery lab
+				{
+				this is where ammo and torpedoes are built, whater and O2 may be sinthethized
+				anything may be sinthethized here if there are "chemical components" aviable
+				}
+			15 crewmen quarters
+				{
+				the amount of beds indicates the amount of crewmen living together, if the number
+				is smaller than 4 they may buy furniture to decorate the room acording to their perks
+				object's will be placed adjacent to walls and not to doors
+				}
+			16 engeneering building bay
+				{
+				anything that you build in the space ship is first built here and then moved (entirely or in parts)
+				to where you ordered the item, engeneers build what you order using raw materials, a certain
+				ammount of them are stored in the room into shelfs, the rest is stored in the storage room.
+				spare parts for damage repairs are also built here.
+				}
+			17 shuttle bay
+			    {
+				 this is where you send soldiers to board an enemy ship or check out something
+				 this is also where funerals take place
+				}
+			18 captain quarters
+				{
+				}
+			19 outside floor
+				{
+				this is an outside area of your ship where you place turrets to attack your enemy. it' in
+				outer space and requires a space siut to safely enter.
+				}
+			20 services and life support
+				{
+				this is where life suppor equipment goes, whater tanks and oxygen tanks hold the needed substances 
+				and if a pipe is punctured there will be loss of them until the pipe is cuted down or repaired.
+				oxygen pipes ignite and will generate fires, water and oxygen recycling plants mantain the tank levels
+				almost constant all the time, without them there will be a constant drain on the tanks.
+				
+				}
 	
 	}
 			
+	}	
+				
 	3.2---------- CREW -----
 	{	
 		3.2.1-------crews needs:
@@ -429,9 +588,9 @@ management sims fans
 		6 friendship-coeficient modifier: modifies the coeficient if the perks of the crewmen dictate so, may
 		produce bad relationships.
 		
-		7 sex chance: a friendship with a pre-determined sex along time generates a sex-chance
+		7 sex chance: a high enouth friendlyness coeficient and both crewmen sex need will generate a sex chance
 		
-		8 once sex takes place, those crewmen will became sex partners until one of them dies or their friendship
+		8 once sex takes place, those crewmen may became sex partners until one of them dies or their friendship
 		stops.
 		
 		9 random fight: while talking, there is a small random chance of a disagreement that will randomly
@@ -470,10 +629,10 @@ management sims fans
 			cleanness: clean environment.
 			self-actualization: is met by complying to the specific crew perks. may start fights.
 			}
-
+	}
 
 	3.3-------- SCHEDULE SHIFTS AND RANKS ----
-	    {
+	{
 		3.3.1 SCHEDULE
 			{
 		the player will be able to modify the schedule for 3 shifts
@@ -526,16 +685,13 @@ management sims fans
 			hazenv -> emergency squad member, seals hull, repairs critical systems with spacesuite, puts out fires
 			bartender -> tends the bar
 			}
+	}	
 			
-			
-		
-		
-		}
-	}
+
+}
 	
 	
 	
-	}
 	
 	
 	
