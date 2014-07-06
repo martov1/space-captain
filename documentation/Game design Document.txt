@@ -23,6 +23,7 @@ Table of Contents:
 3.6 squads
 3.7	combat
 3.5	electric power, water and O2
+3.6 health and diciplin 
 
 4: Menu Layout
 
@@ -629,6 +630,16 @@ management sims fans
 			cleanness: clean environment.
 			self-actualization: is met by complying to the specific crew perks. may start fights.
 			}
+		3.2.4-------psycological disorders
+			{
+			when a crewman's friend dies, there is a high random chance that he may get a 
+			psycological disorder and needs to see the psycologist for a few sessions before
+			it goes away, he may pick up a perk (like conflictive or drinker) for the duration of
+			the psycological disorder, there is a chance that the perk gained wount go away
+			
+			
+			}
+	
 	}
 
 	3.3-------- SCHEDULE SHIFTS AND RANKS ----
@@ -684,6 +695,7 @@ management sims fans
 			EMT -> emergency squad member, brings wounded people to sickbay
 			hazenv -> emergency squad member, seals hull, repairs critical systems with spacesuite, puts out fires
 			bartender -> tends the bar
+			psycologyst -> treats crewmen with anxiety
 			}
 	}	
 			
