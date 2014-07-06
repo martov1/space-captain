@@ -115,11 +115,11 @@ management sims fans
 	{
 	
 	OBJECTS:
-	{
-	}
-	ROOMS:
-	{
-			bridge 
+	
+	
+		3.1.1 ROOMS AND ITEMS IN THEM
+		{
+			1 bridge 
 				{
 			navegation console
 			tactical console
@@ -129,11 +129,11 @@ management sims fans
 			executive officer's chair
 			dispatch
 				}
-			cargo hold
+			2 cargo hold
 				{
 				shelf
 				}
-			any room
+			3 any room
 				{
 				 sonic shower (surrounded by walls)
 				 water treatment
@@ -155,7 +155,7 @@ management sims fans
 				non-smoking sign
 				hammock (amaca paraguaya, para que los crewmen duerman tipo como en los barcos)
 				}
-			kitchen
+			4 kitchen
 				{
 					freezer
 					stove
@@ -166,14 +166,14 @@ management sims fans
 					garbage compressor
 					LED sign with the number of meals made and number of meals needed
 					}
-			mess hall
+			5 mess hall
 				{
 				tables
 				benches
 				seats
 				counter
 				}
-			sickbay
+			6 sickbay
 				{
 				 sickbay bed
 				 pharmatheutic shelf
@@ -185,7 +185,7 @@ management sims fans
 				 console
 				 }
 				 
-			staffroom
+			7 staffroom
 				{
 				large TV 
 				bookshelf
@@ -198,7 +198,7 @@ management sims fans
 				ping-pong table
 				personal terminal
 				}
-			bar
+			8 bar
 				{
 				 bar counter
 				 drinks shelf
@@ -213,16 +213,16 @@ management sims fans
 				 color lights
 				 stage
 				 }
-			hydrophonics bay
+			9 hydrophonics bay
 				{
 				 hydrophonics shelf		 
 				 }
-			brigg
+		    10 brigg
 				{ 
 				 cell
 				 warden
 				}
-			reactor room
+		    11 reactor room
 				{
 				 Main reactor
 				 cooling tanks
@@ -231,7 +231,7 @@ management sims fans
 				 engeneering console
 				
 				}
-			armoury
+			12 armoury
 				{
 				 table
 				 tool's drawer
@@ -240,11 +240,11 @@ management sims fans
 				 ammo depot
 				 console
 				}
-			torpedo bay
+			13 torpedo bay
 				{
 				 torpedo launcher
 				}
-			chemistery lab
+			14 chemistery lab
 				{
 				 table
 				 drawer
@@ -252,7 +252,7 @@ management sims fans
 				 chemistery set
 				 autoclave
 				}
-			crewman quarters
+			15 crewman quarters
 				{
 				 bed
 				 protein secuencer
@@ -278,7 +278,7 @@ management sims fans
 										drawer
 										
 				}
-			engeneering building bay
+			16 engeneering building bay
 				{
 				 table
 				 tool's drawer
@@ -287,20 +287,25 @@ management sims fans
 				 shelf (to store finished product)
 				 
 				}
-			shuttle bay
+			17 shuttle bay
 				{
 				 shuttle bay door
 				 
 				}
-			captain's quarters
-			outside floor
+			18 captain's quarters
+			19 outside floor
 				{
 				 turret
 				}
 			
 	}
+		3.1.2 ROOM AND ITEMS DESCRIPTION
+		{
+	
+		}
+	
 	}
-			}
+			
 	3.2---------- CREW -----
 	{	
 							3.2.1-------crews needs:
@@ -527,6 +532,8 @@ management sims fans
 	}
 	
 	
+	
+	}
 	
 	
 	
