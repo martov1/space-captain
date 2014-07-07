@@ -19,11 +19,12 @@ Table of Contents:
 3.1	buildings and items
 3.2	crew
 3.3 schedule shifts and ranks
-3.5 alarms
-3.6 squads
-3.7	combat
-3.5	electric power, water and O2
-3.6 health and diciplin 
+3.4 color conditions
+3.5 squads
+3.6	combat
+3.7	electric power, water and O2
+3.8 spaceship battle (like FTL + starship corporation)
+
 
 4: Menu Layout
 
@@ -50,7 +51,7 @@ Table of Contents:
 sistema de heridas, concecuencias de larga duracion
 sistema diciplinario, gente castigada se pelea menos por tiempo limitado
 sistema de cobertura en combate
-crew skills and knowledge
+
 
 
 
@@ -118,6 +119,8 @@ management sims fans
 	
 		3.1.1 ROOMS AND ITEMS IN THEM
 		{
+			certain items will transform the current room into a certain type of room
+			and prevent some other items to be placed.
 			1 bridge 
 				{
 			navegation console
@@ -276,6 +279,7 @@ management sims fans
 										desk & chair
 										mini stove
 										drawer
+										painting thing
 										
 				}
 			16 engeneering building bay
@@ -429,6 +433,8 @@ management sims fans
 				 this is where ammo, torpedos and extra weapons are stored and where weapons are mantained
 				 weapons stored in lockers have a maintenence coeficient and need to be serviced after a certain
 				 amount of time. used weapons in combat need to be reloaded at the armoury too.
+				 
+				 weapons in a crewmen inventory get it's maintenence coeficient drained faster
 				 
 				 people assigned at the armoury will search the ship looking for guns that need servicing, moving
 				 torpedoes to torpedo launchers and keep a small amount of them stored there.
@@ -663,13 +669,39 @@ management sims fans
 			}
 		3.2.5-------crew skills, habilities and training
 			{
-			 
+			 skills:
+					construction (electromechanical engineering)
+					assembly (electromechanical engineering)
+					cooking
+					weapon maintenence (electromechanical engineering)
+					weapon combat (combat)
+					teaching (commanding)
+					turret fireing (combat)
+					fire fighting
+			 knowledge (trainable):
+					engineering
+					chemistery
+					combat
+					medical
+					piloting
+					spaceship weapons
+			stats:
+				  empathy
+				  muscularity
+				  leadership
+				  HP (muscularity)				  
+				  
 			}
 	
 	}
 
 	3.3-------- SCHEDULE SHIFTS AND RANKS ----
 	{
+		the player will assign crewmen to a certain department, unassigned crewmen belong
+		to the operations department. from that pool crewmen will distribute on each room belonging
+		to their department and get tasks assigned from those rooms. the player may set the minimum
+		and maximum ammount of crewmen to man a particular room
+	
 		3.3.1 SCHEDULE
 			{
 		the player will be able to modify the schedule for 3 shifts
@@ -725,8 +757,76 @@ management sims fans
 			}
 	}	
 			
+	3.4-------- COLOR CONDITIONS
+	{
+	 color conditions are special alerts that modify the crews behabiour, they are customized by
+	 the player who may add or subtract behaviours in order to shape the way he wants the crew to
+	 behave when the color condition is in effect
+	 
+	 behaviours:
+				current duty shift get's weapons
+				current awake shifts get weapons
+				all shifts get weapons
+				assemble the following security crews
+				assemble the following HAZENV crews
+				assemble the following paramedic crews
+				assign awake off duty shifts to "on duty"
+				assign all shifts to "on duty"
+				shut down the following rooms
+				divert all engineering personell to repairs and assembly
+				rise shields
+				weapons on-line
+				turn non-essential machines off-line
+				turn long term non-essential machines off-line
+				assign all medical personell to "on duty"
+				assign all engineering personell to "on duty"
+				current "on duty" shift get's armour
+				current wake shifts get armour
+				all shifts get armour
+				snacking on duty ON
+				snacking on duty OFF
+				bathroom break OFF
+				bathroom break ON
+				
+				
+				
+	
+	
+	
+	}
 
-}
+	3.5-------- SQUADS
+		{
+		 security crews, HAZENV crews and paramedic crews are assembled in squads
+		 squads work as a unit and will be dispatched to solve a problem, players may
+		 dispatch assembled squads manually.
+		 
+		 squads assemble only if the current color condition allows it
+			-security crews:
+								this crews will secure rooms and kill enemy boarding parties
+			-HAZENV crews:
+								hazardous environments crews will repair hull breaches, put
+								out fires and repair turrets. they use special suits for this
+			-paramedic crews:
+								paramedics move injured crewmen to sickbay and defibrilate on-site if
+								the room is safe
+		squads are formed by player assigned crewmen and may get complemented by educated operations crewmen if
+		there are not enougth people in the department to fill all squads.
+		
+		}
+	3.6-------- COMBAT
+			3.6.1 boarding combat
+				all armed personell will shoot enemies on sight, unarmed personell will
+				flee to where they came from if they see an enemy.
+				
+				security crews will be dispatched to enemy sightings automatically.
+				small objects and walls work as cover. if a tile has visibility
+				to the enemy and an adjacent tile does not, then that tile is considered as
+				cover, the crewman will move to the visibility tile to shoot and go back to the
+				
+	
+	
+	}
 	
 	
 	
