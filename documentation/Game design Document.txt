@@ -22,8 +22,8 @@ Table of Contents:
 3.4 color conditions
 3.5 squads
 3.6	combat
-3.7	electric power, water and O2
-3.8 spaceship battle (like FTL + starship corporation)
+
+
 
 
 4: Menu Layout
@@ -48,11 +48,6 @@ Table of Contents:
 5.5	Hours of Gameplay
 
 //--------- OTRAS IDEAS TEMPORALES y TODOs
-sistema de heridas, concecuencias de larga duracion
-sistema diciplinario, gente castigada se pelea menos por tiempo limitado
-sistema de cobertura en combate
-
-
 
 
 1//  ------------   PROJECT OVERVIEW-----------
@@ -815,7 +810,10 @@ management sims fans
 		
 		}
 	3.6-------- COMBAT
-			3.6.1 boarding combat
+		{
+
+		3.6.1 boarding combat
+				{
 				all armed personell will shoot enemies on sight, unarmed personell will
 				flee to where they came from if they see an enemy.
 				
@@ -826,10 +824,13 @@ management sims fans
 				may decide to storm the room and use the cover inside it, if a unit cant find it
 				it will try to flank the enemy
 				
-				
-			3.6.2 ship to ship combat
+				}
+		3.6.2 ship to ship combat
 				{
-				
+				combat works similarly to FTL and starship corporation.
+				turrets and launchers are manned and shoot at the enemy ship, shown in a side window.
+				enemy fire is recibed in the main window and the hull breaks, fires break out, pipes leak
+				and crewmen may be sucked out into space if not wearing protective suits.
 				}
 	
 	
@@ -837,8 +838,8 @@ management sims fans
 	
 	
 	
+
 	
-	
-	
+	}
 	
 	
