@@ -820,10 +820,17 @@ management sims fans
 				flee to where they came from if they see an enemy.
 				
 				security crews will be dispatched to enemy sightings automatically.
-				small objects and walls work as cover. if a tile has visibility
-				to the enemy and an adjacent tile does not, then that tile is considered as
-				cover, the crewman will move to the visibility tile to shoot and go back to the
+				small objects and walls work as cover. 
 				
+				if all cover is in use remaining units will wait, after a random time they
+				may decide to storm the room and use the cover inside it, if a unit cant find it
+				it will try to flank the enemy
+				
+				
+			3.6.2 ship to ship combat
+				{
+				
+				}
 	
 	
 	}
