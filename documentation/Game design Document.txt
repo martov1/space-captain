@@ -48,7 +48,14 @@ Table of Contents:
 5.5	Hours of Gameplay
 
 //--------- OTRAS IDEAS TEMPORALES y TODOs
+distribute launched boxes
 
+departments orders panel
+
+power grid system (gigawatts en tiempo real, agregar watts a propulsion, escudos, armas, life support
+						emergency force-fields)
+
+power grid fuel
 
 1//  ------------   PROJECT OVERVIEW-----------
 {
