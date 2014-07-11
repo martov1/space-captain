@@ -11,7 +11,7 @@ end
 
 function love.update(dt)
  
-  instance_create ("manzanas",10,20) --DESARROLLANDO ESTA FUNCION
+  create_manzana (10,20) --DESARROLLANDO ESTA FUNCION
  
   
 end
