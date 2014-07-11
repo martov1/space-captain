@@ -1,8 +1,9 @@
  clases_list = {}
  loader = love.filesystem.getDirectoryItems( "clases/")
+ GUIloader= love.filesystem.getDirectoryItems( "guis/")
  active_instances = {}
  files_list = {}
- 
+ GUIs_list = {}
  active_instances.id = 0
  
  

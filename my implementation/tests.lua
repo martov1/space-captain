@@ -8,9 +8,25 @@ function show_loaded_clases ()
 
 end
 
+function show_guis ()
+  for i,k in pairs (GUIloader) do 
+     x = string.gsub( k, ".lua", "")  
+     GUIs_list[x]=x 
+     print ("guis/" .. GUIs_list[x] )
+     end
+  end
+
 function tests ()
- print ("LOADED CLASES")
+ if (test >= 1) then  -- runs a test if test = 1
+  test = 0
+   print ("LOADED CLASES")
  show_loaded_clases()
+ print ("LOADED GUIS")
+ 
+show_guis()
+
+
+  end
 
 
 end
