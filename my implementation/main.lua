@@ -8,10 +8,10 @@ require ("input")
 require ("ATL")
 require ("obj_manager");
 require ("tests")
- require ("guis/main_menu")
  --loaders
  load_clases ()
- 
+ loveframes.SetState("mainmenu")
+ require ("guis/main_menu")
  --test values, used for debugging, non essential
  test = 1 --if this value is bigger than 0 tests will be run
  

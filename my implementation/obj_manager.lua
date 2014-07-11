@@ -52,3 +52,7 @@ end
 
 
 
+
+function set_gui_general ()
+loveframes.SetState("general")  
+end
