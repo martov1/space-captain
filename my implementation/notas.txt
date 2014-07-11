@@ -12,3 +12,5 @@ clases functions
         de la instancia guardada en active_instances[id] NOT DONE}
         
         show_loaded_clases() shows the loaded clases
+        
+        tests() runs show_loaded_clases()

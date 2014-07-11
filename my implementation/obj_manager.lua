@@ -22,28 +22,6 @@ end
 
 
 
-function instance_create (name, x, y) ---QUEDE ACA
-  
- 
-  --check if there is such an object, error if it does not exist
-  if clases_list[name] then 
-    
-  
-   
-    
-    
-    else error ("EL OBJETO ".. name .. " NO EXISTE") end
---create it
-
-
-
-
-end
-
-
-
-
-
 function instance_destroy (someid)
   
   active_instances[someid] = nil
