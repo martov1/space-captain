@@ -2,30 +2,20 @@ function love.load()
 if arg[#arg] == "-debug" then require("mobdebug").start() end
 
 require ("obj_manager");
- 
- debugger = true
+require ("tests")
  load_clases ()
- testvalue = 0
+ 
+ --test values, used for debugging, non essential
+ test = 1
+ testvalue2 = 0
 end
 
 
 function love.update(dt)
-
-  create_manzana (10,20) --DESARROLLANDO ESTA FUNCION
- create_manzana (10,20)
- create_manzana (10,20)
- create_manzana (10,20)
- create_manzana (10,20)
- create_manzana (10,20)
- 
-   if (testvalue == 0) then
-     testvalue = 1
-     for i in pairs (active_instances) do
-       print (i) end
-     instance_modify(3, "datos", "jorgito")
-     instance_show  (3)
-       
-   end
+if (test >= 1) then  -- runs a test if test = 1
+  test = 0
+  tests()
+  end
    
 end
 

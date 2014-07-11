@@ -20,14 +20,7 @@ end
 
 
 
-function util_showloadedobjects ()
-  
-  for y,k in pairs (clases_list) do 
-     print ("clases/" .. clases_list[k] )
-     end
-  
 
-  end
 
 function instance_create (name, x, y) ---QUEDE ACA
   
@@ -65,9 +58,9 @@ function instance_modify (someid, variable, modification)
     local A
     A = active_instances[someid]
     A[variable] = modification
-    
   end
     
+
 
 
 function instance_show (someid)
