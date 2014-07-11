@@ -22,8 +22,8 @@ function love.update(dt)
      testvalue = 1
      for i in pairs (active_instances) do
        print (i) end
-     
-     instance_show  (3,datos)
+     instance_modify(3, "datos", "jorgito")
+     instance_show  (3)
        
    end
    
