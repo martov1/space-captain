@@ -56,3 +56,18 @@ function instance_destroy (someid)
   
 end
 
+
+function instance_modify (someid, variable, modification)
+active_instances[someid].variable = modification
+end
+
+function instance_show (someid, variable)
+  
+ local A = active_instances[someid]
+ for i in pairs (A) do print (i) end
+ 
+  
+end
+
+
+

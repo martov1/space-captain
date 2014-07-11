@@ -18,12 +18,15 @@ function love.update(dt)
  create_manzana (10,20)
  create_manzana (10,20)
  
- if (testvalue == 0) then
-   testvalue = 1
-   for i in pairs (active_instances) do
-     print (i) end
-     end
-  
+   if (testvalue == 0) then
+     testvalue = 1
+     for i in pairs (active_instances) do
+       print (i) end
+     
+     instance_show  (3,datos)
+       
+   end
+   
 end
 
 
