@@ -1,0 +1,12 @@
+----- COSAS HECHAS------
+
+clases
+
+        -instance_create () crea una instancia, se guarda en 
+        active_instances[id], a medida que creas instancias id aumenta 1
+        
+        -instance_destroy (id) destruye el objeto guardado en
+        active_instances(id) transformandolo en nil
+        
+        instance_modify (id, variable, newvalue) modifica una variable 
+        de la instancia guardada en active_instances[id] NOT DONE}
