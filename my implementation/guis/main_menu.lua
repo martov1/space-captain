@@ -9,7 +9,7 @@ frame:SetResizable(true)
 
 local button2 = loveframes.Create("button")
 button2.OnClick = function()
-		frame:SetState("general")
+		loveframes.SetState("general")
 	end
 button2:SetParent(frame)
 button2:SetPos(60, 40)
