@@ -13,8 +13,8 @@ general_tabs:SetState("general_gui")
 
  
  -- make the actual tabs inside the general_tabs object (they are asociated to the panels I just made.
-    general_tabs:AddTab("Construction", construction_panel, "Construction" , "resources/images/box.png")
-    general_tabs:AddTab("objects", objects_panel, "objects" , "resources/images/box.png")
-    general_tabs:AddTab("rooms", rooms_panel, "rooms" , "resources/images/box.png")
-    general_tabs:AddTab("orders", orders_panel, "orders" , "resources/images/box.png")
+    general_tabs:AddTab("Construction", construction_panel, "Construction" , "resources/gui images/box.png")
+    general_tabs:AddTab("objects", objects_panel, "objects" , "resources/gui images/box.png")
+    general_tabs:AddTab("rooms", rooms_panel, "rooms" , "resources/gui images/box.png")
+    general_tabs:AddTab("orders", orders_panel, "orders" , "resources/gui images/box.png")
     
