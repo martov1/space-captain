@@ -1,7 +1,8 @@
 ----- TO DO----
 
-CAMERA!
-figure out pathfinding
+1)make object creation panel work
+2)figure out pathfinding
+3) figure out movement using pathfingin info
 
 
 
