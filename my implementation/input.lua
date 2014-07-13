@@ -14,24 +14,13 @@ function love.mousereleased(x, y, button)
  
 end
  
-function love.keypressed(key, unicode )
-   
-    
-    loveframes.keypressed(key, unicode) -- needed for loveframes
-    
-  if key == "down" then map_translation_Y = map_translation_Y - 20 end
-
-if key == "up" then map_translation_Y = map_translation_Y + 20 end
-if key == "left" then map_translation_X = map_translation_X + 20 end
-
-if key == "right" then map_translation_X = map_translation_X - 20 end
-
-
-
-    love.graphics.translate(map_translation_X,map_translation_Y)
-
-  end
-
+function love.keypressed(key, unicode)
+ 
+    -- your code
+ 
+    loveframes.keypressed(key, unicode)
+ 
+end
  
 function love.keyreleased(key)
  
@@ -48,5 +37,3 @@ function love.textinput(text)
     loveframes.textinput(text)
  
 end
-
-

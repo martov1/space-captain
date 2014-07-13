@@ -1,7 +1,9 @@
 ----- TO DO----
 
-CAMERA!
-figure out pathfinding
+elementary gui for navegation
+
+
+
 
 
 
@@ -38,7 +40,8 @@ clases functions
       }
       
         instance_show (someid) {
-          te muestra los datos de la instancia con ese ID
+          te muestra los datos de la instancia con ese ID, si no se coloca ID lista todas las instancias existentes
+          y su respectivo numero de index en active_instances
           }
         set_gui (name_of_gui) {
           hace que el estado de gui sea name_of_gui, solo los objetos de 
@@ -51,11 +54,12 @@ clases functions
         loads all love files in the folder /guis  
         }
         
-       instances_update () {
-	   updates all instances by searching all the objects in
-	   active_instances and executing their "update" function
-	   
-	   
-	   }
-     
-      
+         instances_update() {
+         
+         searchs the active_instances array and checks if each object has the update function, if it does it executes it
+         
+         }
+        
+        
+        
+        
