@@ -1,3 +1,5 @@
+
+
 local main_menu_frame = loveframes.Create("frame")
 main_menu_frame:SetState("main_menu")
 main_menu_frame:SetName("main menu")

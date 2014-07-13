@@ -1,10 +1,11 @@
- clases_list = {}
+ clases_list = {} --list of all clases in /clases
  clases_loader = love.filesystem.getDirectoryItems( "clases/")
  GUIloader= love.filesystem.getDirectoryItems( "guis/")
- active_instances = {}
- files_list = {}
- GUIs_list = {}
- active_instances.id = 0
+ active_instances = {} --contains all the created instances in the game
+ files_list = {} --contains a list of clases files
+ GUIs_list = {} --contains a list of loaded GUIs
+ 
+ active_instances_counter = 0 -- every time an object is created this increases by 1 and the previous number is assigned as the created instance's unique ID number
  
  
  function load_clases () --load all object filenames into clases_list and subtract ".lua" on each name, then load all clases
@@ -20,8 +21,7 @@ end
 
 function instance_destroy (someid)
   
-  active_instances[someid] = nil
-  
+    active_instances[someid] = nil
 end
 
 
@@ -37,10 +37,18 @@ function instance_modify (someid, variable, modification)
     
 
 function instance_show (someid)
-  
+ 
+ if (someid == nil) then
+ for i,k in pairs (active_instances) do
+ print (i,k.name) end
+ 
+ 
+ else
  local A = active_instances[someid]
  for i,k in pairs (A) do print (i , k) end
  
+ 
+ end
   
 end
 
@@ -59,4 +67,13 @@ function load_guis ()
      end
   
   
-  end
+end
+
+function instances_update ()
+
+  for k,i in pairs (active_instances) do
+ if i.update then i:update() end 
+end  
+
+end
+

@@ -1,15 +1,33 @@
 ------------ OBJ manzana -------------
 
 function create_manzana (x,y)
-active_instances.id = active_instances.id + 1
+
+
+
+
+
+active_instances_counter =  active_instances_counter + 1
 local manzana = {}
 
-manzana.id = table.maxn(active_instances)
+manzana.id = active_instances_counter
 manzana.datos = "charly!"
+manzana.name = "manzana"
+    function manzana.update ()
 
+
+    end
 --aca inicializas sus funciones
 
 
-table.insert(active_instances , active_instances.id, manzana )
+table.insert(active_instances , manzana )
+
+
+
+
+
+
+
+
+
 end
 
