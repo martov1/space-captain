@@ -10,8 +10,9 @@ require ("obj_manager");
 require ("tests")
  --loaders
  load_clases ()
- loveframes.SetState("mainmenu")
- require ("guis/main_menu")
+
+ set_gui ("main_menu")
+  load_guis ()
  --test values, used for debugging, non essential
  test = 1 --if this value is bigger than 0 tests will be run
  
@@ -28,6 +29,8 @@ function love.update(dt)
   -- required stff
   loveframes.update(dt)
    tests()
+   
+   
   --end of required stuff
  
   
