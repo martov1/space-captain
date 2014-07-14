@@ -11,3 +11,5 @@ selected folder into STI by using load_decks()
 -added loop to update all decks , draw all decks and resize them, needs optimizing and cleaning up
 
 -broke: function draw_grid (map)
+-added: multiple decks working
+-broke auto detection of  maps
