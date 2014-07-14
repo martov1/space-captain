@@ -1,5 +1,0 @@
-funciones de una instancia
-
-nombre.load
-nombre.draw
-nombre.update(dt)
