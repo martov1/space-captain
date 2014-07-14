@@ -451,7 +451,8 @@ function Map:drawTileLayer(layer)
 end
 
 function Map:drawObjectLayer(layer)
-	assert(layer.type == "objectgroup", "Invalid layer type: " .. layer.type .. ". Layer must be of type: objectgroup")
+	
+  assert( layer.type  == "objectgroup", "Invalid layer type: " .. layer.type .. ". Layer must be of type: objectgroup")
 	
 	local line		= { 160, 160, 160, 255 * layer.opacity }
 	local fill		= { 160, 160, 160, 255 * layer.opacity * 0.2 }

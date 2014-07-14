@@ -4,7 +4,6 @@ loop to update all decks and draw all decks in love.update and love.draw and lov
 need a way to determine current deck to fix function draw_grid (map)
 terminar  function manzana.draw()
 
-1) load levels by GUI
 2) object rendering
 3)make object creation panel work
 4)figure out pathfinding

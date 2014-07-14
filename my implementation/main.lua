@@ -22,6 +22,7 @@ require ("tests")
  map_translation_Y=0
  map_translation_X = 0
  deck_loaded = false
+ current_deck = 2
  --load stuff into memory
  load_clases ()
  load_guis ()
@@ -68,12 +69,12 @@ camera:set()
 
 
 if deck_loaded == true then
-  for i,k in pairs (decks) do
-      decks[i]:draw(dt)
-  end
+  decks[2]:draw(dt)
+
   end
 
-draw_grid (decks)
+
+
 
 camera:unset()
 ----DRAW GUI ---

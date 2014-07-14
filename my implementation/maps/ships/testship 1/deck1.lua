@@ -78,7 +78,7 @@ return {
       properties = {},
       objects = {
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 192,
@@ -90,7 +90,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 192,
@@ -102,7 +102,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 192,
@@ -114,7 +114,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 224,
@@ -126,7 +126,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 288,
@@ -138,7 +138,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 320,
@@ -150,7 +150,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 320,
@@ -162,7 +162,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 320,
@@ -174,7 +174,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 224,
@@ -186,7 +186,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 224,
@@ -198,7 +198,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 224,
@@ -210,7 +210,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 288,
@@ -222,7 +222,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 352,
@@ -234,7 +234,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 320,
@@ -246,7 +246,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 352,
@@ -258,7 +258,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 352,
@@ -287,7 +287,7 @@ return {
       properties = {},
       objects = {
         {
-          name = "",
+          name = "a",
           type = "",
           shape = "rectangle",
           x = 320,
@@ -299,7 +299,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "a",
           type = "",
           shape = "rectangle",
           x = 320,
@@ -311,7 +311,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "b",
           type = "",
           shape = "rectangle",
           x = 288,
@@ -323,7 +323,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "a",
           type = "",
           shape = "rectangle",
           x = 288,
@@ -335,7 +335,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 512,
@@ -347,7 +347,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 512,
@@ -359,7 +359,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 544,
@@ -371,7 +371,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 544,
@@ -383,7 +383,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 32,
@@ -395,7 +395,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 32,
@@ -407,7 +407,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 32,
@@ -419,7 +419,7 @@ return {
           properties = {}
         },
         {
-          name = "",
+          name = "e",
           type = "",
           shape = "rectangle",
           x = 32,

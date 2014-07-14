@@ -107,7 +107,7 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
    decks[i] = sti.new("maps/ships/"..ship.."/".."deck" ..i)
     
     deck_loaded = true
-     
+    
    end
   
   

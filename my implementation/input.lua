@@ -19,12 +19,12 @@ function love.keypressed(key, unicode )
     
     loveframes.keypressed(key, unicode) -- needed for loveframes
     
-  if key == "down" then map_translation_Y = map_translation_Y - 20 end
-
+if key == "down" then map_translation_Y = map_translation_Y - 20 end
 if key == "up" then map_translation_Y = map_translation_Y + 20 end
 if key == "left" then map_translation_X = map_translation_X + 20 end
-
 if key == "right" then map_translation_X = map_translation_X - 20 end
+if key == "s" then current_deck = current_deck -1 end
+  if key == "w" then current_deck = current_deck +1 end
 
 
 
