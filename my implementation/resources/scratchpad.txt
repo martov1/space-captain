@@ -1,5 +1,14 @@
 --scratch
-transformar data de tiles en coordenadas.
+object rendering
+necesito armar un instances_draw()
+tiene que dibujar PRIMERO las cosas que estan arriba de la pantalla y recursivamente las cosas que estan
+mas abajo para que lo que esta abajo tape lo que esta arriba si es que ocupa mas de 1 tile hacia arriba
+http://eliasdaler.wordpress.com/2013/11/20/z-order-in-top-down-2d-games/
+
+
+
+
+
 ---sctatch
 2)make object creation panel work
 

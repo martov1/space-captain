@@ -1,6 +1,6 @@
 ----- TO DO IN PRIORITY ORDER
 
-
+1) object rendering
 2)make object creation panel work
 3)figure out pathfinding
 4) figure out movement using pathfingin info
