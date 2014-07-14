@@ -1,8 +1,8 @@
 ----- TO DO----
-
-1)make object creation panel work
-2)figure out pathfinding
-3) figure out movement using pathfingin info
+1)fix map-screen interaction
+2)make object creation panel work
+3)figure out pathfinding
+4) figure out movement using pathfingin info
 
 
 

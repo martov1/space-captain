@@ -9,18 +9,22 @@ local sti = require("STI")
 require ("obj_manager");
 require ("tests")
  require("camera")
- --loaders
+ 
+ --initialize needed variables
+ map_translation_Y=0
+ map_translation_X = 0
+ 
+ --load stuff into memory
  load_clases ()
  load_guis ()
  set_gui ("main_menu")
+ map = sti.new("maps/untitled")
 
 --- window configuration
 love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minheight=300})
  
  --experimental features
- map = sti.new("maps/untitled")
- map_translation_Y=0
- map_translation_X = 0
+
  --test values, used for debugging, non essential
  test = 1 --if this value is bigger than 0 tests will be run
  testvalue2 = 0
@@ -73,4 +77,5 @@ general_tabs:SetSize(w,h*(1/5))
   objects_panel:SetSize (w,h*(1/5))
   policy_panel:SetSize (w,h*(1/5))
   orders_panel:SetSize (w,h*(1/5))
+   map:resize(width, height)
 end
