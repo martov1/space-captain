@@ -68,7 +68,6 @@ camera:set()
 map_deck0:draw()
 
 draw_grid (map_deck0)
-map_deck0:drawObjectLayer("infrastructure")
 
 camera:unset()
 ----DRAW GUI ---
