@@ -4,8 +4,9 @@
  active_instances = {} --contains all the created instances in the game
  files_list = {} --contains a list of clases files
  GUIs_list = {} --contains a list of loaded GUIs
- 
  active_instances_counter = 0 -- every time an object is created this increases by 1 and the previous number is assigned as the created instance's unique ID number
+ 
+ 
  
  
  function load_clases () --load all object filenames into clases_list and subtract ".lua" on each name, then load all clases
@@ -81,7 +82,6 @@ end
 function draw_grid (map)
  
 if draw_the_grid == true then
-  print ("hay")
   local A
   local R
       love.graphics.setLineStyle('rough')      
@@ -96,4 +96,20 @@ if draw_the_grid == true then
     love.graphics.line( 0,A*map.tileheight,  map.width*map.tilewidth ,A*map.tileheight  )
     end
   end
+end
+
+
+function load_decks (ship) -- loads all files in  decks(maps) of the selected ship (located at maps/ships) into STI
+  for i,k in pairs ( love.filesystem.getDirectoryItems( "maps/ships/"..ship )) do
+  
+
+  decks={}
+   decks[i] = sti.new("maps/ships/"..ship.."/".."deck" ..i)
+    
+    deck_loaded = true
+     
+   end
+  
+  
+  
   end

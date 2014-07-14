@@ -1,9 +1,14 @@
 --scratch
+
+
 object rendering
 necesito armar un instances_draw()
 tiene que dibujar PRIMERO las cosas que estan arriba de la pantalla y recursivamente las cosas que estan
 mas abajo para que lo que esta abajo tape lo que esta arriba si es que ocupa mas de 1 tile hacia arriba
 http://eliasdaler.wordpress.com/2013/11/20/z-order-in-top-down-2d-games/
+
+para cada deck va a haber un array que va a contener los objetos en el orden que deben ser dibujados mediante un table.sort
+que sera llamado una vez cada X segundos. los va a sortear definiendo cual tiene un Y mas alto que otro
 
 
 

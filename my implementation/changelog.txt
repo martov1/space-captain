@@ -1,0 +1,13 @@
+14/07/2014 
+-added load_decks () and manzana.determine_coordinates_in_grid
+
+-added "load map" interface to main menu, it lists aviable folders in maps/ships (they contain the diferent maps) and loads all the maps in the 
+selected folder into STI by using load_decks() 
+
+-started manzana.determine_coordinates_in_grid ()
+
+-added deck_loaded variable to determine if there is a map is loaded, if it is then the map will start updating and drawing
+
+-added loop to update all decks , draw all decks and resize them, needs optimizing and cleaning up
+
+-broke: function draw_grid (map)

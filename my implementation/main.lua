@@ -13,7 +13,7 @@ if arg[#arg] == "-debug" then require("mobdebug").start() end
 require ("utilities")
 require("loveframes/")
 require ("input")
-local sti = require("STI")
+sti = require("STI")
 require ("obj_manager");
 require ("tests")
  require("camera")
@@ -21,12 +21,13 @@ require ("tests")
  --initialize needed variables
  map_translation_Y=0
  map_translation_X = 0
- 
+ deck_loaded = false
  --load stuff into memory
  load_clases ()
  load_guis ()
  set_gui ("main_menu")
- map_deck0 = sti.new("maps/untitled")
+ 
+ 
 
 --- window configuration
 love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minheight=300})
@@ -48,9 +49,11 @@ function love.update(dt)
 
    instances_update()
   --end of required stuff
-      map_deck0:update(dt)
-
-  
+  if deck_loaded == true then
+  for i,k in pairs (decks) do
+      decks[i]:update(dt)
+  end
+  end
 
    
 end
@@ -64,10 +67,13 @@ function love.draw ()
 camera:set()
 
 
+if deck_loaded == true then
+  for i,k in pairs (decks) do
+      decks[i]:draw(dt)
+  end
+  end
 
-map_deck0:draw()
-
-draw_grid (map_deck0)
+draw_grid (decks)
 
 camera:unset()
 ----DRAW GUI ---
@@ -82,5 +88,11 @@ general_tabs:SetSize(w,h*(1/5))
   objects_panel:SetSize (w,h*(1/5))
   policy_panel:SetSize (w,h*(1/5))
   orders_panel:SetSize (w,h*(1/5))
-   map_deck0:resize(w, h)
+   
+   
+   if deck_loaded == true then
+  for i,k in pairs (decks) do
+      decks[i]:resize(w,h)
+  end
+  end
 end

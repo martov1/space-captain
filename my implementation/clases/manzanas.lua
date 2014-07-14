@@ -12,13 +12,24 @@ local manzana = {}
 manzana.id = active_instances_counter
 manzana.datos = "charly!"
 manzana.name = "manzana"
-    function manzana.update ()
+--manzana.Xtilecoordenates =     
+--manzana.Ytilecoordenates =
+
+function manzana.determine_coordinates_in_grid ()
+ 
+  
+  end
+function manzana.update ()
 
 
     end
 --aca inicializas sus funciones
 
+ function manzana.draw()
 
+   
+ end
+ 
 table.insert(active_instances , manzana )
 
 
