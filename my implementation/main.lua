@@ -53,6 +53,7 @@ function love.update(dt)
   if deck_loaded == true then
   for i,k in pairs (decks) do
       decks[i]:update(dt)
+      
   end
   end
 
@@ -69,7 +70,7 @@ camera:set()
 
 
 if deck_loaded == true then
-  decks[2]:draw(dt)
+  decks[current_deck]:draw(dt)
 
   end
 

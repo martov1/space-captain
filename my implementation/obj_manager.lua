@@ -100,15 +100,13 @@ end
 
 
 function load_decks (ship) -- loads all files in  decks(maps) of the selected ship (located at maps/ships) into STI
-  for i,k in pairs ( love.filesystem.getDirectoryItems( "maps/ships/"..ship )) do
-  
-
-  decks={}
-   decks[i] = sti.new("maps/ships/"..ship.."/".."deck" ..i)
+ decks={}
+ decks[1] = sti.new("maps/ships/"..ship.."/".."deck" ..1)
+   decks[2] = sti.new("maps/ships/"..ship.."/".."deck" ..2)
     
     deck_loaded = true
     
-   end
+   
   
   
   
