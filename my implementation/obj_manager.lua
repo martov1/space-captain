@@ -78,3 +78,22 @@ end
 end
 
 
+function draw_grid (map)
+ 
+if draw_the_grid == true then
+  print ("hay")
+  local A
+  local R
+      love.graphics.setLineStyle('rough')      
+      love.graphics.setColor(100,100,100)
+  
+  for R=0 ,map.width do --- draw vertical lines
+    love.graphics.line( R*map.tilewidth,0, R*map.tilewidth,map.height*map.tileheight  )
+    end   
+    
+    
+    for A=0 , map.height do -- draw horizontal lines
+    love.graphics.line( 0,A*map.tileheight,  map.width*map.tilewidth ,A*map.tileheight  )
+    end
+  end
+  end

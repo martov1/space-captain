@@ -63,7 +63,7 @@ function STI.new(map)
 		ex = map.width,
 		ey = map.height,
 	}
-	
+
 	map:init(path, framework)
 	
 	return map

@@ -2,7 +2,15 @@ function love.load()
   --debuger
 if arg[#arg] == "-debug" then require("mobdebug").start() end
 
+
+ --test values, used for debugging, non essential
+ test = 1 --if this value is bigger than 0 tests will be run
+ testvalue2 = 0
+ draw_the_grid = false
+
+
 --requires
+require ("utilities")
 require("loveframes/")
 require ("input")
 local sti = require("STI")
@@ -18,17 +26,14 @@ require ("tests")
  load_clases ()
  load_guis ()
  set_gui ("main_menu")
- map = sti.new("maps/untitled")
+ map_deck0 = sti.new("maps/untitled")
 
 --- window configuration
 love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minheight=300})
  
  --experimental features
 
- --test values, used for debugging, non essential
- test = 1 --if this value is bigger than 0 tests will be run
- testvalue2 = 0
- 
+
 end
 
 
@@ -43,7 +48,7 @@ function love.update(dt)
 
    instances_update()
   --end of required stuff
-      map:update(dt)
+      map_deck0:update(dt)
 
   
 
@@ -60,11 +65,12 @@ camera:set()
 
 
 
-map:draw()
+map_deck0:draw()
 
+draw_grid (map_deck0)
+map_deck0:drawObjectLayer("infrastructure")
 
 camera:unset()
-
 ----DRAW GUI ---
 loveframes.draw()
 end
@@ -77,5 +83,5 @@ general_tabs:SetSize(w,h*(1/5))
   objects_panel:SetSize (w,h*(1/5))
   policy_panel:SetSize (w,h*(1/5))
   orders_panel:SetSize (w,h*(1/5))
-   map:resize(width, height)
+   map_deck0:resize(w, h)
 end

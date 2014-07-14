@@ -1,0 +1,31 @@
+--scratch
+transformar data de tiles en coordenadas.
+---sctatch
+2)make object creation panel work
+
+press button --> sprite follows mouse and snaps to grid
+
+on click  --> crear objeto
+
+
+pasos para crear objeto:
+1) crear la instancia en el array de instancias
+2) si la instancia es un objeto y no otra cosa, agregarlo a un deck_array para facilitar el pathfinding
+3) darle al objeto coordenadas en tiles para que pathfinder las use
+4) modificar el collision map para que exista colision si el objeto la generase
+5) dibujar el objeto en el mapa usando la objets layer
+6) updatear el mapa, intentando hacerlo lo menos posible
+
+
+on right click -->sprite does not follow mouse or snap to grid
+
+---------- pathfinding
+
+1) buscar el objeto requerido iterando en la tabla que contiene los objetos del deck actual
+2) si no esta en el deck actual, chequear si existen las decks de arriba y abajo
+3) si existen, buscar en una y despues en la otra, seleccionar cual primero al azar
+4) cada vez que encontras un objeto, haces el pathfinding, hasta que encuentres el mas cercano en el deck actual o
+si no hay ninguno en el deck actual, en el de arriba o el de abajo
+5)una vez que en un deck encontraste el objeto mas cercano, navegar hasta el usando sus coordenadas
+
+

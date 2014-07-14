@@ -1,6 +1,7 @@
 local Map = {}
 local framework
 
+
 function Map:init(path, fw)
 	framework = fw
 	
@@ -593,5 +594,8 @@ end
 function Map:resize(w, h)
 	self.canvas = framework:newCanvas(w, h)
 end
+
+
+
 
 return Map

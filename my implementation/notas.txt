@@ -1,12 +1,13 @@
------ TO DO----
-1)fix map-screen interaction
+----- TO DO IN PRIORITY ORDER
+
+
 2)make object creation panel work
 3)figure out pathfinding
 4) figure out movement using pathfingin info
 
 
 
-
+50) usar map.setdrawrange para optimizar el dibujado del mapa
 ----- COSAS HECHAS------
 
 clases functions
