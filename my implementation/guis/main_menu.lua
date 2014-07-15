@@ -6,6 +6,7 @@ main_menu_frame:SetName("main menu")
 main_menu_frame:SetWidth (400)
 main_menu_frame:SetHeight(400)
 
+--START button
 local startbutton = loveframes.Create("button", main_menu_frame)
 startbutton:SetWidth(200)
 startbutton:CenterX ()
@@ -19,7 +20,7 @@ set_gui("general_gui")
 end
      
 
-
+--LOAD button
 local loadbutton = loveframes.Create("button", main_menu_frame)
 loadbutton:SetWidth(200)
 loadbutton:SetText("load")
@@ -29,6 +30,7 @@ loadbutton.OnClick = function(object, x, y)
 map_load_frame:SetVisible (true)
 end
 
+--EXIT button
      local exitbutton = loveframes.Create("button", main_menu_frame)
 exitbutton:SetWidth(200)
 exitbutton:SetText("exit")

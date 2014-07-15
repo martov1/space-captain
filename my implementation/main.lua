@@ -69,12 +69,13 @@ function love.draw ()
 -- DRAW WORLD ---
 camera:set()
 
-
+    --draw the current deck deck
 if deck_loaded == true then
   decks[current_deck]:draw(dt)
-  if draw_the_grid == true then draw_grid(decks[current_deck])end
+  love.graphics.print(current_deck, 0, 0) --shows current deck on screen
   end
-
+  if draw_the_grid == true then draw_grid(decks[current_deck])end
+   --decks
 
 
 
