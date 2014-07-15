@@ -22,7 +22,7 @@ require ("tests")
  map_translation_Y=0
  map_translation_X = 0
  deck_loaded = false
- current_deck = 2
+ current_deck = 1
  --load stuff into memory
  load_clases ()
  load_guis ()
