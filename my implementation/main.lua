@@ -71,7 +71,6 @@ camera:set()
 
 if deck_loaded == true then
   decks[current_deck]:draw(dt)
-
   end
 
 
