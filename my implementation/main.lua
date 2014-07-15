@@ -72,6 +72,7 @@ camera:set()
 
 if deck_loaded == true then
   decks[current_deck]:draw(dt)
+  if draw_the_grid == true then draw_grid(decks[current_deck])end
   end
 
 
