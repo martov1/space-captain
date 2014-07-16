@@ -113,3 +113,17 @@ draw_the_grid = checkbox1:GetChecked()
 end
 
 end
+
+function debug_right_click_menu ()
+
+   
+local menu = loveframes.Create("menu")
+menu:AddOption("Option A", "resources/images/brick.png", function() end)
+menu:AddOption("Option B", "resources/images/add.png", function() end)
+menu:AddDivider()
+menu:AddOption("Option C", "resources/images/building.png", function() end)
+menu:AddOption("Option D", "resources/images/accept.png", function() end)
+menu:AddDivider()
+menu:SetPos(love.mouse.getX(), love.mouse.getY())
+		
+end
