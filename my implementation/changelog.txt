@@ -1,5 +1,5 @@
 15/07/2014
--STARTED make_quads
+-STARTED make_quads ()
 -FIXED: function draw_grid (map)
 -FIXED: auto detection of  maps
 -ADDED: current deck indicator
