@@ -89,13 +89,13 @@ loveframes.draw()
 end
 
 function love.resize(w, h) --this stuff is called when window is resized, used mainly for GUI resizing
-general_tabs:SetPos(0,h*(4/5))
+if general_tabs then general_tabs:SetPos(0,h*(4/5))
 general_tabs:SetSize(w,h*(1/5))
  construction_panel:SetSize (w,h*(1/5))
  rooms_panel:SetSize (w,h*(1/5))
   objects_panel:SetSize (w,h*(1/5))
     orders_panel:SetSize (w,h*(1/5))
-   
+   end
    
    if deck_loaded == true then
   for i in pairs (decks) do
