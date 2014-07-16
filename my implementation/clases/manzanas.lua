@@ -8,7 +8,7 @@ manzana.y = y
 manzana.deck = deck
 manzana.id = active_instances_counter --unique ID of this instance
 manzana.xtile,manzana.ytile = determine_grid_coordinates(manzana)
- print (manzana.xtile,manzana.ytile)
+ 
  
  
 

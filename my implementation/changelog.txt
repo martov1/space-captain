@@ -3,7 +3,8 @@
 -FIXED: auto detection of  maps
 -ADDED: current deck indicator
 -ADDED determine_grid_coordinates
-
+-ADDED moved all the GUIs to GUI_manager
+-ADDED right click interface to debug menu
 14/07/2014 
 -ADDED load_decks () and manzana.determine_coordinates_in_grid
 

@@ -57,17 +57,6 @@ end
 
 
 
-function load_guis ()
-  
-  for i,k in pairs (GUIloader) do 
-     x = string.gsub( k, ".lua", "")  
-     GUIs_list[x]=x 
-     require ("guis/" .. GUIs_list[x] )
-     end
-  
-  
-end
-
 function instances_update ()
 
   for k,i in pairs (active_instances) do

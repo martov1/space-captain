@@ -1,25 +1,4 @@
 --scratch
-
-
-    debug_menu = loveframes.Create("frame")
-    debug_menu:SetName("debugging")
-    debug_menu:SetHeight(85)
-    debug_menu:SetVisible (true)
-    debug_menu:SetResizable (true)
-     local checkbox1 = loveframes.Create("checkbox", debug_menu)
-    checkbox1:SetText("show grid")
-    checkbox1:SetPos(5, 30)
-   checkbox1.OnChanged  = function(object, x, y)
-draw_the_grid = checkbox1:GetChecked()
-end
-
-
-
-
-
-
-
-
 object rendering
 necesito armar un instances_draw()
 tiene que dibujar PRIMERO las cosas que estan arriba de la pantalla y recursivamente las cosas que estan

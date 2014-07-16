@@ -25,8 +25,7 @@ require ("tests")
  debug_menu_active = false
  --load stuff into memory
  load_clases () --this loades all clases from the clases directory
- load_guis () --this loads all the guis from the guis directories
-debug_menu ()
+ debug_menu ()
  
 
 --- window configuration
