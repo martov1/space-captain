@@ -17,23 +17,23 @@ sti = require("STI")
 require ("obj_manager");
 require ("tests")
  require("camera")
- 
+ require("GUI_manager")
  --initialize needed variables
  map_translation_Y=0
  map_translation_X = 0
  deck_loaded = false -- when the game is loaded, no decks (or maps) are currently loaded
- 
+ debug_menu_active = false
  --load stuff into memory
  load_clases () --this loades all clases from the clases directory
  load_guis () --this loads all the guis from the guis directories
- set_gui ("main_menu") --the GUI loaded at load time is the main menu
- 
+debug_menu ()
  
 
 --- window configuration
 love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minheight=300})
  
  --experimental features
+ main_menu("activated")
 
 
 end
@@ -90,8 +90,7 @@ general_tabs:SetSize(w,h*(1/5))
  construction_panel:SetSize (w,h*(1/5))
  rooms_panel:SetSize (w,h*(1/5))
   objects_panel:SetSize (w,h*(1/5))
-  policy_panel:SetSize (w,h*(1/5))
-  orders_panel:SetSize (w,h*(1/5))
+    orders_panel:SetSize (w,h*(1/5))
    
    
    if deck_loaded == true then

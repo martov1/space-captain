@@ -56,9 +56,7 @@ end
 
 
 
-function set_gui (name_of_gui)
-loveframes.SetState(name_of_gui )  
-end
+
 function load_guis ()
   
   for i,k in pairs (GUIloader) do 
