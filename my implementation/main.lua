@@ -3,11 +3,6 @@ function love.load()
 if arg[#arg] == "-debug" then require("mobdebug").start() end
 
 
- --test values, used for debugging, non essential
- test = 1 --if this value is bigger than 0 tests will be run
- testvalue2 = 0
- draw_the_grid = false
-
 
 --requires
 require ("utilities")
@@ -23,16 +18,26 @@ require ("tests")
  map_translation_X = 0
  deck_loaded = false -- when the game is loaded, no decks (or maps) are currently loaded
  debug_menu_active = false
+ tileWidth = nil
+ tileHeight = nil
  --load stuff into memory
  load_clases () --this loades all clases from the clases directory
- debug_menu ()
  
+ load_atlases()
+ make_quads()
 
 --- window configuration
 love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minheight=300})
  
  --experimental features
  main_menu("activated")
+ 
+ --test values, used for debugging, non essential
+ test = 1 --if this value is bigger than 0 tests will be run
+ testvalue2 = 0
+ draw_the_grid = false
+debug_menu ()
+debug_menu:SetVisible (false)
 
 
 end

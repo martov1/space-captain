@@ -1,4 +1,12 @@
 ----- TO DO IN PRIORITY ORDER
+graphics:
+A)dividir textura en quads de forma automatica dependiendo del nombre del atlas
+B) añadir como propiedad a cada objeto el quad que le corresponde
+C) añadir las instancias existentes a listas divididas por decks Y ordenar los objetos de menor a mayor usando Y como parametro (cada cierto tiempo medianamente largo y random)
+D) iterar en la tabla que corresponde al current deck, ubicar los items que estan en el viewport y dibujarlos.
+
+
+
 terminar manzana.determine_coordinates_in_grid ()
 terminar  function manzana.draw()
 
@@ -8,8 +16,9 @@ terminar  function manzana.draw()
 5) figure out movement using pathfingin info
 
 
-
+optimizar:
 50) usar map.setdrawrange para optimizar el dibujado del mapa
+51) usar imagenes con un formato comprimido
 ----- COSAS HECHAS------
 
 clases functions

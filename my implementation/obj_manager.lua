@@ -5,10 +5,10 @@
  files_list = {} --contains a list of clases files
  GUIs_list = {} --contains a list of loaded GUIs
  active_instances_counter = 0 -- every time an object is created this increases by 1 and the previous number is assigned as the created instance's unique ID number
- 
- 
- 
- 
+ atlas_loader = love.filesystem.getDirectoryItems( "resources/tilemaps/atlases")
+ atlas_list={}
+ atlases = {}
+ quads = {}
  function load_clases () --load all object filenames into clases_list and subtract ".lua" on each name, then load all clases
     
    for i,k in pairs (clases_loader) do 
@@ -97,6 +97,8 @@ for A,B in pairs (love.filesystem.getDirectoryItems( "maps/ships/"..ship )) do
  end
  
  deck_loaded = true
+  tilewidth = decks[1].tilewidth
+ tileHeight = decks[1].tileHeight
  return (A)
  end
 
@@ -108,3 +110,16 @@ function determine_grid_coordinates(instance_or_object) --determines in what gri
   end
 
 --fin
+function load_atlases () -- here I load all the atlases in resources/tilemaps/atlases
+    for i,k in pairs (atlas_loader) do 
+      local x
+      x = string.gsub( k, ".lua", "")  
+      atlas_list[x]=x 
+      atlases[x] = love.graphics.newImage("resources/tilemaps/atlases/".. x )
+      
+    end
+  end
+
+function make_quads () -- here the quads are made, this will need some touch when adding atlases
+    
+end
