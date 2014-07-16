@@ -1,7 +1,5 @@
 ----- TO DO IN PRIORITY ORDER
 terminar manzana.determine_coordinates_in_grid ()
-loop to update all decks and draw all decks in love.update and love.draw and love.resize, needs optimizing and cleaning up
-need a way to determine current deck to fix function draw_grid (map)
 terminar  function manzana.draw()
 
 2) object rendering

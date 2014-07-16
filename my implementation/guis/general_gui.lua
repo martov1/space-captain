@@ -24,7 +24,7 @@
     construction_wall:SetPos(0, 10)
     construction_wall:SizeToImage()
     construction_wall.OnClick = function(object, x, y)
-    for i,k in pairs(map_deck0.layers.infrastructure) do print (i,k)end
+    
   end
 
 --debug menu
@@ -40,6 +40,5 @@
    checkbox1.OnChanged  = function(object, x, y)
 draw_the_grid = checkbox1:GetChecked()
 end
-    local checkbox2 = loveframes.Create("checkbox", debug_menu)
-    checkbox2:SetText("Checkbox 2")
-    checkbox2:SetPos(5, 60)
+
+

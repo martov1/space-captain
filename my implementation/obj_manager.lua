@@ -100,7 +100,7 @@ end
 
 
 function load_decks (ship) -- loads all files in  decks(maps) of the selected ship (located at maps/ships) into STI
- 
+ current_deck = 1
  decks={}
  
  local A
@@ -112,5 +112,12 @@ for A,B in pairs (love.filesystem.getDirectoryItems( "maps/ships/"..ship )) do
  deck_loaded = true
  return (A)
  end
+
+function determine_grid_coordinates(instance_or_object) --determines in what grid coordinates is an object based on it's current x,y and deck (so that if for whatever reason one deck were to be different in size to another, it wount crash)
+ local grid_coordinates_x = math.floor(instance_or_object.x
+   / decks[instance_or_object.deck].tilewidth) + 1--derermines X grid coordinate by dividing the current x coordinate of the object by the tilewidth of the current deck and then taking the whole number only
+  local grid_coordinates_y = math.floor(instance_or_object.y / decks[instance_or_object.deck].tileheight) + 1 --here, but for Y
+  return grid_coordinates_x,grid_coordinates_y
+  end
 
 --fin

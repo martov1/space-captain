@@ -21,12 +21,12 @@ require ("tests")
  --initialize needed variables
  map_translation_Y=0
  map_translation_X = 0
- deck_loaded = false
- current_deck = 1
+ deck_loaded = false -- when the game is loaded, no decks (or maps) are currently loaded
+ 
  --load stuff into memory
- load_clases ()
- load_guis ()
- set_gui ("main_menu")
+ load_clases () --this loades all clases from the clases directory
+ load_guis () --this loads all the guis from the guis directories
+ set_gui ("main_menu") --the GUI loaded at load time is the main menu
  
  
 
@@ -95,7 +95,7 @@ general_tabs:SetSize(w,h*(1/5))
    
    
    if deck_loaded == true then
-  for i,k in pairs (decks) do
+  for i in pairs (decks) do
       decks[i]:resize(w,h)
   end
   end
