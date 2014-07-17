@@ -1,8 +1,7 @@
 ----- TO DO IN PRIORITY ORDER
-DO transform_into_grid_coordinates()
 graphics:
-A)dividir textura en quads de forma automatica dependiendo del nombre del atlas
-B) añadir como propiedad a cada objeto el quad que le corresponde
+HECHO --A)dividir textura en quads de forma automatica dependiendo del nombre del atlas 
+HECHO --B) añadir como propiedad a cada objeto el quad que le corresponde (A MANO SI O SI)
 C) añadir las instancias existentes a listas divididas por decks Y ordenar los objetos de menor a mayor usando Y como parametro (cada cierto tiempo medianamente largo y random)
 D) iterar en la tabla que corresponde al current deck, ubicar los items que estan en el viewport y dibujarlos.
 
