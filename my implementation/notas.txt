@@ -17,6 +17,7 @@ terminar  function manzana.draw()
 
 
 optimizar:
+49) creo que si agragas layers en el mapa eso emperoa un monton la preformance, sacar layers de los mapas y ver que pasa
 50) usar map.setdrawrange para optimizar el dibujado del mapa
 51) usar imagenes con un formato comprimido
 ----- COSAS HECHAS------

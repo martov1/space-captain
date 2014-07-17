@@ -23,6 +23,7 @@ function tests ()
  show_loaded_clases()
  print ("LOADED GUIS")
 profiler = newProfiler()
+profiler_activated = true
     profiler:start()
 show_guis()
 

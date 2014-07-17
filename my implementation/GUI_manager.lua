@@ -37,12 +37,13 @@ exitbutton:CenterX ()
 exitbutton:SetY (main_menu_frame:GetHeight()*(8/10))
 exitbutton.OnClick = function(object, x, y)
 object:SetText("You clicked the button!")
+ if  profiler_activated == true then 
  profiler:stop()
 
     local outfile = io.open( "profile.txt", "w+" )
     profiler:report( outfile )
     outfile:close()
-
+end
 love.event.quit()
 end
 

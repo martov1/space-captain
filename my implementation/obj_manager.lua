@@ -1,11 +1,11 @@
- clases_list = {} --list of all clases in /clases
+ clases_list = {} --contains a list of all clases in /clases folder
  clases_loader = love.filesystem.getDirectoryItems( "clases/")
  GUIloader= love.filesystem.getDirectoryItems( "guis/")
  active_instances = {} --contains all the created instances in the game
  files_list = {} --contains a list of clases files
  GUIs_list = {} --contains a list of loaded GUIs
  active_instances_counter = 0 -- every time an object is created this increases by 1 and the previous number is assigned as the created instance's unique ID number
- atlas_loader = love.filesystem.getDirectoryItems( "resources/tilemaps/atlases")
+ atlas_loader = love.filesystem.getDirectoryItems( "resources/tilemaps/atlases") --contains the names of the atlases files
  atlas_list={}
  atlases = {}
  quads = {}
@@ -110,27 +110,39 @@ function determine_grid_coordinates(instance_or_object) --determines in what gri
   return grid_coordinates_x,grid_coordinates_y
   end
 
---fin
+
 function load_atlases () -- here I load all the atlases in resources/tilemaps/atlases
     for i,k in pairs (atlas_loader) do 
       atlases[k] = love.graphics.newImage("resources/tilemaps/atlases/".. k )
+    --  for i,k in pairs (atlases) do print (i,k)end --activate this to list all loaded atlases in output
       
     end
   end
 
 function make_quads () -- here the quads are made, this will need some touch when adding atlases
+  local i,k,x,y
   for i,k in pairs (atlases) do
-    if string.find(i, "1x1") ~= nil then 
+    --this block finds atlases with "1x1" in their file name and makes quads of 1 tile x 1 tile sin size. 
+    --the tile size is determined by the "tilesize" variable, that get's it's data from deck[1]
+    
+    if string.find(i, "1x1") ~= nil then --if "1x1" is in the name of the file (file names are contained in "atlases")
       for x=1, atlases[i]:getWidth()/tilewidth do
         for y=1, atlases[i]:getHeight()/tileheight do
-          print(i,x,y)
+          
+          quads[i..x..y] = love.graphics.newQuad( tilewidth*(x-1), tileheight*(y-1), tilewidth, tileheight, atlases[i]:          getWidth(), atlases[i]:getHeight())
+        
         end
       end 
     end
-    
-    
+   
     
   end
+  --for i,k in pairs(quads) do print (i,k) end --prints the quads
 end
+
+function transform_into_grid_coordinates()
+  
+  
+  end
 
 --end of doc

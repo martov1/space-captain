@@ -50,7 +50,7 @@ function love.update(dt)
 
   -- required stff
   loveframes.update(dt)
-   --tests()
+  -- tests()
 
    instances_update()
   --end of required stuff
@@ -77,9 +77,13 @@ camera:set()
 if deck_loaded == true then
   decks[current_deck]:draw(dt)
   love.graphics.print(current_deck, 0, 0) --shows current deck on screen
+  --love.graphics.draw(atlases["A1x1.png"], quads["A1x1.png11"], 50, 50) ejemplo de como dibujar un tile
   end
+    --draw the grid if necesary
   if draw_the_grid == true then draw_grid(decks[current_deck])end
-   --decks
+   --test
+    
+  
 
 
 

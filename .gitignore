@@ -1,7 +1,7 @@
 #################
 ## Eclipse
 #################
-
+profile.txt
 *.pydevproject
 .project
 .metadata
