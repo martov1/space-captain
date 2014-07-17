@@ -22,7 +22,8 @@ function tests ()
    print ("LOADED CLASES")
  show_loaded_clases()
  print ("LOADED GUIS")
- 
+profiler = newProfiler()
+    profiler:start()
 show_guis()
 
 

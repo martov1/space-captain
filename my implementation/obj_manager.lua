@@ -98,7 +98,8 @@ for A,B in pairs (love.filesystem.getDirectoryItems( "maps/ships/"..ship )) do
  
  deck_loaded = true
   tilewidth = decks[1].tilewidth
- tileHeight = decks[1].tileHeight
+ tileheight = decks[1].tileheight
+ make_quads()
  return (A)
  end
 
@@ -112,14 +113,24 @@ function determine_grid_coordinates(instance_or_object) --determines in what gri
 --fin
 function load_atlases () -- here I load all the atlases in resources/tilemaps/atlases
     for i,k in pairs (atlas_loader) do 
-      local x
-      x = string.gsub( k, ".lua", "")  
-      atlas_list[x]=x 
-      atlases[x] = love.graphics.newImage("resources/tilemaps/atlases/".. x )
+      atlases[k] = love.graphics.newImage("resources/tilemaps/atlases/".. k )
       
     end
   end
 
 function make_quads () -- here the quads are made, this will need some touch when adding atlases
+  for i,k in pairs (atlases) do
+    if string.find(i, "1x1") ~= nil then 
+      for x=1, atlases[i]:getWidth()/tilewidth do
+        for y=1, atlases[i]:getHeight()/tileheight do
+          print(i,x,y)
+        end
+      end 
+    end
     
+    
+    
+  end
 end
+
+--end of doc

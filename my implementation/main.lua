@@ -5,6 +5,7 @@ if arg[#arg] == "-debug" then require("mobdebug").start() end
 
 
 --requires
+require("profiler")
 require ("utilities")
 require("loveframes/")
 require ("input")
@@ -24,7 +25,7 @@ require ("tests")
  load_clases () --this loades all clases from the clases directory
  
  load_atlases()
- make_quads()
+
 
 --- window configuration
 love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minheight=300})
@@ -39,7 +40,6 @@ love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minhei
 debug_menu ()
 debug_menu:SetVisible (false)
 
-
 end
 
 
@@ -50,16 +50,16 @@ function love.update(dt)
 
   -- required stff
   loveframes.update(dt)
-   tests()
+   --tests()
 
    instances_update()
   --end of required stuff
-  if deck_loaded == true then
-  for i,k in pairs (decks) do
-      decks[i]:update(dt)
+  --if deck_loaded == true then
+  --for i,k in pairs (decks) do
+    --  decks[current_deck]:update(dt)
       
-  end
-  end
+ --end
+  --end
 
    
 end
