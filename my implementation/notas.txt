@@ -1,4 +1,5 @@
 ----- TO DO IN PRIORITY ORDER
+DO transform_into_grid_coordinates()
 graphics:
 A)dividir textura en quads de forma automatica dependiendo del nombre del atlas
 B) añadir como propiedad a cada objeto el quad que le corresponde

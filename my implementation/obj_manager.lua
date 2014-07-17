@@ -119,7 +119,7 @@ function load_atlases () -- here I load all the atlases in resources/tilemaps/at
     end
   end
 
-function make_quads () -- here the quads are made, this will need some touch when adding atlases
+function make_quads () -- automatically generates quads based on the atlases in resources/tilemaps/atlases, their name, size and the configured tilewidth and tileheigt if an atlas has 1x1 in it's filename then 1 tile by 1 tile quads will be made for the atlas, the name for each quad will be quads[(name of the atlas file)(x coordinate in tiles)(y coordinate in tiles)] for example,        quads[Atlas1x1.png12] is the image in the first tile in the second row, in the file "Atlas1x1.png"
   local i,k,x,y
   for i,k in pairs (atlases) do
     --this block finds atlases with "1x1" in their file name and makes quads of 1 tile x 1 tile sin size. 
@@ -139,7 +139,7 @@ function make_quads () -- here the quads are made, this will need some touch whe
     
     if string.find(i, "1x2") ~= nil then --if "1x2" is in the name of the file (file names are contained in "atlases")
       for x=1, atlases[i]:getWidth()/tilewidth do
-        for y=1, atlases[i]:getHeight()/(tileheight*2) do
+        for y=1, atlases[i]:getHeight()/(tileheight*2) do 
           
           quads[i..x..y] = love.graphics.newQuad( tilewidth*(x-1), 2*tileheight*(y-1), tilewidth, tileheight*2, atlases[i]:          getWidth(), atlases[i]:getHeight())
         
@@ -147,6 +147,19 @@ function make_quads () -- here the quads are made, this will need some touch whe
       end 
       
     end
+    --this block finds atlases with "2X2" in their file name and makes quads of 1 tile x 1 tile sin size. 
+    --the tile size is determined by the "tilesize" variable, that get's it's data from deck[1]
+    if string.find(i, "2x2") ~= nil then --if "1x2" is in the name of the file (file names are contained in "atlases")
+      for x=1, atlases[i]:getWidth()/tilewidth*2 do
+        for y=1, atlases[i]:getHeight()/(tileheight*2) do
+          
+          quads[i..x..y] = love.graphics.newQuad( 2*tilewidth*(x-1), 2*tileheight*(y-1), tilewidth*2, tileheight*2, atlases[i]:          getWidth(), atlases[i]:getHeight())
+        
+        end
+      end 
+      
+    end
+  
   end
   for i,k in pairs(quads) do print (i,k) end --prints the quads
 end
