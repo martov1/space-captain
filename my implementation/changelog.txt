@@ -1,4 +1,5 @@
 16/07/2014
+-ADDED: to make_quads, automatic generation of quads for 1x2 tilesets 
 -ADDED: to make_quads, automatic generation of quads for 1x1 tilesets 
 15/07/2014
 -STARTED make_quads ()

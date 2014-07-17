@@ -129,15 +129,26 @@ function make_quads () -- here the quads are made, this will need some touch whe
       for x=1, atlases[i]:getWidth()/tilewidth do
         for y=1, atlases[i]:getHeight()/tileheight do
           
-          quads[i..x..y] = love.graphics.newQuad( tilewidth*(x-1), tileheight*(y-1), tilewidth, tileheight, atlases[i]:          getWidth(), atlases[i]:getHeight())
+          quads[i..x..y] = love.graphics.newQuad( tilewidth*(x-1), tileheight*(y-1), tilewidth, tileheight, atlases[i]:              getWidth(), atlases[i]:getHeight())
         
         end
       end 
     end
-   
+        --this block finds atlases with "2x1" in their file name and makes quads of 1 tile x 1 tile sin size. 
+    --the tile size is determined by the "tilesize" variable, that get's it's data from deck[1]
     
+    if string.find(i, "1x2") ~= nil then --if "1x2" is in the name of the file (file names are contained in "atlases")
+      for x=1, atlases[i]:getWidth()/tilewidth do
+        for y=1, atlases[i]:getHeight()/(tileheight*2) do
+          
+          quads[i..x..y] = love.graphics.newQuad( tilewidth*(x-1), 2*tileheight*(y-1), tilewidth, tileheight*2, atlases[i]:          getWidth(), atlases[i]:getHeight())
+        
+        end
+      end 
+      
+    end
   end
-  --for i,k in pairs(quads) do print (i,k) end --prints the quads
+  for i,k in pairs(quads) do print (i,k) end --prints the quads
 end
 
 function transform_into_grid_coordinates()
