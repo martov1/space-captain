@@ -103,7 +103,9 @@ function general_gui (activated)
         construction_wall:SetPos(0, 10)
         construction_wall:SizeToImage()
         construction_wall.OnClick = function(object, x, y)
-      end
+          current_pointer = quads["A1x1.png11"]
+          
+        end
  end
 function debug_menu (activated)
 
@@ -134,3 +136,10 @@ menu:AddDivider()
 menu:SetPos(love.mouse.getX(), love.mouse.getY())
 		
 end
+
+function draw_current_pointer() --changes the mouse pointer (for building for example)
+         if current_pointer ~=nil then 
+           love.graphics.draw(atlases["A1x1.png"], quads["A1x1.png12"], love.mouse.getX(), love.mouse.getY())
+         end
+  
+  end

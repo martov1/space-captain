@@ -114,7 +114,7 @@ function determine_grid_coordinates(instance_or_object) --determines in what gri
 function load_atlases () -- here I load all the atlases in resources/tilemaps/atlases
     for i,k in pairs (atlas_loader) do 
       atlases[k] = love.graphics.newImage("resources/tilemaps/atlases/".. k )
-    --  for i,k in pairs (atlases) do print (i,k)end --activate this to list all loaded atlases in output
+    --for i,k in pairs (atlases) do print (i,k)end --activate this to list all loaded atlases in output
       
     end
   end
@@ -164,9 +164,11 @@ function make_quads () -- automatically generates quads based on the atlases in 
   for i,k in pairs(quads) do print (i,k) end --prints the quads
 end
 
-function transform_into_grid_coordinates()
-  
-  
+function transform_into_grid_coordinates(x,y)
+  local tileX,tileY
+  tileX = math.ceil(x/tilewidth)
+  tileY = math.ceil(y/tileheight)
+  return tileX,tileY
   end
 
 --end of doc

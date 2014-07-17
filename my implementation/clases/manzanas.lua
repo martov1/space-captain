@@ -8,7 +8,7 @@ manzana.y = y
 manzana.deck = deck
 manzana.id = active_instances_counter --unique ID of this instance
 manzana.xtile,manzana.ytile = determine_grid_coordinates(manzana)
- 
+manzana.tile = quads[A1x1.png11]
  
  
 
@@ -33,3 +33,6 @@ function manzana.update ()
 table.insert(active_instances , manzana )
 end
 
+function build_manzana ()
+  
+  end

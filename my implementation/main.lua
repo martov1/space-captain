@@ -19,8 +19,9 @@ require ("tests")
  map_translation_X = 0
  deck_loaded = false -- when the game is loaded, no decks (or maps) are currently loaded
  debug_menu_active = false
- tileWidth = nil
- tileHeight = nil
+ tilewidth = nil
+ tileheight = nil
+ current_pointer = nil
  --load stuff into memory
  load_clases () --this loades all clases from the clases directory
  
@@ -57,7 +58,7 @@ function love.update(dt)
   -- required stuff
   loveframes.update(dt)
   --debug stuff
-   -- tests()
+  --tests()
 end
 
 
@@ -78,7 +79,7 @@ if deck_loaded == true then
     --draw the grid if necesary
   if draw_the_grid == true then draw_grid(decks[current_deck])end
    --test
-    
+ draw_current_pointer()
   
 
 
@@ -86,6 +87,7 @@ if deck_loaded == true then
 camera:unset()
 ----DRAW GUI ---
 loveframes.draw()
+
 end
 
 function love.resize(w, h) --this stuff is called when window is resized, used mainly for GUI resizing

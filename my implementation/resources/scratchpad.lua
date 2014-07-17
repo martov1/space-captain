@@ -1,10 +1,5 @@
 
  
-
-
-
-
-
 --scratch
 object rendering
 necesito armar un instances_draw()

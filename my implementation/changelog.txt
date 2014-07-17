@@ -1,4 +1,6 @@
 16/07/2014
+-ADDED: draw_current_pointer(), changes the image attached to the cursor
+-ADDED: wall build button makes pointer change
 -ADDED: to make_quads, automatic generation of quads for 1x2 tilesets 
 -ADDED: to make_quads, automatic generation of quads for 1x1 tilesets 
 15/07/2014
