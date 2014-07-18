@@ -1,5 +1,5 @@
  clases_list = {} --contains a list of all clases in /clases folder
- 
+ clases={} --contains all actual clases
  GUIloader= love.filesystem.getDirectoryItems( "guis/")
  active_instances = {} --contains all the created instances in the game
  files_list = {} --contains a list of clases files
@@ -181,9 +181,7 @@ function get_current_mouse_tile_coordinates()
   
 end
 
-function load_objects
-  
-  end
+
 
 function build_object (object, x,y) --spawns an instance of object in x and y coordinates
   if object_to_build_on_next_click then

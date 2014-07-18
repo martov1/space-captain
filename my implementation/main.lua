@@ -57,8 +57,9 @@ function love.update(dt)
 
   -- required stuff
   loveframes.update(dt)
+  clases.manzana:create()
   --debug stuff
-  tests()
+  --tests()
 end
 
 
