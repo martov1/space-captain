@@ -181,6 +181,10 @@ function get_current_mouse_tile_coordinates()
   
 end
 
+function load_objects
+  
+  end
+
 function build_object (object, x,y) --spawns an instance of object in x and y coordinates
   if object_to_build_on_next_click then
     
