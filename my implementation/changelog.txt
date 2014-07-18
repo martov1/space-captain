@@ -1,4 +1,5 @@
 16/07/2014
+-ADDED: set_mouse_pointer() to set what image will be used to draw the mouse pointer
 -ADDED: draw_current_pointer(), changes the image attached to the cursor
 -ADDED: wall build button makes pointer change
 -ADDED: to make_quads, automatic generation of quads for 1x2 tilesets 

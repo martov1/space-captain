@@ -103,7 +103,7 @@ function general_gui (activated)
         construction_wall:SetPos(0, 10)
         construction_wall:SizeToImage()
         construction_wall.OnClick = function(object, x, y)
-          current_pointer = quads["A1x1.png11"]
+         set_mouse_pointer(quads["A1x1.png11"], atlases["A1x1.png"])
           
         end
  end
@@ -137,9 +137,14 @@ menu:SetPos(love.mouse.getX(), love.mouse.getY())
 		
 end
 
-function draw_current_pointer() --changes the mouse pointer (for building for example)
-         if current_pointer ~=nil then 
-           love.graphics.draw(atlases["A1x1.png"], quads["A1x1.png12"], love.mouse.getX(), love.mouse.getY())
+function draw_current_pointer() --draws the pointer each frame using the variables set by set_mouse_pointer()
+         if mouse_pointer ~=nil then 
+           love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , love.mouse.getX()-(tilewidth/2), love.mouse.getY()-(tilewidth/2))
          end
   
+end
+function set_mouse_pointer(quad,atlas) --sets what image will be used for the mouse pointer
+  mouse_pointer = {}
+  mouse_pointer.quad = quad
+  mouse_pointer.atlas = atlas
   end
