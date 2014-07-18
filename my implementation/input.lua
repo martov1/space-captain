@@ -1,5 +1,5 @@
 function love.mousepressed(x, y, button)
- mouse_pressed = true
+ --build_objects(object_to_build_on_next_click, love.mouse.getX(),love.mouse.getY())
  
     loveframes.mousepressed(x, y, button)
 if debug_menu.hover and button == "r" then debug_right_click_menu() end
@@ -11,7 +11,8 @@ end
 
  
 function love.mousereleased(x, y, button)
- mouse_pressed =  false
+if button == "l" then mouse_pressed = false end
+
     -- your code
  
     loveframes.mousereleased(x, y, button)

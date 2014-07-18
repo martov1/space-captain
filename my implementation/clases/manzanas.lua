@@ -34,5 +34,6 @@ table.insert(active_instances , manzana )
 end
 
 function build_manzana ()
-  
+ set_mouse_pointer(quads["A1x1.png11"], atlases["A1x1.png"],true)
+  --if mouse_pressed == true then 
   end

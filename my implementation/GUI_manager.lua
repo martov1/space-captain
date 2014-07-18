@@ -103,7 +103,7 @@ function general_gui (activated)
         construction_wall:SetPos(0, 10)
         construction_wall:SizeToImage()
         construction_wall.OnClick = function(object, x, y)
-         set_mouse_pointer(quads["A1x1.png11"], atlases["A1x1.png"])
+         object_to_build_on_next_click = manzana --when the player clicks LMB, function build_objects() will be called, with this value as parameter
           
         end
  end
@@ -138,13 +138,23 @@ menu:SetPos(love.mouse.getX(), love.mouse.getY())
 end
 
 function draw_current_pointer() --draws the pointer each frame using the variables set by set_mouse_pointer()
-         if mouse_pointer ~=nil then 
-           love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , love.mouse.getX()-(tilewidth/2), love.mouse.getY()-(tilewidth/2))
+        
+        if mouse_pointer ~=nil and mouse_pointer.snap == true then 
+          local x,y
+           x, y = get_current_mouse_tile_coordinates()
+           love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , x*tilewidth, y*tilewidth)
+         else
+              if mouse_pointer ~=nil then
+              love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , love.mouse.getX(), love.mouse.getY()) end
          end
   
 end
-function set_mouse_pointer(quad,atlas) --sets what image will be used for the mouse pointer
+function set_mouse_pointer(quad,atlas,snap) --sets what image will be used for the mouse pointer, optional snap[bool] determines if the pointer will snap to grid
+  
   mouse_pointer = {}
   mouse_pointer.quad = quad
   mouse_pointer.atlas = atlas
+  if snap then 
+    mouse_pointer.snap = snap else mouse_pointer.snap = false
+    end
   end

@@ -53,12 +53,12 @@ function love.update(dt)
   -- tests()
 
    instances_update()
-
+   
 
   -- required stuff
   loveframes.update(dt)
   --debug stuff
-  --tests()
+  tests()
 end
 
 

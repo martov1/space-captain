@@ -1,5 +1,5 @@
  clases_list = {} --contains a list of all clases in /clases folder
- clases_loader = love.filesystem.getDirectoryItems( "clases/")
+ 
  GUIloader= love.filesystem.getDirectoryItems( "guis/")
  active_instances = {} --contains all the created instances in the game
  files_list = {} --contains a list of clases files
@@ -10,7 +10,7 @@
  atlases = {}
  quads = {}
  function load_clases () --load all object filenames into clases_list and subtract ".lua" on each name, then load all clases
-    
+    clases_loader = love.filesystem.getDirectoryItems( "clases/")
    for i,k in pairs (clases_loader) do 
      x = string.gsub( k, ".lua", "")  
      clases_list[x]=x 
@@ -161,14 +161,33 @@ function make_quads () -- automatically generates quads based on the atlases in 
     end
   
   end
-  for i,k in pairs(quads) do print (i,k) end --prints the quads
+  --for i,k in pairs(quads) do print (i,k) end --prints the quads
 end
 
 function transform_into_grid_coordinates(x,y)
   local tileX,tileY
-  tileX = math.ceil(x/tilewidth)
-  tileY = math.ceil(y/tileheight)
+  tileX = math.floor(x/tilewidth)
+  tileY = math.floor(y/tileheight)
+  
   return tileX,tileY
   end
 
 --end of doc
+function get_current_mouse_tile_coordinates()
+   local x,y
+   
+   x,y = transform_into_grid_coordinates(love.mouse.getX(),love.mouse.getY())
+   return x,y
+  
+end
+
+function build_object (object, x,y) --spawns an instance of object in x and y coordinates
+  if object_to_build_on_next_click then
+    
+    
+    
+  object_to_build_on_next_click=nil
+ end
+    
+  
+  end
