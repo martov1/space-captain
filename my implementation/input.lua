@@ -1,5 +1,11 @@
 function love.mousepressed(x, y, button)
-  build_objects(object_to_build_on_next_click, love.mouse.getX(),love.mouse.getY())
+ if button == "l" and object_to_build_on_next_click ~= nil then
+   build_objects(object_to_build_on_next_click, love.mouse.getX(),love.mouse.getY()) 
+  end
+if button == "r" and  object_to_build_on_next_click ~= nil then
+  set_mouse_pointer()
+  
+  end
  
     loveframes.mousepressed(x, y, button)
 if debug_menu.hover and button == "r" then debug_right_click_menu() end

@@ -33,7 +33,7 @@ love.window.setMode(800, 600, {resizable=true, vsync=false, minwidth=400, minhei
  
  --experimental features
  main_menu("activated")
- 
+  set_mouse_pointer() --no arguments, so the current pointer is nil
  --test values, used for debugging, non essential
  test = 1 --if this value is bigger than 0 tests will be run
  testvalue2 = 0
@@ -57,7 +57,7 @@ function love.update(dt)
 
   -- required stuff
   loveframes.update(dt)
-  clases.manzana:create()
+ 
   --debug stuff
   --tests()
 end
@@ -73,14 +73,17 @@ camera:set()
 
     --draw the current deck deck
 if deck_loaded == true then
+
   decks[current_deck]:draw(dt)
   love.graphics.print(current_deck, 0, 0) --shows current deck on screen
   love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
+   draw_current_pointer() 
+  
   end
     --draw the grid if necesary
   if draw_the_grid == true then draw_grid(decks[current_deck])end
    --test
- draw_current_pointer()
+
   
 
 

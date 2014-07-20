@@ -183,12 +183,12 @@ end
 
 
 
-function build_object (object, x,y) --spawns an instance of object in x and y coordinates
+function build_objects (object, x,y) --spawns an instance of object in x and y coordinates
   if object_to_build_on_next_click then
+    clases[object]:create(love.mouse.getX(),love.mouse.getY(), decks[current_deck])
+     clases[object]:mouse_pointer()
     
-    
-    
-  object_to_build_on_next_click=nil
+ 
  end
     
   

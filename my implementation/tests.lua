@@ -18,6 +18,7 @@ function show_guis ()
 
 function tests ()
  if (test >= 1) then  -- runs a test if test = 1
+  
   test = 0
    print ("LOADED CLASES")
  show_loaded_clases()

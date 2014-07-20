@@ -1,6 +1,8 @@
 ------------ Class manzana -------------
 clases.manzana = {}
-  
+ function clases.manzana.mouse_pointer ()
+   set_mouse_pointer(quads["A1x1.png11"], atlases["A1x1.png"],true)
+  end
 function clases.manzana.create (x,y,deck)
   print ("hola")
 active_instances_counter =  active_instances_counter + 1 --this is used to assign every instance a unique ID
@@ -9,9 +11,9 @@ manzana_instance.x = x
 manzana_instance.y = y
 manzana_instance.deck = deck
 manzana_instance.id = active_instances_counter --unique ID of this instance
-manzana_instance.xtile,manzana_instance.ytile = determine_grid_coordinates(manzana_instance)
-manzana_instance.tile = quads[A1x1.png11]
- 
+--manzana_instance.xtile,manzana_instance.ytile = determine_grid_coordinates(manzana_instance,deck)
+manzana_instance.tile = quads["A1x1.png11"]
+
  
 
 --here I add data to the instance

@@ -103,8 +103,9 @@ function general_gui (activated)
         construction_wall:SetPos(0, 10)
         construction_wall:SizeToImage()
         construction_wall.OnClick = function(object, x, y)
-         object_to_build_on_next_click = manzana --when the player clicks LMB, function build_objects() will be called, with this value as parameter
-          
+         --when the player clicks LMB, function build_objects() will be called, with this value as parameter
+         object_to_build_on_next_click = "manzana" 
+          clases[object_to_build_on_next_click]:mouse_pointer()
         end
  end
 function debug_menu (activated)
@@ -139,12 +140,12 @@ end
 
 function draw_current_pointer() --draws the pointer each frame using the variables set by set_mouse_pointer()
         
-        if mouse_pointer ~=nil and mouse_pointer.snap == true then 
+        if mouse_pointer.quad ~=nil and mouse_pointer.snap == true then 
           local x,y
            x, y = get_current_mouse_tile_coordinates()
            love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , x*tilewidth, y*tilewidth)
          else
-              if mouse_pointer ~=nil then
+              if mouse_pointer.quad ~=nil then
               love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , love.mouse.getX(), love.mouse.getY()) end
          end
   
