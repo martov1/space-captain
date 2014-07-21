@@ -1,23 +1,12 @@
 ----- TO DO IN PRIORITY ORDER
-TRANLATE MOUSE COORDINATES TO WORLD COORDINATES
 
-graphics:
-HECHO --A)dividir textura en quads de forma automatica dependiendo del nombre del atlas 
-HECHO --B) añadir como propiedad a cada objeto el quad que le corresponde (A MANO SI O SI)
-C) añadir las instancias existentes a listas divididas por decks Y ordenar los objetos de menor a mayor usando Y como parametro (cada cierto tiempo medianamente largo y random)
-D) iterar en la tabla que corresponde al current deck, ubicar los items que estan en el viewport y dibujarlos.
-
-
-
-
-
-2) object rendering
-3)make object creation panel work
+3)placed objects need to modify the pathfinding map
 4)figure out pathfinding
 5) figure out movement using pathfingin info
 
 
 optimizar:
+48) generar un orden de rendering y dar soporte a tiles que exceden el tilesize por un poquito para dar efecto de altura
 49) creo que si agragas layers en el mapa eso emperoa un monton la preformance, sacar layers de los mapas y ver que pasa
 50) usar map.setdrawrange para optimizar el dibujado del mapa
 51) usar imagenes con un formato comprimido

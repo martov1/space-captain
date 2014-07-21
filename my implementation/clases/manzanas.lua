@@ -4,7 +4,7 @@ function clases.manzana.mouse_pointer ()
   set_mouse_pointer(quads["A1x1.png11"], atlases["A1x1.png"],true)
 end
 function clases.manzana:create (x,y,deck)
-  print (x,y,deck)
+ 
   active_instances_counter =  active_instances_counter + 1 --this is used to assign every instance a unique ID
   local manzana_instance = {} --create the instance
 

@@ -4,6 +4,7 @@ function love.mousepressed(x, y, button)
   end
   if button == "r" and  object_to_build_on_next_click ~= nil then
     set_mouse_pointer()
+    object_to_build_on_next_click = nil
 
   end
 
