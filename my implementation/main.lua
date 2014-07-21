@@ -23,9 +23,11 @@ require ("tests")
  tileheight = nil
  current_pointer = nil
  --load stuff into memory
+  load_atlases()
+  
+
  load_clases () --this loades all clases from the clases directory
  
- load_atlases()
 
 
 --- window configuration
@@ -77,14 +79,14 @@ if deck_loaded == true then
   decks[current_deck]:draw(dt)
   love.graphics.print(current_deck, 0, 0) --shows current deck on screen
   love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
-   draw_current_pointer() 
+    
   
   end
     --draw the grid if necesary
   if draw_the_grid == true then draw_grid(decks[current_deck])end
    --test
-
-  
+instances_draw()
+  draw_current_pointer()
 
 
 

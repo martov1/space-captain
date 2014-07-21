@@ -183,13 +183,25 @@ end
 
 
 
-function build_objects (object, x,y) --spawns an instance of object in x and y coordinates
+function build_objects (x, y,object) --spawns an instance of object in x and y coordinates
   if object_to_build_on_next_click then
-    clases[object]:create(love.mouse.getX(),love.mouse.getY(), decks[current_deck])
-     clases[object]:mouse_pointer()
+
+tilex,tiley = transform_into_grid_coordinates(x,y)
+tilex = tilex * tilewidth
+tiley = tiley * tileheight
+clases[object]:create(tilex,tiley,decks[current_deck])
+   
     
  
  end
     
   
-  end
+end
+
+function instances_draw ()
+
+  for k,i in pairs (active_instances) do
+ if i.update then i:draw() end 
+end  
+
+end

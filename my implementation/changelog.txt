@@ -1,3 +1,7 @@
+20/07/2014
+-ADDED palced objects into a table
+-ADDED creating objects by building them in the gui
+
 16/07/2014
 -ADDED: set_mouse_pointer() to set what image will be used to draw the mouse pointer
 -ADDED: draw_current_pointer(), changes the image attached to the cursor

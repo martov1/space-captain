@@ -1,6 +1,6 @@
 function love.mousepressed(x, y, button)
  if button == "l" and object_to_build_on_next_click ~= nil then
-   build_objects(object_to_build_on_next_click, love.mouse.getX(),love.mouse.getY()) 
+   build_objects(love.mouse.getX(),love.mouse.getY(),object_to_build_on_next_click) 
   end
 if button == "r" and  object_to_build_on_next_click ~= nil then
   set_mouse_pointer()
