@@ -20,33 +20,28 @@ function load_clases () --load all object filenames into clases_list and subtrac
 end
 
 
-function instance_destroy (someid)
+function instance_destroy (someid) -- TO DO
 
-  active_instances[someid] = nil
+ 
 end
 
 
 
 
-function instance_modify (someid, variable, modification)
-  local i
-  local k
-  local A
-  A = active_instances[someid]
-  A[variable] = modification
-end
+
 
 
 function instance_show (someid)
 
   if (someid == nil) then
     for i,k in pairs (active_instances) do
-      print (i,k.name) end
-    else
-      local A = active_instances[someid]
-      for i,k in pairs (A) do print (i , k) end
+
+      for A,B in pairs (active_instances[i]) do
+        print (A,B.name,B.deck) 
+      end
     end
   end
+end
 
 
 
@@ -76,17 +71,26 @@ function instance_show (someid)
 
 
   function load_decks (ship) -- loads all files in  decks(maps) of the selected ship (located at maps/ships) into STI
-    current_deck = 1
+   
+   current_deck = 1 
+      --here I load the maps into variables for later use
     decks={}
     local A
     for A,B in pairs (love.filesystem.getDirectoryItems( "maps/ships/"..ship )) do
       decks[A] = sti.new("maps/ships/"..ship.."/".."deck" ..A)
-      number_of_decks = A
+      --and determine how many decks does this ship have
+      number_of_decks = A  
     end
     deck_loaded = true
     tilewidth = decks[1].tilewidth
     tileheight = decks[1].tileheight
+    --using the info about tile size I got, I can now make the quads from the tilesets
     make_quads()
+    --and count the number of decks so that I can make assign objects into lists sorted by deck
+    for A=1, number_of_decks do
+    active_instances[A] = {}
+          end
+    for i,k in pairs (active_instances) do print(i,k) end
     return (A)
   end
 
@@ -161,13 +165,13 @@ function instance_show (someid)
       tilex,tiley = transform_into_grid_coordinates(x,y)
       tilex = tilex * tilewidth
       tiley = tiley * tileheight
-      clases[object]:create(tilex,tiley,decks[current_deck])
+      clases[object]:create(tilex,tiley,current_deck)
     end
   
   end
 
   function instances_draw ()
-    for k,i in pairs (active_instances) do
+    for k,i in pairs (active_instances[current_deck]) do
       if i.update then i:draw() end 
     end  
   end

@@ -36,7 +36,7 @@ function clases.manzana:create (x,y,deck)
     love.graphics.draw(manzana_instance.atlas, manzana_instance.quad,manzana_instance.x,manzana_instance.y)
   end
 
-  table.insert(active_instances , manzana_instance )
+  table.insert(active_instances[current_deck] , manzana_instance )
 end
 
 

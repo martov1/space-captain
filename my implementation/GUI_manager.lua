@@ -128,7 +128,7 @@ function debug_right_click_menu ()
 
 
   local menu = loveframes.Create("menu")
-  menu:AddOption("Option A", "resources/images/brick.png", function() end)
+  menu:AddOption("print current instances", "resources/images/brick.png", function() instance_show() end)
   menu:AddOption("Option B", "resources/images/add.png", function() end)
   menu:AddDivider()
   menu:AddOption("Option C", "resources/images/building.png", function() end)

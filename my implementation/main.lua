@@ -79,13 +79,13 @@ function love.draw ()
     decks[current_deck]:draw(dt)
     love.graphics.print(current_deck, 0, 0) --shows current deck on screen
     love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
-
+ instances_draw()
 
   end
   --draw the grid if necesary
   if draw_the_grid == true then draw_grid(decks[current_deck])end
   --test
-  instances_draw()
+ 
   draw_current_pointer()
 
 

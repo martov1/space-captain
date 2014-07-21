@@ -1,4 +1,7 @@
 20/07/2014
+-ADDED objects are now in deck-specific lists
+-ADDED objects now are only drawn if they are in the current deck
+FIXED: clases.manzana.create (x,y,deck) arguments get in the wrong order for reasons unknown
 -ADDED palced objects into a table
 -ADDED creating objects by building them in the gui
 -BUG: objects can be built on top of one another
