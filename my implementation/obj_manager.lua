@@ -2,6 +2,8 @@ clases_list = {} --contains a list of all clases in /clases folder
 clases={} --contains all actual clases
 GUIloader= love.filesystem.getDirectoryItems( "guis/")
 active_instances = {} --contains all the created instances in the game
+active_instances.crewmen = {} -- contains all crew members
+active_instances.furniture = {}
 files_list = {} --contains a list of clases files
 GUIs_list = {} --contains a list of loaded GUIs
 active_instances_counter = 0 -- every time an object is created this increases by 1 and the previous number is assigned as the created instance's unique ID number
@@ -9,6 +11,7 @@ atlas_loader = love.filesystem.getDirectoryItems( "resources/tilemaps/atlases") 
 atlas_list={}
 atlases = {}
 quads = {}
+
 function load_clases () --load all object filenames into clases_list and subtract ".lua" on each name, then load all clases
   clases_loader = love.filesystem.getDirectoryItems( "clases/")
   for i,k in pairs (clases_loader) do 
@@ -34,12 +37,20 @@ end
 function instance_show (someid)
 
   if (someid == nil) then
-    for i,k in pairs (active_instances) do
+    print ("FURNITURE")
+    for i,k in pairs (active_instances.furniture) do
 
-      for A,B in pairs (active_instances[i]) do
-        print (A,B.name,B.deck) 
+      for A,B in pairs (active_instances.furniture[i]) do
+        print ("index: ",A,"object: ",B.name," in deck:  ",B.deck) 
       end
     end
+   print ("crewmen")
+--    for i,k in pairs (active_instances.crewmen) do
+
+--      for A,B in pairs (active_instances.furniture[i]) do
+--        print ("index: "A,"object: "B.name," in deck:  ",B.deck) 
+--      end
+--    end
   end
 end
 
@@ -48,7 +59,10 @@ end
 
 
   function instances_update ()
-    for k,i in pairs (active_instances) do
+    for k,i in pairs (active_instances.furniture) do
+      if i.update then i:update() end 
+    end  
+     for k,i in pairs (active_instances.crewmen) do
       if i.update then i:update() end 
     end  
   end
@@ -88,9 +102,9 @@ end
     make_quads()
     --and count the number of decks so that I can make assign objects into lists sorted by deck
     for A=1, number_of_decks do
-    active_instances[A] = {}
+    active_instances.furniture[A] = {}
           end
-    for i,k in pairs (active_instances) do print(i,k) end
+    for i,k in pairs (active_instances.furniture) do print(i,k) end
     return (A)
   end
 
@@ -171,7 +185,12 @@ end
   end
 
   function instances_draw ()
-    for k,i in pairs (active_instances[current_deck]) do
-      if i.update then i:draw() end 
+    --draw furniture
+    for k,i in pairs (active_instances.furniture[current_deck]) do
+      if i.draw then i:draw() end 
+    end  
+    --draw crewmen on top of furniture
+      for k,i in pairs (active_instances.crewmen) do
+      if i.draw then i:draw() end 
     end  
   end
