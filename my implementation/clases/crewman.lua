@@ -28,6 +28,14 @@ function clases.crewman:create (x,y,deck)
 
 
   function crewman_instance.update ()
+--  CREWMAN NEEDS ----
+
+
+--CREWMAN PATHFINDING 
+
+--moveto()
+
+
 
 
   end
@@ -38,7 +46,7 @@ function clases.crewman:create (x,y,deck)
     love.graphics.draw(crewman_instance.atlas, crewman_instance.quad,crewman_instance.x,crewman_instance.y)
   end
 
-  table.insert(active_instances.crewmen[current_deck] , crewman_instance )
+  table.insert(active_instances.crewmen , crewman_instance )
 end
 
 
