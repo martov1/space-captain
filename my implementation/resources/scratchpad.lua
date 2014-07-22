@@ -15,7 +15,7 @@ que sera llamado una vez cada X segundos. los va a sortear definiendo cual tiene
 
 
 ---sctatch
-2)make object creation panel work
+DONE 2)make object creation panel work
 
 press button --> sprite follows mouse and snaps to grid
 
@@ -23,9 +23,9 @@ on click  --> crear objeto
 
 
 pasos para crear objeto:
-1) crear la instancia en el array de instancias
-2) si la instancia es un objeto y no otra cosa, agregarlo a un deck_array para facilitar el pathfinding
-3) darle al objeto coordenadas en tiles para que pathfinder las use
+DONE 1) crear la instancia en el array de instancias
+DONE 2) si la instancia es un objeto y no otra cosa, agregarlo a un deck_array para facilitar el pathfinding
+DONE 3) darle al objeto coordenadas en tiles para que pathfinder las use
 4) modificar el collision map para que exista colision si el objeto la generase
 5) dibujar el objeto en el mapa usando la objets layer
 6) updatear el mapa, intentando hacerlo lo menos posible

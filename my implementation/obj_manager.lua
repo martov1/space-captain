@@ -201,28 +201,7 @@ end
 
 
 function load_collision_map ()
-  --LOCATE THE COLLISION MAP
-  for i,k in pairs (decks[1].layers) do
-    if decks[1].layers[i].name == "collisions" then
-      pathfinding_layer = decks[1].layers[i]
-      --for i,k in pairs (collision_layer) do print (i,k) end  
-      pathfinding_map_data = pathfinding_layer.data
-    end
-
-  end
-  --translate tiled's collision data into a format that jumper's API can use
-  decks_pathfinding_maps[1].row = {}
-  for i=1, decks[1].height do
-    for A=1, decks[1].width do
-     -- print (A)
-      decks_pathfinding_maps[1].row[i] = {}
-      table.insert (decks_pathfinding_maps[1].row[i], pathfinding_map_data[(i-1)* decks[1].width + A] )
-    end
-  end
-  for i,k in pairs(decks_pathfinding_maps[1].row[1]) do 
-    print (i,k)
-    --for A,B in pairs (k) do print (A,B)end
-    end
+for i,k in pairs (decks[1].layers[6].data[1][1]) do print (i,k) end
 end
 
 --function move_to(startx, starty, endx, endy)
