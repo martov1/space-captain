@@ -1,4 +1,5 @@
 23/07/2014
+-ADDED find_path() finds shortest path between 2 points
 -FINISHED load_pathfinding_map()
 -STARTED find_path() and pathfinding implementation
 

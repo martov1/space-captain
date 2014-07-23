@@ -27,7 +27,7 @@ profiler = newProfiler()
 profiler_activated = true
     profiler:start()
 show_guis()
-find_path(2,2,19,18)
+find_path(2,2,19,18,1,1)
 
   end
 

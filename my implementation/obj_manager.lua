@@ -208,45 +208,46 @@ function load_pathfinding_map ()
   end
 end
 
-function find_path(startx,starty,endx,endy,deck)
-  -- APLICAR PATHFINDING SOLO PARA LA DECK 1
--- First, set a collision map
-local map = pathfinding_maps[1]
--- Value for walkable tiles
-local walkable = 0
+function find_path(startx,starty,endx,endy,start_deck, end_deck)
+ 
+  if start_deck == end_deck then 
+    local map = pathfinding_maps[1]
+    -- Value for walkable tiles
+    local walkable = 0
 
--- Library setup
-local Grid = require ("jumper/jumper.grid") -- The grid class
-local Pathfinder = require ("jumper/jumper.pathfinder") -- The pathfinder lass
+    -- Library setup
+    local Grid = require ("jumper/jumper.grid") -- The grid class
+    local Pathfinder = require ("jumper/jumper.pathfinder") -- The pathfinder lass
 
--- Creates a grid object
-local grid = Grid(map) 
--- Creates a pathfinder object using Jump Point Search
-local myFinder = Pathfinder(grid, 'JPS', walkable) 
+    -- Creates a grid object
+    local grid = Grid(map) 
+    -- Creates a pathfinder object using Jump Point Search
+    local myFinder = Pathfinder(grid, 'JPS', walkable) 
 
--- Define start and goal locations coordinates
+    -- Define start and goal locations coordinates
 
 
--- Calculates the path, and its length
-local path = myFinder:getPath(startx, starty, endx, endy)
-if path then
-  print(('Path found! Length: %.2f'):format(path:getLength()))
-    for node, count in path:nodes() do
-      print(('Step: %d - x: %d - y: %d'):format(count, node:getX(), node:getY()))
-    end
+    -- Calculates the path, and its length
+    local path = myFinder:getPath(startx, starty, endx, endy)
+    if path then
+      print(('Path found! Length: %.2f'):format(path:getLength()))
+      for node, count in path:nodes() do
+        print(('Step: %d - x: %d - y: %d'):format(count, node:getX(), node:getY()))
+      end
 
-else print ("fail")end
---> Output:
---> Path found! Length: 8.83
---> Step: 1 - x: 1 - y: 1
---> Step: 2 - x: 1 - y: 3
---> Step: 3 - x: 2 - y: 4
---> Step: 4 - x: 4 - y: 4
---> Step: 5 - x: 5 - y: 3
---> Step: 6 - x: 5 - y: 1
-  
+    else print ("fail")end
+    --> Output:
+    --> Path found! Length: 8.83
+    --> Step: 1 - x: 1 - y: 1
+    --> Step: 2 - x: 1 - y: 3
+    --> Step: 3 - x: 2 - y: 4
+    --> Step: 4 - x: 4 - y: 4
+    --> Step: 5 - x: 5 - y: 3
+    --> Step: 6 - x: 5 - y: 1
+
   end
+end
 
---function move_to(startx, starty, endx, endy)
+function move_to(startx, starty, endx, endy)
 
---  end
+  end
