@@ -208,7 +208,7 @@ function load_pathfinding_map ()
   end
 end
 
-function find_path()
+function find_path(startx,starty,endx,endy,deck)
   -- APLICAR PATHFINDING SOLO PARA LA DECK 1
 -- First, set a collision map
 local map = pathfinding_maps[1]
@@ -225,8 +225,7 @@ local grid = Grid(map)
 local myFinder = Pathfinder(grid, 'JPS', walkable) 
 
 -- Define start and goal locations coordinates
-local startx, starty = 1,1
-local endx, endy = 5,1
+
 
 -- Calculates the path, and its length
 local path = myFinder:getPath(startx, starty, endx, endy)
@@ -235,8 +234,8 @@ if path then
     for node, count in path:nodes() do
       print(('Step: %d - x: %d - y: %d'):format(count, node:getX(), node:getY()))
     end
-end
 
+else print ("fail")end
 --> Output:
 --> Path found! Length: 8.83
 --> Step: 1 - x: 1 - y: 1

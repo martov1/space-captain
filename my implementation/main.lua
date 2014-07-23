@@ -61,7 +61,7 @@ function love.update(dt)
   loveframes.update(dt)
 
   --debug stuff
-  --tests()
+ 
 end
 
 
@@ -80,7 +80,7 @@ function love.draw ()
     love.graphics.print(current_deck, 0, 0) --shows current deck on screen
     love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
     instances_draw()
-    
+     tests()
   end
   --draw the grid if necesary
   if draw_the_grid == true then draw_grid(decks[current_deck])end
