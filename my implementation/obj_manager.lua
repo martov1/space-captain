@@ -248,6 +248,6 @@ function find_path(startx,starty,endx,endy,start_deck, end_deck)
   end
 end
 
-function move_to(startx, starty, endx, endy)
+function move_to(startx, starty, endx, endy, speed)
 
   end
