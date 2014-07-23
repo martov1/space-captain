@@ -11,7 +11,7 @@ atlas_loader = love.filesystem.getDirectoryItems( "resources/tilemaps/atlases") 
 atlas_list={}
 atlases = {}
 quads = {}
-decks_pathfinding_maps = {} -- holds each deck navegation map for pathfinding
+pathfinding_maps = {} -- holds each deck navegation map for pathfinding
 function load_clases () --load all object filenames into clases_list and subtract ".lua" on each name, then load all clases
   clases_loader = love.filesystem.getDirectoryItems( "clases/")
   for i,k in pairs (clases_loader) do 
@@ -103,12 +103,12 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
   --and count the number of decks so that I can make assign objects into lists sorted by deck
   for A=1, number_of_decks do
     active_instances.furniture[A] = {}
-    decks_pathfinding_maps[A] = {}
+    pathfinding_maps[A] = {}
 
   end
   --for i,k in pairs (active_instances.furniture) do print(i,k) end
 
-load_collision_map()
+  load_pathfinding_map()
   return (A)
 end
 
@@ -200,9 +200,53 @@ function instances_draw ()
 end
 
 
-function load_collision_map ()
-for i,k in pairs (decks[1].layers[6].data[1][1]) do print (i,k) end
+function load_pathfinding_map ()
+  local pathfinding_data = {}
+  for A=1, number_of_decks do
+    pathfinding_data[A] = decks[A]:getCollisionMap(2) --pathfinding map is the second layer of the tiled map
+    pathfinding_maps[A] = pathfinding_data[A].data
+  end
 end
+
+function find_path()
+  -- APLICAR PATHFINDING SOLO PARA LA DECK 1
+-- First, set a collision map
+local map = pathfinding_maps[1]
+-- Value for walkable tiles
+local walkable = 0
+
+-- Library setup
+local Grid = require ("jumper/jumper.grid") -- The grid class
+local Pathfinder = require ("jumper/jumper.pathfinder") -- The pathfinder lass
+
+-- Creates a grid object
+local grid = Grid(map) 
+-- Creates a pathfinder object using Jump Point Search
+local myFinder = Pathfinder(grid, 'JPS', walkable) 
+
+-- Define start and goal locations coordinates
+local startx, starty = 1,1
+local endx, endy = 5,1
+
+-- Calculates the path, and its length
+local path = myFinder:getPath(startx, starty, endx, endy)
+if path then
+  print(('Path found! Length: %.2f'):format(path:getLength()))
+    for node, count in path:nodes() do
+      print(('Step: %d - x: %d - y: %d'):format(count, node:getX(), node:getY()))
+    end
+end
+
+--> Output:
+--> Path found! Length: 8.83
+--> Step: 1 - x: 1 - y: 1
+--> Step: 2 - x: 1 - y: 3
+--> Step: 3 - x: 2 - y: 4
+--> Step: 4 - x: 4 - y: 4
+--> Step: 5 - x: 5 - y: 3
+--> Step: 6 - x: 5 - y: 1
+  
+  end
 
 --function move_to(startx, starty, endx, endy)
 

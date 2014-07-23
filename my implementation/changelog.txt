@@ -1,3 +1,7 @@
+23/07/2014
+-FINISHED load_pathfinding_map()
+-STARTED find_path() and pathfinding implementation
+
 20/07/2014
 -ADDED objects are now in deck-specific lists
 -ADDED objects now are only drawn if they are in the current deck
