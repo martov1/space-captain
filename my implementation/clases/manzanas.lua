@@ -6,37 +6,38 @@ end
 function clases.manzana:create (x,y,deck)
  
   active_instances_counter =  active_instances_counter + 1 --this is used to assign every instance a unique ID
-  local manzana_instance = {} --create the instance
+  local self = {} --create the instance
 
-  manzana_instance.x = x
+  self.x = x
 
-  manzana_instance.y = y
-  manzana_instance.deck = deck
-  manzana_instance.id = active_instances_counter --unique ID of this instance
-  --manzana_instance.xtile,manzana_instance.ytile = determine_grid_coordinates(manzana_instance,deck)
-  manzana_instance.quad = quads["A1x1.png11"]
-  manzana_instance.atlas = atlases["A1x1.png"]
+  self.y = y
+  self.deck = deck
+  self.id = active_instances_counter --unique ID of this instance
+  self.xtile,self.ytile = determine_grid_coordinates(self)
+  
+  self.quad = quads["A1x1.png11"]
+  self.atlas = atlases["A1x1.png"]
 
 
   --here I add data to the instance
-  manzana_instance.datos = "charly!"
-  manzana_instance.name = "manzana"
+  self.datos = "charly!"
+  self.name = "manzana"
   --existe manzana.deck para saber en que deck esta el objeto
 
+function show_self()
+  for a,b in pairs (self) do print (a,b) end
+end
 
-
-  function manzana_instance.update ()
-
-
+  function self.update ()
+show_self()
   end
   --aca inicializas sus funciones
 
-  function manzana_instance.draw()
-
-    love.graphics.draw(manzana_instance.atlas, manzana_instance.quad,manzana_instance.x,manzana_instance.y)
+  function self.draw()
+    love.graphics.draw(self.atlas, self.quad,self.x,self.y)
   end
 
-  table.insert(active_instances.furniture[current_deck] , manzana_instance )
+  table.insert(active_instances.furniture[current_deck] , self )
 end
 
 

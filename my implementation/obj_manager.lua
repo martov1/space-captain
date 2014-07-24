@@ -59,10 +59,10 @@ end
 
 
 function instances_update ()
-  for k,i in pairs (active_instances.furniture) do
+  for k,i in pairs (active_instances.furniture[current_deck]) do
     if i.update then i:update() end 
   end  
-  for k,i in pairs (active_instances.crewmen) do
+  for k,i in pairs (active_instances.crewmen[current_deck]) do
     if i.update then i:update() end 
   end  
 end
@@ -104,7 +104,7 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
   for A=1, number_of_decks do
     active_instances.furniture[A] = {}
     pathfinding_maps[A] = {}
-
+    active_instances.crewmen[A] = {}
   end
   --for i,k in pairs (active_instances.furniture) do print(i,k) end
 
@@ -112,7 +112,7 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
   return (A)
 end
 
-function determine_grid_coordinates(instance_or_object) --determines in what grid coordinates is an object based on it's current x,y and deck (so that if for whatever reason one deck were to be different in size to another, it wount crash)
+function determine_grid_coordinates(instance_or_object) --determines in what grid coordinates is an object based on it's current x,y 
   local grid_coordinates_x = math.floor(instance_or_object.x
     / decks[instance_or_object.deck].tilewidth) + 1--derermines X grid coordinate by dividing the current x coordinate of the object by the tilewidth of the current deck and then taking the whole number only
   local grid_coordinates_y = math.floor(instance_or_object.y / decks[instance_or_object.deck].tileheight) + 1 --here, but for Y
@@ -248,6 +248,3 @@ function find_path(startx,starty,endx,endy,start_deck, end_deck)
   end
 end
 
-function move_to(startx, starty, endx, endy, speed)
-
-  end

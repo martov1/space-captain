@@ -53,10 +53,10 @@ function love.update(dt)
 
 
   -- tests()
-
-  instances_update()
-
-
+if deck_loaded == true then
+  
+instances_update()
+end
   -- required stuff
   loveframes.update(dt)
 
@@ -81,6 +81,7 @@ function love.draw ()
     love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
     instances_draw()
      tests()
+     
   end
   --draw the grid if necesary
   if draw_the_grid == true then draw_grid(decks[current_deck])end
