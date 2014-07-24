@@ -29,7 +29,7 @@ function show_self()
 end
 
   function self.update ()
-show_self()
+
   end
   --aca inicializas sus funciones
 
@@ -37,7 +37,7 @@ show_self()
     love.graphics.draw(self.atlas, self.quad,self.x,self.y)
   end
 
-  table.insert(active_instances.furniture[current_deck] , self )
+  table.insert(active_instances.furniture[deck] , self )
 end
 
 

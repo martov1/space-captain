@@ -58,13 +58,17 @@ end
 
 
 
-function instances_update ()
-  for k,i in pairs (active_instances.furniture[current_deck]) do
-    if i.update then i:update() end 
-  end  
-  for k,i in pairs (active_instances.crewmen[current_deck]) do
-    if i.update then i:update() end 
-  end  
+function instances_update () --call the update function of all objects (on all decks)
+  for A = 0 , number_of_decks do
+    for k,i in pairs (active_instances.furniture[current_deck]) do
+      if i.update then i:update() end 
+
+    end  
+    for k,i in pairs (active_instances.crewmen[current_deck]) do
+
+      if i.update then i:update() end 
+    end  
+  end
 end
 
 
@@ -177,24 +181,24 @@ function get_current_mouse_tile_coordinates()
   return x,y
 end
 
-function build_objects (x, y,object) --spawns an instance of object in x and y coordinates
+function build_objects (x, y,object,deck) --spawns an instance of object in x and y coordinates
 
   if object_to_build_on_next_click then
     tilex,tiley = transform_into_grid_coordinates(x,y)
     tilex = tilex * tilewidth
     tiley = tiley * tileheight
-    clases[object]:create(tilex,tiley,current_deck)
+    clases[object]:create(tilex,tiley,deck)
   end
 
 end
 
-function instances_draw ()
+function instances_draw () --draws all the objects in the current deck (for now)
   --draw furniture
   for k,i in pairs (active_instances.furniture[current_deck]) do
     if i.draw then i:draw() end 
   end  
   --draw crewmen on top of furniture
-  for k,i in pairs (active_instances.crewmen) do
+  for k,i in pairs (active_instances.crewmen[current_deck]) do
     if i.draw then i:draw() end 
   end  
 end
@@ -209,7 +213,7 @@ function load_pathfinding_map ()
 end
 
 function find_path(startx,starty,endx,endy,start_deck, end_deck)
- 
+
   if start_deck == end_deck then 
     local map = pathfinding_maps[1]
     -- Value for walkable tiles
@@ -230,12 +234,11 @@ function find_path(startx,starty,endx,endy,start_deck, end_deck)
     -- Calculates the path, and its length
     local path = myFinder:getPath(startx, starty, endx, endy)
     if path then
-      print(('Path found! Length: %.2f'):format(path:getLength()))
-      for node, count in path:nodes() do
-        print(('Step: %d - x: %d - y: %d'):format(count, node:getX(), node:getY()))
-      end
+  print ("path encontrado")
 
-    else print ("fail")end
+    else print ("no path!")end
+      return path
+    end
     --> Output:
     --> Path found! Length: 8.83
     --> Step: 1 - x: 1 - y: 1
@@ -246,5 +249,5 @@ function find_path(startx,starty,endx,endy,start_deck, end_deck)
     --> Step: 6 - x: 5 - y: 1
 
   end
-end
+
 

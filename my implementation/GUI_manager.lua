@@ -107,6 +107,19 @@ function general_gui (activated)
     object_to_build_on_next_click = "manzana" 
     clases[object_to_build_on_next_click]:mouse_pointer()
   end
+  local construction_crew = loveframes.Create("imagebutton", construction_panel)
+  construction_crew:SetImage("resources/gui images/wall.png")
+  construction_crew:SetPos(60, 10)
+  construction_crew:SizeToImage()
+  construction_crew.OnClick = function(object, x, y)
+    --when the player clicks LMB, function build_objects() will be called, with this value as parameter
+    object_to_build_on_next_click = "crewman" 
+    clases[object_to_build_on_next_click]:mouse_pointer()
+  end
+
+
+
+
 end
 function debug_menu (activated)
 
@@ -159,5 +172,4 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
       mouse_pointer.snap = snap else mouse_pointer.snap = false
     end
   end
-  
- 
+
