@@ -1,4 +1,44 @@
 
+ are the current coordinates and deck different from the ones i am? n-> end
+ 
+ if circulating == false then
+  is my current node the first one in the path? 
+    no->calc path
+        A = 1
+        circulating = true
+    yes->circulating = true
+elseif circulating = true then
+  is my current node A? 
+  y-> is A my destination?
+      n-> approach to node A+1
+      y-> circulating = false
+  n->A=A+1
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     local A = 1
+      
+    --elseif self.navegation_nodes[A]:getX() == self.xtile and self.navegation_nodes[A]:getY() == self.ytile then
+
+
+    elseif  A < self.number_of_steps then 
+      A = A+1 
+
+  else
+    print (self.navegation_nodes[A]:getX()) 
+--      print (self.navegation_nodes[A+1])
+--      self.x = self.x + (self.navegation_nodes[A+1]:getX() * tilewidth) * speed
+--      self.y = self.y + (self.navegation_nodes[A+1]:getY() * tileheight) * speed 
+      --print(('Step: %d - x: %d - y: %d'):format(count, node:getX(), node:getY()))
+    end
+
+ 
+ 
  
 --scratch
 object rendering

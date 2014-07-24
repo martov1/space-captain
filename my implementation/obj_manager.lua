@@ -235,7 +235,9 @@ function find_path(startx,starty,endx,endy,start_deck, end_deck)
     local path = myFinder:getPath(startx, starty, endx, endy)
     if path then
   print ("path encontrado")
-
+ for node, count in path:nodes() do
+   print (node:getX(),node:getY())
+ end	
     else print ("no path!")end
       return path
     end
