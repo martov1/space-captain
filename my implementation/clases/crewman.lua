@@ -30,16 +30,22 @@ function clases.crewman:create (x,y,deck)
   function show_self()
     for a,b in pairs (self) do print (a,b) end
   end
-  function move_towards(A,Speed)
+  function self:move_towards(A,Speed)
 
-    if self.x < (self.navegation_nodes[A]:getX() * tilewidth) then self.x= self.x + Speed end
-    if self.x > (self.navegation_nodes[A]:getX() * tilewidth) then self.x=self.x - Speed end
-    if self.y < (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y + Speed end
-    if self.y > (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y - Speed end
+
+--        if self.y < (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y + Speed end
+--        if self.y > (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y - Speed end
+--         if self.x < (self.navegation_nodes[A]:getX() * tilewidth) then self.x= self.x + Speed end
+--        if self.x > (self.navegation_nodes[A]:getX() * tilewidth) then self.x=self.x - Speed end
+
+    if self.y < (((self.navegation_nodes[A]:getY() -1) * tileheight)) then self.y=self.y + Speed end
+    if self.y > (((self.navegation_nodes[A]:getY()-1) * tileheight)) then self.y=self.y - Speed end
+    if self.x < (((self.navegation_nodes[A]:getX()-1) * tilewidth)) then self.x= self.x + Speed end
+    if self.x > (((self.navegation_nodes[A]:getX() -1)* tilewidth)) then self.x=self.x - Speed end
   end
 
 
-  function analize_path(apath) --places all nodes in local variables and determines number of steps
+  function self:analize_path(apath) --places all nodes in local variables and determines number of steps
     for node, count in apath:nodes() do
 
       self.navegation_nodes[count] = node
@@ -52,21 +58,26 @@ function clases.crewman:create (x,y,deck)
 
   function self:move_to(startx, starty, endx, endy,start_deck,end_deck, speed)
 
-    if self.xtile == endx and self.ytile == endy then self.end_reached = true  else self.end_reached = false end 
+    if self.xtile == endx and self.ytile == endy then self.end_reached = true else self.end_reached = false end 
 
     if self.end_reached == false  and self.path == nil then
 
       self.path = find_path(startx,starty,endx,endy,start_deck, end_deck)
-      analize_path(self.path)
+      self:analize_path(self.path)
       self.step = 1
 
     end
 
     if self.end_reached == false and self.path ~= nil then
-      if get_if_currently_inside_node( self.navegation_nodes[self.step]) == false then
-        move_towards(self.step,0.01)
+
+      if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) == false then
+     
+        self:move_towards(self.step,0.01)
+
       end
-      if get_if_currently_inside_node( self.navegation_nodes[self.step]) then self.step = self.step + 1 end
+      if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) and self.number_of_steps > self.step
+      
+      then self.step = self.step + 1 end
     end
   end
 
@@ -75,42 +86,42 @@ function clases.crewman:create (x,y,deck)
 
 
 
-function determine_current_tile ()
+  function self:determine_current_tile ()
 
-  self.xtile,self.ytile = determine_grid_coordinates(self)
+    self.xtile,self.ytile = determine_grid_coordinates(self)
 
-end
-function get_if_currently_inside_node(node)
-  local A
-  if node:getX() ==self.xtile and node:getY() ==self.ytile then A = true
-  else A = false end 
+  end
+  function self:get_if_currently_inside_node(node)
+    local A
+    if node:getX() ==self.xtile and node:getY() ==self.ytile then A = true
+    else A = false end 
 
-  return A
-end
+    return A
+  end
 
-function self.update ()
-  --  CREWMAN NEEDS ----
-  determine_current_tile()
-  self:move_to(self.xtile,self.ytile,10,10,self.deck,self.deck,0.01)
+  function self.update ()
+    --  CREWMAN NEEDS ----
+    self:determine_current_tile()
+    self:move_to(self.xtile,self.ytile,10,10,self.deck,self.deck,0.01)
 
-  --CREWMAN PATHFINDING 
+    --CREWMAN PATHFINDING 
 
-  --moveto()
-
-
-
-
-end
---aca inicializas sus funciones
-
-function self:draw()
-
-  love.graphics.draw(self.atlas, self.quad,self.x,self.y)
-end
+    --moveto()
 
 
 
-table.insert(active_instances.crewmen[deck] , self )
+
+  end
+  --aca inicializas sus funciones
+
+  function self:draw()
+
+    love.graphics.draw(self.atlas, self.quad,self.x,self.y)
+  end
+
+
+
+  table.insert(active_instances.crewmen[deck] , self )
 end
 
 
