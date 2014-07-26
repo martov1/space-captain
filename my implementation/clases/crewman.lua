@@ -27,7 +27,7 @@ function clases.crewman:create (x,y,deck)
   self.circulating = nil
   self.current_step = nil
   self.step = nil
-  function show_self()
+  function self:show_self()
     for a,b in pairs (self) do print (a,b) end
   end
   function self:move_towards(A,Speed)
@@ -94,12 +94,15 @@ function clases.crewman:create (x,y,deck)
   function self:get_if_currently_inside_node(node)
     local A
     if node:getX() ==self.xtile and node:getY() ==self.ytile then A = true
-    else A = false end 
+  else A = false 
+ -- print (node:getX(), self.xtile,node:getY(),self.ytile , A)
+    
+    end 
 
     return A
   end
 
-  function self.update ()
+  function self:update ()
     --  CREWMAN NEEDS ----
     self:determine_current_tile()
     self:move_to(self.xtile,self.ytile,10,10,self.deck,self.deck,0.01)

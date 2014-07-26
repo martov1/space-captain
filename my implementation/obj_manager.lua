@@ -43,15 +43,16 @@ function instance_show (someid)
       for A,B in pairs (active_instances.furniture[i]) do
         print ("index: ",A,"object: ",B.name," in deck:  ",B.deck) 
       end
-    end
+    
     print ("crewmen")
-    --    for i,k in pairs (active_instances.crewmen) do
+        for i,k in pairs (active_instances.crewmen) do
 
-    --      for A,B in pairs (active_instances.furniture[i]) do
-    --        print ("index: "A,"object: "B.name," in deck:  ",B.deck) 
-    --      end
-    --    end
+          for A,B in pairs (active_instances.furniture[i]) do
+            print ("index: ",A,"object: ",B.name," in deck:  ",B.deck) 
+          end
+        end
   end
+end
 end
 
 
@@ -117,9 +118,9 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
 end
 
 function determine_grid_coordinates(instance_or_object) --determines in what grid coordinates is an object based on it's current x,y 
-  local grid_coordinates_x = math.floor(instance_or_object.x
-    / decks[instance_or_object.deck].tilewidth) + 1--derermines X grid coordinate by dividing the current x coordinate of the object by the tilewidth of the current deck and then taking the whole number only
-  local grid_coordinates_y = math.floor(instance_or_object.y / decks[instance_or_object.deck].tileheight) + 1 --here, but for Y
+  local grid_coordinates_x = math.ceil(instance_or_object.x
+    / decks[instance_or_object.deck].tilewidth) +1--derermines X grid coordinate by dividing the current x coordinate of the object by the tilewidth of the current deck and then taking the whole number only
+  local grid_coordinates_y = math.ceil(instance_or_object.y / decks[instance_or_object.deck].tileheight) +1 --here, but for Y
   return grid_coordinates_x,grid_coordinates_y
 end
 

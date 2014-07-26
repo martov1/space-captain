@@ -1,3 +1,7 @@
+-25/7*2014
+-ADDED move_to(), analize_path() get_if_currently_inside_node()
+-FIXED pathfinding bug where objects would stand in a line
+
 23/07/2014
 -ADDED find_path() finds shortest path between 2 points
 -FINISHED load_pathfinding_map()
