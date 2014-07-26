@@ -60,12 +60,12 @@ end
 
 
 function instances_update () --call the update function of all objects (on all decks)
-  for A = 0 , number_of_decks do
-    for k,i in pairs (active_instances.furniture[current_deck]) do
+  for A = 1 , number_of_decks do
+    for k,i in pairs (active_instances.furniture[A]) do
       if i.update then i:update() end 
 
     end  
-    for k,i in pairs (active_instances.crewmen[current_deck]) do
+    for k,i in pairs (active_instances.crewmen[A]) do
 
       if i.update then i:update() end 
     end  
