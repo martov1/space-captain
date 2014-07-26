@@ -119,8 +119,8 @@ end
 
 function determine_grid_coordinates(instance_or_object) --determines in what grid coordinates is an object based on it's current x,y 
   local grid_coordinates_x = math.ceil(instance_or_object.x
-    / decks[instance_or_object.deck].tilewidth) +1--derermines X grid coordinate by dividing the current x coordinate of the object by the tilewidth of the current deck and then taking the whole number only
-  local grid_coordinates_y = math.ceil(instance_or_object.y / decks[instance_or_object.deck].tileheight) +1 --here, but for Y
+    / decks[instance_or_object.deck].tilewidth) --derermines X grid coordinate by dividing the current x coordinate of the object by the tilewidth of the current deck and then taking the whole number only
+  local grid_coordinates_y = math.ceil(instance_or_object.y / decks[instance_or_object.deck].tileheight)  --here, but for Y
   return grid_coordinates_x,grid_coordinates_y
 end
 

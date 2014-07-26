@@ -10,7 +10,7 @@ function clases.crewman:create (x,y,deck)
   local self = {} --create the instance
 
   self.x = x
-  self.speed = 2
+  self.speed = 0.01
   self.y = y
   self.deck = deck
   self.id = active_instances_counter --unique ID of this instance
@@ -33,15 +33,14 @@ function clases.crewman:create (x,y,deck)
   function self:move_towards(A,Speed)
 
 
---        if self.y < (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y + Speed end
---        if self.y > (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y - Speed end
---         if self.x < (self.navegation_nodes[A]:getX() * tilewidth) then self.x= self.x + Speed end
---        if self.x > (self.navegation_nodes[A]:getX() * tilewidth) then self.x=self.x - Speed end
-
-    if self.y < (((self.navegation_nodes[A]:getY() -1) * tileheight)) then self.y=self.y + Speed end
-    if self.y > (((self.navegation_nodes[A]:getY()-1) * tileheight)) then self.y=self.y - Speed end
-    if self.x < (((self.navegation_nodes[A]:getX()-1) * tilewidth)) then self.x= self.x + Speed end
-    if self.x > (((self.navegation_nodes[A]:getX() -1)* tilewidth)) then self.x=self.x - Speed end
+    if self.y < (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y + Speed end
+    if self.y > (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y - Speed end
+    if self.x < (self.navegation_nodes[A]:getX() * tilewidth) then self.x= self.x + Speed end
+    if self.x > (self.navegation_nodes[A]:getX() * tilewidth) then self.x=self.x - Speed end
+    --    if self.y < (((self.navegation_nodes[A]:getY() -1) * tileheight)) then self.y=self.y + Speed end
+    --    if self.y > (((self.navegation_nodes[A]:getY()-1) * tileheight)) then self.y=self.y - Speed end
+    --    if self.x < (((self.navegation_nodes[A]:getX()-1) * tilewidth)) then self.x= self.x + Speed end
+    --    if self.x > (((self.navegation_nodes[A]:getX() -1)* tilewidth)) then self.x=self.x - Speed end
   end
 
 
@@ -57,8 +56,17 @@ function clases.crewman:create (x,y,deck)
   end
 
   function self:move_to(startx, starty, endx, endy,start_deck,end_deck, speed)
+  
+    if self.xtile == endx and self.ytile == endy then 
+    
+      self.end_reached = true 
+        if self.y < (endy * tilewidth) then self.y=self.y + self.speed end
+    if self.y > (endy * tilewidth) then self.y=self.y - self.speed end
+    if self.x < (endx * tilewidth) then self.x= self.x + self.speed end
+    if self.x > (endx * tilewidth) then self.x=self.x - self.speed end
+    else self.end_reached = false 
 
-    if self.xtile == endx and self.ytile == endy then self.end_reached = true else self.end_reached = false end 
+    end 
 
     if self.end_reached == false  and self.path == nil then
 
@@ -71,12 +79,12 @@ function clases.crewman:create (x,y,deck)
     if self.end_reached == false and self.path ~= nil then
 
       if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) == false then
-     
-        self:move_towards(self.step,0.01)
+
+        self:move_towards(self.step,self.speed)
 
       end
       if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) and self.number_of_steps > self.step
-      
+
       then self.step = self.step + 1 end
     end
   end
@@ -93,10 +101,12 @@ function clases.crewman:create (x,y,deck)
   end
   function self:get_if_currently_inside_node(node)
     local A
-    if node:getX() ==self.xtile and node:getY() ==self.ytile then A = true
-  else A = false 
- -- print (node:getX(), self.xtile,node:getY(),self.ytile , A)
-    
+    if node:getX() ==self.xtile and node:getY() ==self.ytile then 
+      A = true
+
+    else A = false 
+    --  print (node:getX(), self.xtile,node:getY(),self.ytile , A)
+
     end 
 
     return A
@@ -105,7 +115,7 @@ function clases.crewman:create (x,y,deck)
   function self:update ()
     --  CREWMAN NEEDS ----
     self:determine_current_tile()
-    self:move_to(self.xtile,self.ytile,10,10,self.deck,self.deck,0.01)
+    self:move_to(self.xtile,self.ytile,10,10,self.deck,self.deck,self.speed)
 
     --CREWMAN PATHFINDING 
 
