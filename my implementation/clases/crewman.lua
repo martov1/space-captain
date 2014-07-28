@@ -27,6 +27,7 @@ function clases.crewman:create (x,y,deck)
   self.circulating = nil
   self.current_step = nil
   self.step = nil
+  
   function self:show_self()
     for a,b in pairs (self) do print (a,b) end
   end

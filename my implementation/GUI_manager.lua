@@ -173,3 +173,9 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
     end
   end
 
+
+function create_object_info_panel(object)
+print (object.name , " selected!")
+     
+
+  end
