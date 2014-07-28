@@ -11,7 +11,9 @@ function camera:set()
   love.graphics.scale(1 / self.scaleX, 1 / self.scaleY)
   love.graphics.translate(map_translation_X, map_translation_Y)
   mouse_x_position = love.mouse.getX() - map_translation_X
-  mouse_Y_position = love.mouse.getY() - map_translation_Y
+  mouse_y_position = love.mouse.getY() - map_translation_Y
+
+  
 end
 
 function camera:unset()

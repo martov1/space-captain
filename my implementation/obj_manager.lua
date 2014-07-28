@@ -178,7 +178,7 @@ end
 --end of doc
 function get_current_mouse_tile_coordinates()
   local x,y
-  x,y = transform_into_grid_coordinates(mouse_x_position,mouse_Y_position)
+  x,y = transform_into_grid_coordinates(mouse_x_position,mouse_y_position)
   return x,y
 end
 
