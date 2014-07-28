@@ -216,7 +216,7 @@ end
 function find_path(startx,starty,endx,endy,start_deck, end_deck)
 
   if start_deck == end_deck then 
-    print ("yay")
+    
     local map = pathfinding_maps[1]
     -- Value for walkable tiles
     local walkable = 0

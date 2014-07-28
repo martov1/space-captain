@@ -8,7 +8,7 @@ function clases.crewman:create (x,y,deck)
 
   active_instances_counter =  active_instances_counter + 1 --this is used to assign every instance a unique ID
   local self = {} --create the instance
-
+  self.name = "crewman"
   self.x = x
   self.speed = 0.01
   self.y = y
