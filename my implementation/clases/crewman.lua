@@ -57,7 +57,7 @@ function clases.crewman:create (x,y,deck)
   end
 
   function self:move_to(startx, starty, endx, endy,start_deck,end_deck, speed)
-  
+ 
     if self.xtile == endx and self.ytile == endy then 
     
       self.end_reached = true 
@@ -117,7 +117,7 @@ function clases.crewman:create (x,y,deck)
     --  CREWMAN NEEDS ----
     self:determine_current_tile()
     self:move_to(self.xtile,self.ytile,10,10,self.deck,self.deck,self.speed)
-
+ 
     --CREWMAN PATHFINDING 
 
     --moveto()
@@ -135,7 +135,7 @@ function clases.crewman:create (x,y,deck)
 
 
 
-  table.insert(active_instances.crewmen[deck] , self )
+  table.insert(active_instances.crewmen , self )
 end
 
 

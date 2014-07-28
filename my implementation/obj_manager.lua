@@ -65,7 +65,7 @@ function instances_update () --call the update function of all objects (on all d
       if i.update then i:update() end 
 
     end  
-    for k,i in pairs (active_instances.crewmen[A]) do
+    for k,i in pairs (active_instances.crewmen) do
 
       if i.update then i:update() end 
     end  
@@ -199,7 +199,7 @@ function instances_draw () --draws all the objects in the current deck (for now)
     if i.draw then i:draw() end 
   end  
   --draw crewmen on top of furniture
-  for k,i in pairs (active_instances.crewmen[current_deck]) do
+  for k,i in pairs (active_instances.crewmen) do
     if i.draw then i:draw() end 
   end  
 end
@@ -216,6 +216,7 @@ end
 function find_path(startx,starty,endx,endy,start_deck, end_deck)
 
   if start_deck == end_deck then 
+    print ("yay")
     local map = pathfinding_maps[1]
     -- Value for walkable tiles
     local walkable = 0
