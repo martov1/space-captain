@@ -22,12 +22,20 @@ function clases.crewman:create (x,y,deck)
   self.number_of_steps = nil
   --here I add data to the instance
   self.datos = "charly!"
-  
+  self.description = "im a crewman!"
   --existe manzana.deck para saber en que deck esta el objeto
   self.circulating = nil
   self.current_step = nil
   self.step = nil
+  self.xdestination = nil
+  self.ydestination = nil
   
+  function self:set_destination(endx, endy)
+    if endx and endy then
+    self.xdestination = endx
+    self.ydestination = endy
+    end
+    end
   function self:show_self()
     for a,b in pairs (self) do print (a,b) end
   end
@@ -57,7 +65,7 @@ function clases.crewman:create (x,y,deck)
   end
 
   function self:move_to(startx, starty, endx, endy,start_deck,end_deck, speed)
- 
+ if endx and endy then
     if self.xtile == endx and self.ytile == endy then 
     
       self.end_reached = true 
@@ -65,6 +73,7 @@ function clases.crewman:create (x,y,deck)
     if self.y > (endy * tilewidth) then self.y=self.y - self.speed end
     if self.x < (endx * tilewidth) then self.x= self.x + self.speed end
     if self.x > (endx * tilewidth) then self.x=self.x - self.speed end
+    
     else self.end_reached = false 
 
     end 
@@ -88,6 +97,7 @@ function clases.crewman:create (x,y,deck)
 
       then self.step = self.step + 1 end
     end
+  end
   end
 
 
@@ -116,7 +126,8 @@ function clases.crewman:create (x,y,deck)
   function self:update ()
     --  CREWMAN NEEDS ----
     self:determine_current_tile()
-    self:move_to(self.xtile,self.ytile,10,10,self.deck,self.deck,self.speed)
+    
+    self:move_to(self.xtile,self.ytile,self.xdestination,self.ydestination,self.deck,self.deck,self.speed)
  
     --CREWMAN PATHFINDING 
 

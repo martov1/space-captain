@@ -1,4 +1,7 @@
 
+local function debug_move_crewman_to(crewman)
+  crewman:set_destination(10,5)
+  end
 local function mouse_over_object(object)
   if object.x then
     if object.x <love.mouse.getX() and object.x > (love.mouse.getX() - tilewidth) then
@@ -18,12 +21,18 @@ local function object_selected() --checks if the user is selecting an instance
 
     for index,crewman in pairs(active_instances.crewmen) do
      if  mouse_over_object(crewman) == true then
-     create_object_info_panel(crewman) break end
-
+       create_object_info_panel(crewman)  
+       debug_move_crewman_to (crewman)
+      break
+      end
     end
   end
 end
 
+
+local function open_properties_window ()
+  
+  end
 local function  build_object_on_next_click() --spawns an object on next click
   build_objects(mouse_x_position,mouse_Y_position,object_to_build_on_next_click,current_deck) 
 end
@@ -44,6 +53,7 @@ end
 local function right_click()
   cancel_build()
   if debug_menu.hover then  debug_right_click_menu() end
+  
 end
 
 
