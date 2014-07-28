@@ -60,7 +60,7 @@ function clases.crewman:create (x,y,deck)
     if self.xtile == endx and self.ytile == endy then 
     
       self.end_reached = true 
-        if self.y < (endy * tilewidth) then self.y=self.y + self.speed end
+    if self.y < (endy * tilewidth) then self.y=self.y + self.speed end
     if self.y > (endy * tilewidth) then self.y=self.y - self.speed end
     if self.x < (endx * tilewidth) then self.x= self.x + self.speed end
     if self.x > (endx * tilewidth) then self.x=self.x - self.speed end
