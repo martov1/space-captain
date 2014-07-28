@@ -139,7 +139,6 @@ end
 
 function debug_right_click_menu ()
 
-
   local menu = loveframes.Create("menu")
   menu:AddOption("print current instances", "resources/images/brick.png", function() instance_show() end)
   menu:AddOption("Option B", "resources/images/add.png", function() end)
@@ -175,7 +174,38 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
 
 
 function create_object_info_panel(object)
-print (object.name , " selected!")
+local frame = loveframes.Create("frame")
+    frame:SetName(object.name)
+    frame:SetSize(500, 330)
+   
+     
+    local list1 = loveframes.Create("list", frame)
+    list1:SetPos(5, 30)
+    list1:SetSize(243, 265)
+    list1:SetPadding(5)
+    list1:SetSpacing(5)
+     
+    local text1 = loveframes.Create("text")
+    text1:SetLinksEnabled(true)
+    text1:SetDetectLinks(true)
+    text1:SetText(loremipsum)
+    text1:SetShadowColor(200, 200, 200, 255)
+    list1:AddItem(text1)
+     
+ 
+     
+    local list2 = loveframes.Create("list", frame)
+    list2:SetPos(252, 30)
+    list2:SetSize(243, 265)
+    list2:SetPadding(5)
+    list2:SetSpacing(5)
+     
+    local text2 = loveframes.Create("text", frame)
+    text2:SetPos(255, 30)
+    text2:SetLinksEnabled(true)
+    text2:SetText(colortext)
+
+    list2:AddItem(text2)
      
 
   end

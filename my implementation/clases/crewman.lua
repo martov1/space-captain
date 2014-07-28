@@ -22,7 +22,7 @@ function clases.crewman:create (x,y,deck)
   self.number_of_steps = nil
   --here I add data to the instance
   self.datos = "charly!"
-  self.name = "manzana"
+  
   --existe manzana.deck para saber en que deck esta el objeto
   self.circulating = nil
   self.current_step = nil

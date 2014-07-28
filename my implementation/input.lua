@@ -1,11 +1,9 @@
 
-local function mouse_over_object(object,area_in_tiles)
+local function mouse_over_object(object)
   if object.x then
-    if object.x >love.mouse.getX() and object.x < (love.mouse.getX() + tilewidth) then
-      print ("eje x ok")
-      if
-      object.y > love.mouse.getY() and object.y < (love.mouse.getY () + tileheight) then
-        print("yes!") 
+    if object.x <love.mouse.getX() and object.x > (love.mouse.getX() - tilewidth) then
+      if object.y < love.mouse.getY() and object.y > (love.mouse.getY () - tileheight) then
+        return true
       end
     end
 
@@ -19,10 +17,8 @@ local function object_selected() --checks if the user is selecting an instance
     local x,y =get_current_mouse_tile_coordinates()
 
     for index,crewman in pairs(active_instances.crewmen) do
-      mouse_over_object(crewman,area_in_tiles)
-      --      if crewman.xtile == x and crewman.ytile == y then
-      --        print (crewman.xtile)
-      --        create_object_info_panel(crewman) break end
+     if  mouse_over_object(crewman) == true then
+     create_object_info_panel(crewman) break end
 
     end
   end
@@ -47,7 +43,7 @@ end
 
 local function right_click()
   cancel_build()
-  if debug_menu.hover then debug_right_click_menu() end
+  if debug_menu.hover then  debug_right_click_menu() end
 end
 
 
