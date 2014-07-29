@@ -1,6 +1,7 @@
 
 selection = nil
-
+local lastclick = 0
+local clickInterval = 0.3 --Number of seconds between double clicks 
 local function debug_move_crewman_to(crewman,x,y)
   if crewman and x and y then
   crewman:set_destination(x,y)
@@ -34,11 +35,11 @@ local function object_selected() --checks if the user is clicking an instance
 end
 
 
-local function open_properties_window ()
+local function open_properties_window (object)
 
-  if object_selected() then
+  if object then
 
-    create_object_info_panel(object_selected())
+    create_object_info_panel(object)
   end
 end
 
@@ -58,11 +59,15 @@ local function left_click()
  
   object_selected()
   build_object_on_next_click() --checks if an object needs to be built on next click
-  open_properties_window()
+ 
   selection = object_selected() --placed the selected object in a variable
- if selection then print("current selection is ", selection.name)end
+
 end
 
+local function double_left_click()
+   open_properties_window(selection)
+  
+  end
 local function right_click()
    if selection and selection.name == "crewman" then debug_move_crewman_to(selection,mouse_x_tile,mouse_y_tile)end
   cancel_build()
@@ -76,6 +81,17 @@ function love.mousepressed(x, y, button)
 
   if button == "l" then left_click() end
   if button == "r" then right_click() end
+  
+    if button=="l" then --Left click
+        local time =  love.timer.getTime ()
+        if time <= lastclick + clickInterval then
+            double_left_click()
+        else
+            lastclick = time
+        end
+    end
+
+  
   loveframes.mousepressed(x, y, button)
 
 
