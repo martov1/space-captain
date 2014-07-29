@@ -174,13 +174,16 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
 
 
   function create_object_info_panel(object)
+   
+  if  info_panel == nil then --this prevents more than 1 info panel at the same time
+     info_panel = loveframes.Create("frame")
+    info_panel:SetName(object.name)
+    info_panel:SetSize(500, 330)
+    info_panel.OnClose =  function (object) 
+      info_panel = nil
+      end
 
-    local frame = loveframes.Create("frame")
-    frame:SetName(object.name)
-    frame:SetSize(500, 330)
-
-
-    local list1 = loveframes.Create("list", frame)
+    local list1 = loveframes.Create("list", info_panel)
     list1:SetPos(5, 30)
     list1:SetSize(243, 265)
     list1:SetPadding(5)
@@ -192,4 +195,5 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
     text1:SetText(object.description)
     text1:SetShadowColor(200, 200, 200, 255)
     list1:AddItem(text1)
+    end
   end
