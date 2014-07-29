@@ -84,7 +84,7 @@ function clases.crewman:create (x,y,deck)
       end
     else self.end_reached = false 
 
-    end 
+     
 
     if self.end_reached == false  and self.path == nil and endx and endy then
 print("making path!")
@@ -106,7 +106,7 @@ print("making path!")
       then self.step = self.step + 1 end
     end
   end
-  
+  end
 
 
 
