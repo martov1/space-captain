@@ -51,7 +51,7 @@ end
 
 function love.update(dt)
 
-
+deltatime=dt
   -- tests()
 if deck_loaded == true then
   
