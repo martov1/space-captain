@@ -1,4 +1,5 @@
 
+selection = nil
 
 local function debug_move_crewman_to(crewman,x,y)
   if crewman and x and y then
@@ -18,7 +19,7 @@ local function mouse_over_object(object)
 end
 
 
-local function object_selected() --checks if the user is selecting an instance
+local function object_selected() --checks if the user is clicking an instance
   if deck_loaded == true and  object_to_build_on_next_click == nil then
     local x,y =get_current_mouse_tile_coordinates()
 
@@ -58,12 +59,12 @@ local function left_click()
   object_selected()
   build_object_on_next_click() --checks if an object needs to be built on next click
   open_properties_window()
-  debug_move_crewman_to(object_selected(),testvalue2,testvalue2)
+  selection = object_selected() --placed the selected object in a variable
  
 end
 
 local function right_click()
-   testvalue2=testvalue2+1
+   if selection and selection.name == "crewman" then debug_move_crewman_to(selection,mouse_x_tile,mouse_y_tile)end
   cancel_build()
   if debug_menu.hover then  debug_right_click_menu() end
 

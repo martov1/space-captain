@@ -22,6 +22,8 @@ function love.load()
   tilewidth = nil
   tileheight = nil
   current_pointer = nil
+  mouse_x_tile = nil
+  mouse_y_tile = nil
   --load stuff into memory
   load_atlases()
 
@@ -54,7 +56,7 @@ function love.update(dt)
 deltatime=dt
   -- tests()
 if deck_loaded == true then
-  
+  get_current_mouse_tile_coordinates()
 instances_update()
 end
   -- required stuff
