@@ -54,15 +54,16 @@ local function cancel_build() --stop spawning objects on click
 
 end
 local function left_click()
-  
+ 
   object_selected()
   build_object_on_next_click() --checks if an object needs to be built on next click
   open_properties_window()
-  
+  debug_move_crewman_to(object_selected(),testvalue2,testvalue2)
  
 end
 
 local function right_click()
+   testvalue2=testvalue2+1
   cancel_build()
   if debug_menu.hover then  debug_right_click_menu() end
 

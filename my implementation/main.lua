@@ -38,7 +38,7 @@ function love.load()
   set_mouse_pointer() --no arguments, so the current pointer is nil
   --test values, used for debugging, non essential
   test = 1 --if this value is bigger than 0 tests will be run
-  testvalue2 = 0
+  testvalue2 = 1
   draw_the_grid = false
   debug_menu ()
   debug_menu:SetVisible (false)
