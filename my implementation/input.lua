@@ -21,7 +21,7 @@ end
 
 local function object_selected() --checks if the user is clicking an instance
   if deck_loaded == true and  object_to_build_on_next_click == nil then
-    local x,y =get_current_mouse_tile_coordinates()
+    
 
     for index,crewman in pairs(active_instances.crewmen) do
       if  mouse_over_object(crewman) == true then
@@ -60,7 +60,7 @@ local function left_click()
   build_object_on_next_click() --checks if an object needs to be built on next click
   open_properties_window()
   selection = object_selected() --placed the selected object in a variable
- 
+ if selection then print("current selection is ", selection.name)end
 end
 
 local function right_click()

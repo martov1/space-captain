@@ -65,7 +65,7 @@ function clases.crewman:create (x,y,deck)
   end
 
   function self:move_to(startx, starty, endx, endy,start_deck,end_deck, speed)
-    print (startx, starty,endx,endy)
+    --print (startx, starty,endx,endy)
     if self.xtile == endx and self.ytile == endy then 
       print("endtile")
       self.end_reached = true 
@@ -74,7 +74,7 @@ function clases.crewman:create (x,y,deck)
       if self.x < (endx * tilewidth) then self.x= self.x + self.speed end
       if self.x > (endx * tilewidth) then self.x=self.x - self.speed end
       self.timer = self.timer + deltatime
-      if self.timer > 5 then 
+      if self.timer > 2 then 
         self.end_reached = false
         self.xdestination = nil
         self.ydestination = nil
@@ -97,7 +97,7 @@ function clases.crewman:create (x,y,deck)
       if self.end_reached == false and self.path ~= nil then
         print("there is a path")
         if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) == false then
-
+          
           self:move_towards(self.step,self.speed)
 
         end
