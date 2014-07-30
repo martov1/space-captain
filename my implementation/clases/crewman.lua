@@ -69,18 +69,18 @@ function clases.crewman:create (x,y,deck)
     if self.xtile == endx and self.ytile == endy then 
       print("endtile")
       self.end_reached = true 
-      if self.y < (endy * tilewidth) then self.y=self.y + self.speed end
-      if self.y > (endy * tilewidth) then self.y=self.y - self.speed end
-      if self.x < (endx * tilewidth) then self.x= self.x + self.speed end
-      if self.x > (endx * tilewidth) then self.x=self.x - self.speed end
-      self.timer = self.timer + deltatime
-      if self.timer > 2 then 
+      if self.y < (endy * tilewidth) then self.y=self.y + tilewidth*self.speed end
+      if self.y > (endy * tilewidth) then self.y=self.y - tilewidth*self.speed end
+      if self.x < (endx * tilewidth) then self.x= self.x + tilewidth*self.speed end
+      if self.x > (endx * tilewidth) then self.x=self.x - tilewidth*self.speed end
+      http://gamedev.stackexchange.com/questions/31410/keeping-player-aligned-to-grid-in-pacman
+      if self.x==endx*tilewidth and self.y==endy*tilewidth then 
         self.end_reached = false
         self.xdestination = nil
         self.ydestination = nil
         self.path = nil
         self.timer = 0
-
+  print("ended")
       end
     else self.end_reached = false 
 
