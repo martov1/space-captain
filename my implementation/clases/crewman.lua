@@ -30,26 +30,19 @@ function clases.crewman:create (x,y,deck)
   self.xdestination = nil
   self.ydestination = nil
   self.timer = 0
+  self.xdirection = nil 
+  self.ydirection = nil
+  self.step = 1
   function self:set_destination(endx, endy)
     if endx and endy then
       self.xdestination = endx
       self.ydestination = endy
+      self.step = 1
+      self.path = nil 
     end
   end
   function self:show_self()
     for a,b in pairs (self) do print (a,b) end
-  end
-  function self:move_towards(A,Speed)
-
-
-    if self.y < (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y + Speed end
-    if self.y > (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y - Speed end
-    if self.x < (self.navegation_nodes[A]:getX() * tilewidth) then self.x= self.x + Speed end
-    if self.x > (self.navegation_nodes[A]:getX() * tilewidth) then self.x=self.x - Speed end
-    --    if self.y < (((self.navegation_nodes[A]:getY() -1) * tileheight)) then self.y=self.y + Speed end
-    --    if self.y > (((self.navegation_nodes[A]:getY()-1) * tileheight)) then self.y=self.y - Speed end
-    --    if self.x < (((self.navegation_nodes[A]:getX()-1) * tilewidth)) then self.x= self.x + Speed end
-    --    if self.x > (((self.navegation_nodes[A]:getX() -1)* tilewidth)) then self.x=self.x - Speed end
   end
 
 
@@ -58,103 +51,130 @@ function clases.crewman:create (x,y,deck)
 
       self.navegation_nodes[count] = node
       self.number_of_steps = count
-      self.current_step = 1
+      self.step = 1
+      self:get_direction(self.navegation_nodes[self.step])
       --print(self.number_of_steps)
 
     end
   end
-
-  function self:move_to(startx, starty, endx, endy,start_deck,end_deck, speed)
-    --print (startx, starty,endx,endy)
-    if self.xtile == endx and self.ytile == endy then 
-      print("endtile")
-      self.end_reached = true 
-      if self.y < (endy * tilewidth) then self.y=self.y + tilewidth*self.speed end
-      if self.y > (endy * tilewidth) then self.y=self.y - tilewidth*self.speed end
-      if self.x < (endx * tilewidth) then self.x= self.x + tilewidth*self.speed end
-      if self.x > (endx * tilewidth) then self.x=self.x - tilewidth*self.speed end
-      http://gamedev.stackexchange.com/questions/31410/keeping-player-aligned-to-grid-in-pacman
-      if self.x==endx*tilewidth and self.y==endy*tilewidth then 
-        self.end_reached = false
-        self.xdestination = nil
-        self.ydestination = nil
-        self.path = nil
-        self.timer = 0
-  print("ended")
-      end
-    else self.end_reached = false 
-
-
-
-      if self.end_reached == false  and self.path == nil and endx and endy then
-        print("making path!")
-        self.path = find_path(startx,starty,endx,endy,start_deck, end_deck)
-        self:analize_path(self.path)
-        self.step = 1
-
-      end
-
-      if self.end_reached == false and self.path ~= nil then
-        print("there is a path")
-        if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) == false then
-          
-          self:move_towards(self.step,self.speed)
-
-        end
-        if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) and self.number_of_steps > self.step
-
-        then self.step = self.step + 1 end
-      end
-    end
-  end
-
-
-
-
-
 
   function self:determine_current_tile ()
 
     self.xtile,self.ytile = determine_grid_coordinates(self)
 
   end
-  function self:get_if_currently_inside_node(node)
-    local A
-    if node:getX() ==self.xtile and node:getY() ==self.ytile then 
-      A = true
 
-    else A = false 
-      --  print (node:getX(), self.xtile,node:getY(),self.ytile , A)
 
-    end 
 
-    return A
+  function self:navegate_to(endx,endy)
+    assert (self.speed > 0, "speed in 0 or negative! >:C")
+    --determino si llegue a mi destino
+    --print (self.x,self.y,endx*tilewidth,endy*tileheight)
+    if self.x ~= endx*tilewidth or self.y ~= endy*tileheight then 
+      --si no llegue, determino si ya arme un path
+      if self.path == nil then 
+        print ("arming path!")
+        self.path = find_path(self.xtile,self.ytile,endx,endy) 
+        self:analize_path(self.path)
+        self:get_direction(self.navegation_nodes[self.step])
+        print ("path armed!")
+      end  
+      
+      if self:arrived(self.navegation_nodes[self.step]) == true and self.navegation_nodes[self.step + 1] then --determino si llegue a un nodo, si llegue y existe otro, marco el otro como destino
+      --print("increasing from ", self.step," to " , self.step + 1)
+        self.step = self.step+1 
+         --calculo la direccion al siguiente nodo
+      --print ("step incresed to ", self.step)
+      end
+      --if im not in the destination node, move there
+      if self:arrived(self.navegation_nodes[self.step]) == false then  
+        self:get_direction(self.navegation_nodes[self.step])
+        self:approach(self.navegation_nodes[self.step]) 
+        --print ("aproaching") 
+        end
+   
+    
+
+ else 
+      --si ya llegue, rompo el path
+      print("end of path")
+      self.step = 1
+      self.path = nil 
+  end
+end
+
+
+  function self:get_direction(node)
+    --print("getting direction")
+    local endx, endy
+  endx = node:getX()*tilewidth
+endy = node:getY()*tileheight
+local deltax = endx -  self.x 
+local deltay = endy - self.y
+if deltax < 0 then self.xdirection = -1 else self.xdirection = 1 end
+if deltay < 0 then self.ydirection = -1 else self.ydirection = 1 end
+--print ("direction vector is: ", self.xdirection , self.ydirection)
+end
+
+function self:arrived()
+  --print("arrived() start")
+  local endx, endy
+endx = self.navegation_nodes[self.step]:getX()*tilewidth  
+endy = self.navegation_nodes[self.step]:getY()*tileheight
+local deltax = endx -  self.x 
+local deltay = endy - self.y
+--print(math.abs(deltax),(1+ math.abs(self.xdirection * self.speed )),math.abs(deltay),(1+ math.abs(self.ydirection * self.speed )) )
+--if suficiently near, place on the exact position and return true
+if math.abs(deltax) <= (1+ math.abs(self.xdirection * self.speed )) and math.abs(deltay) <= (1+ math.abs(self.ydirection * self.speed )) then 
+  
+  self.x = endx
+  self.y = endy
+  return true 
+  else return false
   end
 
-  function self:update ()
-    --  CREWMAN NEEDS ----
-    self:determine_current_tile()
 
-    self:move_to(self.xtile,self.ytile,self.xdestination,self.ydestination,self.deck,self.deck,self.speed)
-
-    --CREWMAN PATHFINDING 
-
-    --moveto()
+--print("arrive end")
+end
 
 
-
-
-  end
-  --aca inicializas sus funciones
-
-  function self:draw()
-
-    love.graphics.draw(self.atlas, self.quad,self.x,self.y)
-  end
+function self:approach (node)
+   
+  --print(self.xdirection,self.ydirection)
+  self.x = self.x + (self.xdirection * self.speed )
+  self.y = self.y + (self.ydirection * self.speed )
+end
 
 
 
-  table.insert(active_instances.crewmen , self )
+
+
+
+
+function self:update ()
+  --  CREWMAN NEEDS ----
+  self:determine_current_tile()
+
+  self:navegate_to(10,10)
+
+  --CREWMAN PATHFINDING 
+
+  --moveto()
+
+
+
+
+end
+--aca inicializas sus funciones
+
+function self:draw()
+
+  love.graphics.draw(self.atlas, self.quad,self.x,self.y)
+end
+
+
+
+table.insert(active_instances.crewmen , self )
 end
 
 
