@@ -35,6 +35,7 @@ function clases.crewman:create (x,y,deck)
   self.step = 1
   function self:set_destination(endx, endy)
     if endx and endy then
+      --print("destination",endx,endy)
       self.xdestination = endx
       self.ydestination = endy
       self.step = 1
@@ -73,18 +74,18 @@ function clases.crewman:create (x,y,deck)
     if self.x ~= endx*tilewidth or self.y ~= endy*tileheight then 
       --si no llegue, determino si ya arme un path
       if self.path == nil then 
-        print ("arming path!")
+        --print ("arming path!")
         self.path = find_path(self.xtile,self.ytile,endx,endy) 
         self:analize_path(self.path)
         self:get_direction(self.navegation_nodes[self.step])
-        print ("path armed!")
+        --print ("path armed!")
       end  
       
       if self:arrived(self.navegation_nodes[self.step]) == true and self.navegation_nodes[self.step + 1] then --determino si llegue a un nodo, si llegue y existe otro, marco el otro como destino
-      --print("increasing from ", self.step," to " , self.step + 1)
+      print("increasing from ", self.step," to " , self.step + 1)
         self.step = self.step+1 
          --calculo la direccion al siguiente nodo
-      --print ("step incresed to ", self.step)
+      print ("step incresed to ", self.step)
       end
       --if im not in the destination node, move there
       if self:arrived(self.navegation_nodes[self.step]) == false then  
@@ -97,9 +98,11 @@ function clases.crewman:create (x,y,deck)
 
  else 
       --si ya llegue, rompo el path
+      if self.step ~= 1 or self.path ~= nil then
       print("end of path")
       self.step = 1
       self.path = nil 
+      end
   end
 end
 
@@ -107,8 +110,10 @@ end
   function self:get_direction(node)
     --print("getting direction")
     local endx, endy
+    
   endx = node:getX()*tilewidth
 endy = node:getY()*tileheight
+
 local deltax = endx -  self.x 
 local deltay = endy - self.y
 if deltax < 0 then self.xdirection = -1 else self.xdirection = 1 end
@@ -134,7 +139,7 @@ if math.abs(deltax) <= (1+ math.abs(self.xdirection * self.speed )) and math.abs
   end
 
 
---print("arrive end")
+print("arrive end")
 end
 
 
@@ -155,7 +160,7 @@ function self:update ()
   --  CREWMAN NEEDS ----
   self:determine_current_tile()
 
-  self:navegate_to(10,10)
+  if self.ydestination and self.xdestination then self:navegate_to(self.xdestination,self.ydestination) end
 
   --CREWMAN PATHFINDING 
 
