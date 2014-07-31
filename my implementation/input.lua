@@ -78,7 +78,7 @@ end
 
 
 function love.mousepressed(x, y, button)
-
+loveframes.mousepressed(x, y, button)
   if button == "l" then left_click() end
   if button == "r" then right_click() end
   
@@ -92,7 +92,7 @@ function love.mousepressed(x, y, button)
     end
 
   
-  loveframes.mousepressed(x, y, button)
+  
 
 
 end

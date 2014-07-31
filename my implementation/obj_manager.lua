@@ -43,17 +43,15 @@ function instance_show (someid)
       for A,B in pairs (active_instances.furniture[i]) do
         print ("index: ",A,"object: ",B.name," in deck:  ",B.deck) 
       end
-    
+    end
     print ("crewmen")
-        for i,k in pairs (active_instances.crewmen) do
+        for A,B in pairs (active_instances.crewmen) do
 
-          for A,B in pairs (active_instances.furniture[i]) do
-            print ("index: ",A,"object: ",B.name," in deck:  ",B.deck) 
-          end
+        print ("index: ",A,"object: ",B.name)
         end
   end
 end
-end
+
 
 
 
@@ -109,7 +107,7 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
   for A=1, number_of_decks do
     active_instances.furniture[A] = {}
     pathfinding_maps[A] = {}
-    active_instances.crewmen[A] = {}
+    
   end
   --for i,k in pairs (active_instances.furniture) do print(i,k) end
 
