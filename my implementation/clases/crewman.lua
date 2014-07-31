@@ -81,7 +81,7 @@ function clases.crewman:create (x,y,deck)
         --print ("path armed!")
       end  
       
-      if self:arrived(self.navegation_nodes[self.step]) == true and self.navegation_nodes[self.step + 1] then --determino si llegue a un nodo, si llegue y existe otro, marco el otro como destino
+      if self:arrived(self.navegation_nodes[self.step]) == true and self.step < self.number_of_steps  then --determino si llegue a un nodo, si llegue y existe otro, marco el otro como destino
       print("increasing from ", self.step," to " , self.step + 1)
         self.step = self.step+1 
          --calculo la direccion al siguiente nodo
