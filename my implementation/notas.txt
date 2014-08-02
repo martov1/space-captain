@@ -1,5 +1,4 @@
 ----- TO DO IN PRIORITY ORDER
-2) lograr mas de un movimiento de pathfinding, AYUDATE CON debug_move_crewman_to()
 3)placed objects need to modify the pathfinding map
 4)figure out pathfinding
 5) figure out movement using pathfingin info

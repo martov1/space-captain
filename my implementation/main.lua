@@ -39,12 +39,12 @@ function love.load()
   main_menu("activated")
   set_mouse_pointer() --no arguments, so the current pointer is nil
   --test values, used for debugging, non essential
-  test = 1 --if this value is bigger than 0 tests will be run
+   --if this value is bigger than 0 tests will be run
   testvalue2 = 1
   draw_the_grid = false
   debug_menu ()
   debug_menu:SetVisible (false)
-
+  profiler = newProfiler()
 end
 
 
@@ -54,7 +54,7 @@ end
 function love.update(dt)
 
 deltatime=dt
-  -- tests()
+  
 if deck_loaded == true then
   get_current_mouse_tile_coordinates()
 instances_update()
@@ -82,7 +82,7 @@ function love.draw ()
     love.graphics.print(current_deck, 0, 0) --shows current deck on screen
     love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
     instances_draw()
-     tests()
+     
      
   end
   --draw the grid if necesary

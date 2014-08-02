@@ -17,20 +17,16 @@ function show_guis ()
   end
 
 function tests ()
- if (test >= 1) then  -- runs a test if test = 1
-  
-  test = 0
-   print ("LOADED CLASES")
+ 
+   print ("----------LOADED CLASES----------")
  show_loaded_clases()
- print ("LOADED GUIS")
-profiler = newProfiler()
-profiler_activated = true
-    profiler:start()
+ print("----------END OF LOADED CLASES------")
+
 show_guis()
---find_path(2,2,19,18,1,1)
+
 
   end
 
 
-end
+
 

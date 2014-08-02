@@ -37,13 +37,7 @@ function main_menu (activated)
   exitbutton:SetY (main_menu_frame:GetHeight()*(8/10))
   exitbutton.OnClick = function(object, x, y)
     object:SetText("You clicked the button!")
-    if  profiler_activated == true then 
-      profiler:stop()
 
-      local outfile = io.open( "profile.txt", "w+" )
-      profiler:report( outfile )
-      outfile:close()
-    end
     love.event.quit()
   end
 
@@ -104,7 +98,7 @@ function general_gui (activated)
   construction_wall:SizeToImage()
   construction_wall.OnClick = function(object, x, y)
     --when the player clicks LMB, function build_objects() will be called, with this value as parameter
-    object_to_build_on_next_click = "manzana" 
+    object_to_build_on_next_click = "wall" 
     clases[object_to_build_on_next_click]:mouse_pointer()
   end
   local construction_crew = loveframes.Create("imagebutton", construction_panel)
@@ -141,10 +135,22 @@ function debug_right_click_menu ()
 
   local menu = loveframes.Create("menu")
   menu:AddOption("print current instances", "resources/images/brick.png", function() instance_show() end)
-  menu:AddOption("Option B", "resources/images/add.png", function() end)
+  menu:AddOption("run debug tests batch", "resources/images/add.png", function() tests() end)
   menu:AddDivider()
-  menu:AddOption("Option C", "resources/images/building.png", function() end)
-  menu:AddOption("Option D", "resources/images/accept.png", function() end)
+  menu:AddOption("start profiler", "resources/images/building.png", function()
+      profiler:start() 
+      end)
+  menu:AddOption("stop profiler", "resources/images/accept.png", function() 
+          if  profiler_activated == true then 
+      profiler:stop()
+
+      local outfile = io.open( "profile.txt", "w+" )
+      profiler:report( outfile )
+      outfile:close()
+    else print("profiler not active") end
+      
+      
+      end)
   menu:AddDivider()
   menu:SetPos(mouse_x_position, mouse_Y_position)
 
