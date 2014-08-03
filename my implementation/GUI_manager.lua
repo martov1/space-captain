@@ -72,7 +72,7 @@ end
 
 
 
-function general_gui (activated)
+function general_gui (activated) 
   --create a general_tabs object to hold the tabs
   general_tabs = loveframes.Create("tabs")
   general_tabs:SetPos(0,love.window.getHeight()*(4/5))
@@ -115,7 +115,7 @@ function general_gui (activated)
 
 
 end
-function debug_menu (activated)
+function debug_menu (activated) --activated by pressing TAB
 
   debug_menu = loveframes.Create("frame")
   debug_menu:SetName("debugging")
@@ -131,14 +131,16 @@ function debug_menu (activated)
 
 end
 
-function debug_right_click_menu ()
+function debug_right_click_menu () --menu that get's opened when right-clicking the debug menu
 
   local menu = loveframes.Create("menu")
   menu:AddOption("print current instances", "resources/images/brick.png", function() instance_show() end)
   menu:AddOption("run debug tests batch", "resources/images/add.png", function() tests() end)
   menu:AddDivider()
   menu:AddOption("start profiler", "resources/images/building.png", function()
-      profiler:start() 
+     profiler = newProfiler()
+     profiler_activated = true
+     profiler:start() 
     end)
   menu:AddOption("stop profiler", "resources/images/accept.png", function() 
       if  profiler_activated == true then 
@@ -167,7 +169,7 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
   if mouse_pointer.quad ~=nil and mouse_pointer.snap == true then 
     local x,y
     x, y = get_current_mouse_tile_coordinates()
-    love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , x*tilewidth, y*tilewidth)
+    love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , (x-1)*tilewidth, (y-1)*tilewidth)
   else
     if mouse_pointer.quad ~=nil then
       love.graphics.draw(mouse_pointer.atlas, mouse_pointer.quad , mouse_x_position, mouse_Y_position) end
@@ -185,7 +187,7 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
   end
 
 
-  function create_object_info_panel(object)
+  function create_object_info_panel(object) --creates the panel that shows an object's information upon double clicking it
 
     if  info_panel == nil then --this prevents more than 1 info panel at the same time
       info_panel = loveframes.Create("frame")

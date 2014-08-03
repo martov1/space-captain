@@ -1,4 +1,9 @@
 ------------ Class wall -------------
+
+--walls prevent the crewmen from calculating a path through them
+
+
+
 clases.wall = {}
 function clases.wall.mouse_pointer ()
   set_mouse_pointer(quads["A1x1.png11"], atlases["A1x1.png"],true)
@@ -18,16 +23,20 @@ function clases.wall:create (x,y,deck)
   
   self.quad = quads["A1x1.png11"]
   self.atlas = atlases["A1x1.png"]
-
+  
 
   --here I add data to the instance
   self.datos = "charly!"
   self.name = "wall"
   --existe wall.deck para saber en que deck esta el objeto
-function obstruct_pathfinding()
+function self:obstruct_pathfinding()
   if self.path_obstruction == true then 
-    
+    print (self.xtile,self.ytile)
+    pathfinding_maps[current_deck][self.ytile][self.xtile] = 1
+  else
+    pathfinding_maps[current_deck][self.xtile][self.ytile] = 0
     end
+    
     
   
 end
@@ -46,6 +55,8 @@ end
     love.graphics.draw(self.atlas, self.quad,self.x,self.y)
   end
 
+  
+  self:obstruct_pathfinding()
   table.insert(active_instances.furniture[deck] , self )
 end
 

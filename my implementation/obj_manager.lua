@@ -166,8 +166,8 @@ end
 
 function transform_into_grid_coordinates(x,y)
   local tileX,tileY
-  tileX = math.floor(x/tilewidth)
-  tileY = math.floor(y/tileheight)
+  tileX = math.floor(x/tilewidth) 
+  tileY = math.floor(y/tileheight) 
   return tileX,tileY
 end
 
@@ -175,8 +175,8 @@ end
 function get_current_mouse_tile_coordinates()
   local x,y
   x,y = transform_into_grid_coordinates(mouse_x_position,mouse_y_position)
-  mouse_x_tile = x
-  mouse_y_tile = y
+  mouse_x_tile = x 
+  mouse_y_tile = y 
   return x,y
 end
 
@@ -211,7 +211,7 @@ function load_pathfinding_map ()
   end
 end
 
-function find_path(startx,starty,endx,endy,start_deck, end_deck)
+function find_path(startx,starty,endx,endy,start_deck, end_deck) 
 
   if start_deck == end_deck then 
 
@@ -253,3 +253,6 @@ function find_path(startx,starty,endx,endy,start_deck, end_deck)
 end
 
 
+
+
+  

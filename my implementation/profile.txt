@@ -1,112 +1,468 @@
 Lua Profile output created by profiler.lua. Copyright Pepperfish 2002+
 
-------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:344 -------------------
-Sample count:            3
-Time spend total:       0.105s
+------------------- L:CheckHover@@loveframes//objects/base.lua:759 -------------------
+Sample count:           25
+Time spend total:       0.875s
 Time spent in children: 0.000s
-Time spent in self:     0.105s
+Time spent in self:     0.875s
 Time spent per sample:  0.03500s/sample
 Time spent in self per sample: 0.03500s/sample
 
-------------------- L:CheckHover@@loveframes//objects/base.lua:759 -------------------
-Sample count:            3
-Time spend total:       0.097s
+------------------- L:OutlinedRectangle@@loveframes//skins/Blue/skin.lua:156 -------------------
+Sample count:           22
+Time spend total:       0.722s
 Time spent in children: 0.000s
-Time spent in self:     0.097s
-Time spent per sample:  0.03233s/sample
-Time spent in self per sample: 0.03233s/sample
+Time spent in self:     0.722s
+Time spent per sample:  0.03282s/sample
+Time spent in self per sample: 0.03282s/sample
+
+------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:687 -------------------
+Sample count:           28
+Time spend total:       0.939s
+Time spent in children: 0.381s
+Time spent in self:     0.558s
+Time spent per sample:  0.03354s/sample
+Time spent in self per sample: 0.01993s/sample
+
+Child L:GetWidth@@loveframes//objects/base.lua:530 sampled      1 times. Took 0.04s
+Child L:OutlinedRectangle@@loveframes//skins/Blue/skin.lua:156 sampled     11 times. Took 0.34s
 
 ---------------------- L:update@@loveframes//init.lua:101 ----------------------
-Sample count:            6
-Time spend total:       0.221s
-Time spent in children: 0.138s
-Time spent in self:     0.083s
-Time spent per sample:  0.03683s/sample
-Time spent in self per sample: 0.01383s/sample
+Sample count:           57
+Time spend total:       1.980s
+Time spent in children: 1.683s
+Time spent in self:     0.297s
+Time spent per sample:  0.03474s/sample
+Time spent in self per sample: 0.00521s/sample
 
-Child L:update@@loveframes//objects/base.lua:32 sampled      4 times. Took 0.14s
+Child L:update@@loveframes//objects/base.lua:32 sampled     49 times. Took 1.68s
 
 ------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:189 -------------------
+Sample count:           11
+Time spend total:       0.386s
+Time spent in children: 0.211s
+Time spent in self:     0.175s
+Time spent per sample:  0.03509s/sample
+Time spent in self per sample: 0.01591s/sample
+
+Child L:OutlinedRectangle@@loveframes//skins/Blue/skin.lua:156 sampled      6 times. Took 0.21s
+
+------------------- L:update@@loveframes//objects/frame.lua:93 -------------------
+Sample count:           15
+Time spend total:       0.533s
+Time spent in children: 0.363s
+Time spent in self:     0.170s
+Time spent per sample:  0.03553s/sample
+Time spent in self per sample: 0.01133s/sample
+
+Child L:update@@loveframes//objects/checkbox.lua:35 sampled      6 times. Took 0.22s
+Child L:update@@loveframes//objects/internal/closebutton.lua:33 sampled      3 times. Took 0.10s
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      1 times. Took 0.04s
+
+------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:409 -------------------
+Sample count:            6
+Time spend total:       0.218s
+Time spent in children: 0.058s
+Time spent in self:     0.160s
+Time spent per sample:  0.03633s/sample
+Time spent in self per sample: 0.02667s/sample
+
+Child L:GetSkin@@loveframes//objects/base.lua:995 sampled      2 times. Took 0.06s
+
+----------------------- L:drawTileLayer@@STI/map.lua:426 -----------------------
 Sample count:            4
-Time spend total:       0.132s
-Time spent in children: 0.063s
-Time spent in self:     0.069s
+Time spend total:       0.140s
+Time spent in children: 0.000s
+Time spent in self:     0.140s
+Time spent per sample:  0.03500s/sample
+Time spent in self per sample: 0.03500s/sample
+
+------------------- L:draw@@loveframes//objects/imagebutton.lua:87 -------------------
+Sample count:           10
+Time spend total:       0.347s
+Time spent in children: 0.218s
+Time spent in self:     0.129s
+Time spent per sample:  0.03470s/sample
+Time spent in self per sample: 0.01290s/sample
+
+Child L:drawfunc@@loveframes//skins/Blue/skin.lua:409 sampled      6 times. Took 0.22s
+
+------------------- L:update@@loveframes//objects/checkbox.lua:35 -------------------
+Sample count:            6
+Time spend total:       0.222s
+Time spent in children: 0.102s
+Time spent in self:     0.120s
+Time spent per sample:  0.03700s/sample
+Time spent in self per sample: 0.02000s/sample
+
+Child L:update@@loveframes//objects/text.lua:69 sampled      3 times. Took 0.10s
+
+------------------- L:draw@@loveframes//objects/tabs.lua:121 -------------------
+Sample count:           54
+Time spend total:       1.861s
+Time spent in children: 1.742s
+Time spent in self:     0.119s
+Time spent per sample:  0.03446s/sample
+Time spent in self per sample: 0.00220s/sample
+
+Child L:draw@@loveframes//objects/internal/tabbutton.lua:87 sampled     32 times. Took 1.08s
+Child L:SetDrawOrder@@loveframes//objects/base.lua:1150 sampled      1 times. Took 0.04s
+Child L:draw@@loveframes//objects/panel.lua:72  sampled     15 times. Took 0.53s
+Child L:drawfunc@@loveframes//skins/Blue/skin.lua:656 sampled      3 times. Took 0.09s
+
+------------------- L:draw@@loveframes//objects/text.lua:138 -------------------
+Sample count:            7
+Time spend total:       0.241s
+Time spent in children: 0.131s
+Time spent in self:     0.110s
+Time spent per sample:  0.03443s/sample
+Time spent in self per sample: 0.01571s/sample
+
+Child L:DrawText@@loveframes//objects/text.lua:499 sampled      4 times. Took 0.13s
+
+------------------- L:draw@@loveframes//objects/internal/tabbutton.lua:87 -------------------
+Sample count:           32
+Time spend total:       1.079s
+Time spent in children: 0.969s
+Time spent in self:     0.110s
+Time spent per sample:  0.03372s/sample
+Time spent in self per sample: 0.00344s/sample
+
+Child L:SetDrawOrder@@loveframes//objects/base.lua:1150 sampled      1 times. Took 0.03s
+Child L:drawfunc@@loveframes//skins/Blue/skin.lua:687 sampled     28 times. Took 0.94s
+
+------------------- L:SetDrawOrder@@loveframes//objects/base.lua:1150 -------------------
+Sample count:            3
+Time spend total:       0.109s
+Time spent in children: 0.000s
+Time spent in self:     0.109s
+Time spent per sample:  0.03633s/sample
+Time spent in self per sample: 0.03633s/sample
+
+----------------------------- L:draw@@main.lua:76 ------------------------------
+Sample count:           94
+Time spend total:       3.241s
+Time spent in children: 3.134s
+Time spent in self:     0.107s
+Time spent per sample:  0.03448s/sample
+Time spent in self per sample: 0.00114s/sample
+
+Child L:draw@@loveframes//init.lua:212          sampled     82 times. Took 2.84s
+Child L:draw@@STI/map.lua:402                   sampled      8 times. Took 0.27s
+Child L:unset@@camera.lua:19                    sampled      1 times. Took 0.02s
+
+--------------------------- L:draw@@STI/map.lua:402 ----------------------------
+Sample count:            8
+Time spend total:       0.272s
+Time spent in children: 0.180s
+Time spent in self:     0.092s
+Time spent per sample:  0.03400s/sample
+Time spent in self per sample: 0.01150s/sample
+
+Child L:drawLayer@@STI/map.lua:420              sampled      5 times. Took 0.18s
+
+------------------- L:update@@loveframes//objects/tabs.lua:46 -------------------
+Sample count:           29
+Time spend total:       0.991s
+Time spent in children: 0.903s
+Time spent in self:     0.088s
+Time spent per sample:  0.03417s/sample
+Time spent in self per sample: 0.00303s/sample
+
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      2 times. Took 0.07s
+Child L:update@@loveframes//objects/internal/scrollable/scrollbutton.lua:32 sampled      7 times. Took 0.23s
+Child L:update@@loveframes//objects/panel.lua:27 sampled      7 times. Took 0.26s
+Child L:update@@loveframes//objects/internal/tabbutton.lua:59 sampled     10 times. Took 0.34s
+
+------------------- L:update@@loveframes//objects/text.lua:69 -------------------
+Sample count:            4
+Time spend total:       0.126s
+Time spent in children: 0.040s
+Time spent in self:     0.086s
+Time spent per sample:  0.03150s/sample
+Time spent in self per sample: 0.02150s/sample
+
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      1 times. Took 0.04s
+
+------------------- L:GetSkin@@loveframes//objects/base.lua:995 -------------------
+Sample count:            3
+Time spend total:       0.080s
+Time spent in children: 0.000s
+Time spent in self:     0.080s
+Time spent per sample:  0.02667s/sample
+Time spent in self per sample: 0.02667s/sample
+
+------------------- L:update@@loveframes//objects/internal/tabbutton.lua:59 -------------------
+Sample count:           10
+Time spend total:       0.345s
+Time spent in children: 0.266s
+Time spent in self:     0.079s
+Time spent per sample:  0.03450s/sample
+Time spent in self per sample: 0.00790s/sample
+
+Child L:SetClickBounds@@loveframes//objects/base.lua:652 sampled      1 times. Took 0.02s
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      7 times. Took 0.25s
+
+------------------- L:DrawText@@loveframes//objects/text.lua:499 -------------------
+Sample count:            4
+Time spend total:       0.131s
+Time spent in children: 0.052s
+Time spent in self:     0.079s
+Time spent per sample:  0.03275s/sample
+Time spent in self per sample: 0.01975s/sample
+
+Child L:IsInList@@loveframes//objects/base.lua:1193 sampled      2 times. Took 0.05s
+
+------------------- L:draw@@loveframes//objects/panel.lua:72 -------------------
+Sample count:           15
+Time spend total:       0.530s
+Time spent in children: 0.459s
+Time spent in self:     0.071s
+Time spent per sample:  0.03533s/sample
+Time spent in self per sample: 0.00473s/sample
+
+Child L:drawfunc@@loveframes//skins/Blue/skin.lua:597 sampled      3 times. Took 0.11s
+Child L:draw@@loveframes//objects/imagebutton.lua:87 sampled     10 times. Took 0.35s
+
+------------------- L:update@@loveframes//objects/base.lua:32 -------------------
+Sample count:           49
+Time spend total:       1.683s
+Time spent in children: 1.612s
+Time spent in self:     0.071s
+Time spent per sample:  0.03435s/sample
+Time spent in self per sample: 0.00145s/sample
+
+Child L:update@@loveframes//objects/menu.lua:32 sampled      2 times. Took 0.06s
+Child L:update@@loveframes//objects/tabs.lua:46 sampled     29 times. Took 0.99s
+Child L:update@@loveframes//objects/frame.lua:93 sampled     15 times. Took 0.53s
+Child L:update@@loveframes//objects/internal/tooltip.lua:48 sampled      1 times. Took 0.02s
+
+-------------------- L:instances_update@@obj_manager.lua:58 --------------------
+Sample count:            2
+Time spend total:       0.066s
+Time spent in children: 0.000s
+Time spent in self:     0.066s
 Time spent per sample:  0.03300s/sample
-Time spent in self per sample: 0.01725s/sample
+Time spent in self per sample: 0.03300s/sample
+
+------------------- L:update@@loveframes//objects/internal/scrollable/scrollbutton.lua:32 -------------------
+Sample count:            7
+Time spend total:       0.230s
+Time spent in children: 0.168s
+Time spent in self:     0.062s
+Time spent per sample:  0.03286s/sample
+Time spent in self per sample: 0.00886s/sample
+
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      5 times. Took 0.17s
+
+------------------- L:GetParents@@loveframes//objects/base.lua:1087 -------------------
+Sample count:            2
+Time spend total:       0.052s
+Time spent in children: 0.000s
+Time spent in self:     0.052s
+Time spent per sample:  0.02600s/sample
+Time spent in self per sample: 0.02600s/sample
+
+------------------- L:draw@@loveframes//objects/base.lua:58 --------------------
+Sample count:           82
+Time spend total:       2.840s
+Time spent in children: 2.799s
+Time spent in self:     0.041s
+Time spent per sample:  0.03463s/sample
+Time spent in self per sample: 0.00050s/sample
+
+Child L:draw@@loveframes//objects/menu.lua:118  sampled      3 times. Took 0.09s
+Child L:SetDrawOrder@@loveframes//objects/base.lua:1150 sampled      1 times. Took 0.04s
+Child L:draw@@loveframes//objects/tabs.lua:121  sampled     54 times. Took 1.86s
+Child L:draw@@loveframes//objects/frame.lua:414 sampled     23 times. Took 0.81s
+
+-------------------- L:<function: 0x00374630>@boot.lua:399 ---------------------
+Sample count:          154
+Time spend total:       5.328s
+Time spent in children: 5.287s
+Time spent in self:     0.041s
+Time spent per sample:  0.03460s/sample
+Time spent in self per sample: 0.00027s/sample
+
+Child L:draw@@main.lua:76                       sampled     94 times. Took 3.24s
+Child L:update@@main.lua:55                     sampled     59 times. Took 2.05s
+
+------------------- L:update@@loveframes//objects/internal/closebutton.lua:33 -------------------
+Sample count:            3
+Time spend total:       0.101s
+Time spent in children: 0.061s
+Time spent in self:     0.040s
+Time spent per sample:  0.03367s/sample
+Time spent in self per sample: 0.01333s/sample
+
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      2 times. Took 0.06s
+
+------------------- L:GetWidth@@loveframes//objects/base.lua:530 -------------------
+Sample count:            1
+Time spend total:       0.040s
+Time spent in children: 0.000s
+Time spent in self:     0.040s
+Time spent per sample:  0.04000s/sample
+Time spent in self per sample: 0.04000s/sample
+
+------------------- L:update@@loveframes//objects/panel.lua:27 -------------------
+Sample count:            7
+Time spend total:       0.260s
+Time spent in children: 0.220s
+Time spent in self:     0.040s
+Time spent per sample:  0.03714s/sample
+Time spent in self per sample: 0.00571s/sample
+
+Child L:update@@loveframes//objects/imagebutton.lua:32 sampled      5 times. Took 0.18s
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      1 times. Took 0.04s
+
+------------------------- L:drawLayer@@STI/map.lua:420 -------------------------
+Sample count:            5
+Time spend total:       0.180s
+Time spent in children: 0.140s
+Time spent in self:     0.040s
+Time spent per sample:  0.03600s/sample
+Time spent in self per sample: 0.00800s/sample
+
+Child L:draw@@STI/map.lua:119                   sampled      4 times. Took 0.14s
+
+------------------- L:draw@@loveframes//objects/frame.lua:414 -------------------
+Sample count:           23
+Time spend total:       0.808s
+Time spent in children: 0.768s
+Time spent in self:     0.040s
+Time spent per sample:  0.03513s/sample
+Time spent in self per sample: 0.00174s/sample
+
+Child L:draw@@loveframes//objects/checkbox.lua:111 sampled     10 times. Took 0.34s
+Child L:draw@@loveframes//objects/internal/closebutton.lua:86 sampled      1 times. Took 0.04s
+Child L:drawfunc@@loveframes//skins/Blue/skin.lua:189 sampled     11 times. Took 0.39s
+
+------------------- L:draw@@loveframes//objects/internal/closebutton.lua:86 -------------------
+Sample count:            1
+Time spend total:       0.040s
+Time spent in children: 0.000s
+Time spent in self:     0.040s
+Time spent per sample:  0.04000s/sample
+Time spent in self per sample: 0.04000s/sample
+
+------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:1288 -------------------
+Sample count:            2
+Time spend total:       0.062s
+Time spent in children: 0.022s
+Time spent in self:     0.040s
+Time spent per sample:  0.03100s/sample
+Time spent in self per sample: 0.02000s/sample
+
+Child L:GetSkin@@loveframes//objects/base.lua:995 sampled      1 times. Took 0.02s
+
+------------------- L:draw@@loveframes//objects/checkbox.lua:111 -------------------
+Sample count:           10
+Time spend total:       0.342s
+Time spent in children: 0.303s
+Time spent in self:     0.039s
+Time spent per sample:  0.03420s/sample
+Time spent in self per sample: 0.00390s/sample
+
+Child L:draw@@loveframes//objects/text.lua:138  sampled      7 times. Took 0.24s
+Child L:drawfunc@@loveframes//skins/Blue/skin.lua:1288 sampled      2 times. Took 0.06s
+
+------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:656 -------------------
+Sample count:            3
+Time spend total:       0.094s
+Time spent in children: 0.058s
+Time spent in self:     0.036s
+Time spent per sample:  0.03133s/sample
+Time spent in self per sample: 0.01200s/sample
 
 Child L:OutlinedRectangle@@loveframes//skins/Blue/skin.lua:156 sampled      2 times. Took 0.06s
 
-------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:254 -------------------
+------------------- L:update@@loveframes//objects/internal/menuoption.lua:35 -------------------
 Sample count:            2
-Time spend total:       0.063s
-Time spent in children: 0.000s
-Time spent in self:     0.063s
-Time spent per sample:  0.03150s/sample
-Time spent in self per sample: 0.03150s/sample
+Time spend total:       0.064s
+Time spent in children: 0.032s
+Time spent in self:     0.032s
+Time spent per sample:  0.03200s/sample
+Time spent in self per sample: 0.01600s/sample
 
-------------------- L:OutlinedRectangle@@loveframes//skins/Blue/skin.lua:156 -------------------
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      1 times. Took 0.03s
+
+------------------- L:draw@@loveframes//objects/internal/menuoption.lua:110 -------------------
+Sample count:            3
+Time spend total:       0.090s
+Time spent in children: 0.060s
+Time spent in self:     0.030s
+Time spent per sample:  0.03000s/sample
+Time spent in self per sample: 0.01000s/sample
+
+Child L:drawfunc@@loveframes//skins/Blue/skin.lua:1717 sampled      2 times. Took 0.06s
+
+------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:1717 -------------------
 Sample count:            2
-Time spend total:       0.063s
-Time spent in children: 0.000s
-Time spent in self:     0.063s
-Time spent per sample:  0.03150s/sample
-Time spent in self per sample: 0.03150s/sample
+Time spend total:       0.060s
+Time spent in children: 0.030s
+Time spent in self:     0.030s
+Time spent per sample:  0.03000s/sample
+Time spent in self per sample: 0.01500s/sample
 
-------------------- L:update@@loveframes//objects/frame.lua:93 -------------------
-Sample count:            4
-Time spend total:       0.138s
-Time spent in children: 0.097s
-Time spent in self:     0.041s
-Time spent per sample:  0.03450s/sample
-Time spent in self per sample: 0.01025s/sample
+Child L:GetHeight@@loveframes//objects/base.lua:540 sampled      1 times. Took 0.03s
 
-Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      1 times. Took 0.04s
-Child L:update@@loveframes//objects/button.lua:31 sampled      1 times. Took 0.03s
-Child L:update@@loveframes//objects/internal/closebutton.lua:33 sampled      1 times. Took 0.03s
-
--------------------- L:<function: 0x004744c8>@boot.lua:399 ---------------------
-Sample count:           18
-Time spend total:       0.609s
-Time spent in children: 0.569s
-Time spent in self:     0.040s
-Time spent per sample:  0.03383s/sample
-Time spent in self per sample: 0.00222s/sample
-
-Child L:update@@main.lua:54                     sampled      6 times. Took 0.22s
-Child L:draw@@main.lua:72                       sampled     11 times. Took 0.35s
-
-------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:1499 -------------------
+------------------- L:GetHeight@@loveframes//objects/base.lua:540 -------------------
 Sample count:            1
-Time spend total:       0.024s
+Time spend total:       0.030s
 Time spent in children: 0.000s
-Time spent in self:     0.024s
-Time spent per sample:  0.02400s/sample
-Time spent in self per sample: 0.02400s/sample
+Time spent in self:     0.030s
+Time spent per sample:  0.03000s/sample
+Time spent in self per sample: 0.03000s/sample
 
-------------------- L:draw@@loveframes//objects/frame.lua:414 -------------------
-Sample count:           11
-Time spend total:       0.348s
-Time spent in children: 0.324s
-Time spent in self:     0.024s
-Time spent per sample:  0.03164s/sample
-Time spent in self per sample: 0.00218s/sample
+---------------------------- L:unset@@camera.lua:19 ----------------------------
+Sample count:            1
+Time spend total:       0.022s
+Time spent in children: 0.000s
+Time spent in self:     0.022s
+Time spent per sample:  0.02200s/sample
+Time spent in self per sample: 0.02200s/sample
 
-Child L:drawfunc@@loveframes//skins/Blue/skin.lua:189 sampled      4 times. Took 0.13s
-Child L:draw@@loveframes//objects/columnlist.lua:92 sampled      1 times. Took 0.02s
-Child L:draw@@loveframes//objects/internal/closebutton.lua:86 sampled      3 times. Took 0.10s
-Child L:draw@@loveframes//objects/button.lua:85 sampled      2 times. Took 0.06s
+------------------- L:SetClickBounds@@loveframes//objects/base.lua:652 -------------------
+Sample count:            1
+Time spend total:       0.020s
+Time spent in children: 0.000s
+Time spent in self:     0.020s
+Time spent per sample:  0.02000s/sample
+Time spent in self per sample: 0.02000s/sample
 
-------------------- L:draw@@loveframes//objects/button.lua:85 -------------------
+------------------- L:IsInList@@loveframes//objects/base.lua:1193 -------------------
 Sample count:            2
-Time spend total:       0.063s
-Time spent in children: 0.063s
+Time spend total:       0.052s
+Time spent in children: 0.052s
 Time spent in self:     0.000s
-Time spent per sample:  0.03150s/sample
+Time spent per sample:  0.02600s/sample
 Time spent in self per sample: 0.00000s/sample
 
-Child L:drawfunc@@loveframes//skins/Blue/skin.lua:254 sampled      2 times. Took 0.06s
+Child L:GetParents@@loveframes//objects/base.lua:1087 sampled      2 times. Took 0.05s
 
-------------------- L:draw@@loveframes//objects/internal/columnlist/columnlistarea.lua:95 -------------------
+---------------------------- L:update@@main.lua:55 -----------------------------
+Sample count:           59
+Time spend total:       2.046s
+Time spent in children: 2.046s
+Time spent in self:     0.000s
+Time spent per sample:  0.03468s/sample
+Time spent in self per sample: 0.00000s/sample
+
+Child L:update@@loveframes//init.lua:101        sampled     57 times. Took 1.98s
+Child L:instances_update@@obj_manager.lua:58    sampled      2 times. Took 0.07s
+
+------------------- L:update@@loveframes//objects/imagebutton.lua:32 -------------------
+Sample count:            5
+Time spend total:       0.181s
+Time spent in children: 0.181s
+Time spent in self:     0.000s
+Time spent per sample:  0.03620s/sample
+Time spent in self per sample: 0.00000s/sample
+
+Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      5 times. Took 0.18s
+
+------------------- L:update@@loveframes//objects/internal/tooltip.lua:48 -------------------
 Sample count:            1
 Time spend total:       0.024s
 Time spent in children: 0.024s
@@ -114,130 +470,80 @@ Time spent in self:     0.000s
 Time spent per sample:  0.02400s/sample
 Time spent in self per sample: 0.00000s/sample
 
-Child L:draw@@loveframes//objects/internal/columnlist/columnlistrow.lua:74 sampled      1 times. Took 0.02s
+Child L:update@@loveframes//objects/text.lua:69 sampled      1 times. Took 0.02s
 
-------------------- L:draw@@loveframes//objects/columnlist.lua:92 -------------------
-Sample count:            1
-Time spend total:       0.024s
-Time spent in children: 0.024s
+------------------- L:drawfunc@@loveframes//skins/Blue/skin.lua:597 -------------------
+Sample count:            3
+Time spend total:       0.112s
+Time spent in children: 0.112s
 Time spent in self:     0.000s
-Time spent per sample:  0.02400s/sample
+Time spent per sample:  0.03733s/sample
 Time spent in self per sample: 0.00000s/sample
 
-Child L:draw@@loveframes//objects/internal/columnlist/columnlistarea.lua:95 sampled      1 times. Took 0.02s
+Child L:OutlinedRectangle@@loveframes//skins/Blue/skin.lua:156 sampled      3 times. Took 0.11s
+
+------------------- L:draw@@loveframes//objects/menu.lua:118 -------------------
+Sample count:            3
+Time spend total:       0.090s
+Time spent in children: 0.090s
+Time spent in self:     0.000s
+Time spent per sample:  0.03000s/sample
+Time spent in self per sample: 0.00000s/sample
+
+Child L:draw@@loveframes//objects/internal/menuoption.lua:110 sampled      3 times. Took 0.09s
 
 ----------------------- L:draw@@loveframes//init.lua:212 -----------------------
-Sample count:           11
-Time spend total:       0.348s
-Time spent in children: 0.348s
+Sample count:           82
+Time spend total:       2.840s
+Time spent in children: 2.840s
 Time spent in self:     0.000s
-Time spent per sample:  0.03164s/sample
+Time spent per sample:  0.03463s/sample
 Time spent in self per sample: 0.00000s/sample
 
-Child L:draw@@loveframes//objects/base.lua:58   sampled     11 times. Took 0.35s
+Child L:draw@@loveframes//objects/base.lua:58   sampled     82 times. Took 2.84s
 
--------------------- L:<function: 0x004745e0>@boot.lua:1483 --------------------
-Sample count:           18
-Time spend total:       0.609s
-Time spent in children: 0.609s
+-------------------- L:<function: 0x00378430>@boot.lua:1483 --------------------
+Sample count:          154
+Time spend total:       5.328s
+Time spent in children: 5.328s
 Time spent in self:     0.000s
-Time spent per sample:  0.03383s/sample
+Time spent per sample:  0.03460s/sample
 Time spent in self per sample: 0.00000s/sample
 
-Child C:xpcall@=[C]:?                           sampled     18 times. Took 0.61s
-
-------------------- L:draw@@loveframes//objects/internal/columnlist/columnlistrow.lua:74 -------------------
-Sample count:            1
-Time spend total:       0.024s
-Time spent in children: 0.024s
-Time spent in self:     0.000s
-Time spent per sample:  0.02400s/sample
-Time spent in self per sample: 0.00000s/sample
-
-Child L:drawfunc@@loveframes//skins/Blue/skin.lua:1499 sampled      1 times. Took 0.02s
-
-------------------- L:draw@@loveframes//objects/base.lua:58 --------------------
-Sample count:           11
-Time spend total:       0.348s
-Time spent in children: 0.348s
-Time spent in self:     0.000s
-Time spent per sample:  0.03164s/sample
-Time spent in self per sample: 0.00000s/sample
-
-Child L:draw@@loveframes//objects/frame.lua:414 sampled     11 times. Took 0.35s
+Child C:xpcall@=[C]:?                           sampled    154 times. Took 5.33s
 
 ------------------------------- C:xpcall@=[C]:? --------------------------------
-Sample count:           18
-Time spend total:       0.609s
-Time spent in children: 0.609s
+Sample count:          154
+Time spend total:       5.328s
+Time spent in children: 5.328s
 Time spent in self:     0.000s
-Time spent per sample:  0.03383s/sample
+Time spent per sample:  0.03460s/sample
 Time spent in self per sample: 0.00000s/sample
 
-Child L:<function: 0x004744c8>@boot.lua:399     sampled     18 times. Took 0.61s
+Child L:<function: 0x00374630>@boot.lua:399     sampled    154 times. Took 5.33s
 
-------------------- L:draw@@loveframes//objects/internal/closebutton.lua:86 -------------------
-Sample count:            3
-Time spend total:       0.105s
-Time spent in children: 0.105s
+------------------- L:update@@loveframes//objects/menu.lua:32 -------------------
+Sample count:            2
+Time spend total:       0.064s
+Time spent in children: 0.064s
+Time spent in self:     0.000s
+Time spent per sample:  0.03200s/sample
+Time spent in self per sample: 0.00000s/sample
+
+Child L:update@@loveframes//objects/internal/menuoption.lua:35 sampled      2 times. Took 0.06s
+
+--------------------------- L:draw@@STI/map.lua:119 ----------------------------
+Sample count:            4
+Time spend total:       0.140s
+Time spent in children: 0.140s
 Time spent in self:     0.000s
 Time spent per sample:  0.03500s/sample
 Time spent in self per sample: 0.00000s/sample
 
-Child L:drawfunc@@loveframes//skins/Blue/skin.lua:344 sampled      3 times. Took 0.10s
-
-------------------- L:update@@loveframes//objects/internal/closebutton.lua:33 -------------------
-Sample count:            1
-Time spend total:       0.027s
-Time spent in children: 0.027s
-Time spent in self:     0.000s
-Time spent per sample:  0.02700s/sample
-Time spent in self per sample: 0.00000s/sample
-
-Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      1 times. Took 0.03s
-
-------------------- L:update@@loveframes//objects/button.lua:31 -------------------
-Sample count:            1
-Time spend total:       0.029s
-Time spent in children: 0.029s
-Time spent in self:     0.000s
-Time spent per sample:  0.02900s/sample
-Time spent in self per sample: 0.00000s/sample
-
-Child L:CheckHover@@loveframes//objects/base.lua:759 sampled      1 times. Took 0.03s
-
----------------------------- L:update@@main.lua:54 -----------------------------
-Sample count:            6
-Time spend total:       0.221s
-Time spent in children: 0.221s
-Time spent in self:     0.000s
-Time spent per sample:  0.03683s/sample
-Time spent in self per sample: 0.00000s/sample
-
-Child L:update@@loveframes//init.lua:101        sampled      6 times. Took 0.22s
-
-------------------- L:update@@loveframes//objects/base.lua:32 -------------------
-Sample count:            4
-Time spend total:       0.138s
-Time spent in children: 0.138s
-Time spent in self:     0.000s
-Time spent per sample:  0.03450s/sample
-Time spent in self per sample: 0.00000s/sample
-
-Child L:update@@loveframes//objects/frame.lua:93 sampled      4 times. Took 0.14s
-
------------------------------ L:draw@@main.lua:72 ------------------------------
-Sample count:           11
-Time spend total:       0.348s
-Time spent in children: 0.348s
-Time spent in self:     0.000s
-Time spent per sample:  0.03164s/sample
-Time spent in self per sample: 0.00000s/sample
-
-Child L:draw@@loveframes//init.lua:212          sampled     11 times. Took 0.35s
+Child L:drawTileLayer@@STI/map.lua:426          sampled      4 times. Took 0.14s
 
 
 
-Total time spent in profiled functions: 0.609s
+Total time spent in profiled functions:  5.33s
 
 END

@@ -44,7 +44,7 @@ function love.load()
   draw_the_grid = false
   debug_menu ()
   debug_menu:SetVisible (false)
-  profiler = newProfiler()
+  
  
 end
 
@@ -86,7 +86,7 @@ function love.draw ()
     love.graphics.print(current_deck, 0, 0) --shows current deck on screen
     love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
     instances_draw()
-   runtime_tests()
+   runtime_tests() --for tests that need to be called every draw cycle
      
   end
   --draw the grid if necesary
@@ -101,7 +101,7 @@ function love.draw ()
   ----DRAW GUI ---
   loveframes.draw()
   love.graphics.print("Current FPS: "..tostring(love.timer.getFPS( )), 10, 10)
-
+  
 end
 
 function love.resize(w, h) --this stuff is called when window is resized, used mainly for GUI resizing
