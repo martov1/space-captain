@@ -1,11 +1,9 @@
 clases_list = {} --contains a list of all clases in /clases folder
 clases={} --contains all actual clases
-GUIloader= love.filesystem.getDirectoryItems( "guis/")
 active_instances = {} --contains all the created instances in the game
 active_instances.crewmen = {} -- contains all crew members
 active_instances.furniture = {}
 files_list = {} --contains a list of clases files
-GUIs_list = {} --contains a list of loaded GUIs
 active_instances_counter = 0 -- every time an object is created this increases by 1 and the previous number is assigned as the created instance's unique ID number
 atlas_loader = love.filesystem.getDirectoryItems( "resources/tilemaps/atlases") --contains the names of the atlases files
 atlas_list={}
@@ -37,18 +35,18 @@ end
 function instance_show (someid)
 
   if (someid == nil) then
-    print ("FURNITURE")
+    print ("FURNITURE type instances:")
     for i,k in pairs (active_instances.furniture) do
 
       for A,B in pairs (active_instances.furniture[i]) do
         print ("index: ",A,"object: ",B.name," in deck:  ",B.deck) 
       end
     end
-    print ("crewmen")
-        for A,B in pairs (active_instances.crewmen) do
+    print ("CREWMEN type instances:")
+    for A,B in pairs (active_instances.crewmen) do
 
-        print ("index: ",A,"object: ",B.name)
-        end
+      print ("index: ",A,"object: ",B.name)
+    end
   end
 end
 
@@ -107,7 +105,7 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
   for A=1, number_of_decks do
     active_instances.furniture[A] = {}
     pathfinding_maps[A] = {}
-    
+
   end
   --for i,k in pairs (active_instances.furniture) do print(i,k) end
 
@@ -206,7 +204,7 @@ end
 
 
 function load_pathfinding_map ()
-  local pathfinding_data = {}
+  pathfinding_data = {}
   for A=1, number_of_decks do
     pathfinding_data[A] = decks[A]:getCollisionMap(2) --pathfinding map is the second layer of the tiled map
     pathfinding_maps[A] = pathfinding_data[A].data
@@ -216,7 +214,7 @@ end
 function find_path(startx,starty,endx,endy,start_deck, end_deck)
 
   if start_deck == end_deck then 
-    
+
     local map = pathfinding_maps[1]
     -- Value for walkable tiles
     local walkable = 0
@@ -236,22 +234,22 @@ function find_path(startx,starty,endx,endy,start_deck, end_deck)
     -- Calculates the path, and its length
     local path = myFinder:getPath(startx, starty, endx, endy)
     if path then
-  print ("path encontrado")
- for node, count in path:nodes() do
-   print (node:getX(),node:getY())
- end	
+      print ("path encontrado")
+      for node, count in path:nodes() do
+        print (node:getX(),node:getY())
+      end	
     else print ("no path!")end
-      return path
-    end
-    --> Output:
-    --> Path found! Length: 8.83
-    --> Step: 1 - x: 1 - y: 1
-    --> Step: 2 - x: 1 - y: 3
-    --> Step: 3 - x: 2 - y: 4
-    --> Step: 4 - x: 4 - y: 4
-    --> Step: 5 - x: 5 - y: 3
-    --> Step: 6 - x: 5 - y: 1
-
+    return path
   end
+  --> Output:
+  --> Path found! Length: 8.83
+  --> Step: 1 - x: 1 - y: 1
+  --> Step: 2 - x: 1 - y: 3
+  --> Step: 3 - x: 2 - y: 4
+  --> Step: 4 - x: 4 - y: 4
+  --> Step: 5 - x: 5 - y: 3
+  --> Step: 6 - x: 5 - y: 1
+
+end
 
 

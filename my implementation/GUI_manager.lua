@@ -139,19 +139,25 @@ function debug_right_click_menu ()
   menu:AddDivider()
   menu:AddOption("start profiler", "resources/images/building.png", function()
       profiler:start() 
-      end)
+    end)
   menu:AddOption("stop profiler", "resources/images/accept.png", function() 
-          if  profiler_activated == true then 
-      profiler:stop()
+      if  profiler_activated == true then 
+        profiler:stop()
 
-      local outfile = io.open( "profile.txt", "w+" )
-      profiler:report( outfile )
-      outfile:close()
-    else print("profiler not active") end
-      
-      
-      end)
-  menu:AddDivider()
+        local outfile = io.open( "profile.txt", "w+" )
+        profiler:report( outfile )
+        outfile:close()
+      else print("profiler not active") end
+
+
+    end)
+  menu:AddOption("show pathfinding map", "resources/images/building.png", function()
+      if show_pathfinding_map == true then
+        show_pathfinding_map = false
+      else
+        show_pathfinding_map = true
+      end 
+    end)
   menu:SetPos(mouse_x_position, mouse_Y_position)
 
 end
@@ -180,26 +186,26 @@ function draw_current_pointer() --draws the pointer each frame using the variabl
 
 
   function create_object_info_panel(object)
-   
-  if  info_panel == nil then --this prevents more than 1 info panel at the same time
-     info_panel = loveframes.Create("frame")
-    info_panel:SetName(object.name)
-    info_panel:SetSize(500, 330)
-    info_panel.OnClose =  function (object) 
-      info_panel = nil
+
+    if  info_panel == nil then --this prevents more than 1 info panel at the same time
+      info_panel = loveframes.Create("frame")
+      info_panel:SetName(object.name)
+      info_panel:SetSize(500, 330)
+      info_panel.OnClose =  function (object) 
+        info_panel = nil
       end
 
-    local list1 = loveframes.Create("list", info_panel)
-    list1:SetPos(5, 30)
-    list1:SetSize(243, 265)
-    list1:SetPadding(5)
-    list1:SetSpacing(5)
+      local list1 = loveframes.Create("list", info_panel)
+      list1:SetPos(5, 30)
+      list1:SetSize(243, 265)
+      list1:SetPadding(5)
+      list1:SetSpacing(5)
 
-    local text1 = loveframes.Create("text")
-    text1:SetLinksEnabled(true)
-    text1:SetDetectLinks(true)
-    text1:SetText(object.description)
-    text1:SetShadowColor(200, 200, 200, 255)
-    list1:AddItem(text1)
+      local text1 = loveframes.Create("text")
+      text1:SetLinksEnabled(true)
+      text1:SetDetectLinks(true)
+      text1:SetText(object.description)
+      text1:SetShadowColor(200, 200, 200, 255)
+      list1:AddItem(text1)
     end
   end

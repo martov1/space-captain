@@ -25,10 +25,14 @@ function clases.wall:create (x,y,deck)
   self.name = "wall"
   --existe wall.deck para saber en que deck esta el objeto
 function obstruct_pathfinding()
-  if self.path_obstruction == true then end
+  if self.path_obstruction == true then 
+    
+    end
     
   
-  end
+end
+
+
 function show_self()
   for a,b in pairs (self) do print (a,b) end
 end

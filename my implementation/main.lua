@@ -45,6 +45,7 @@ function love.load()
   debug_menu ()
   debug_menu:SetVisible (false)
   profiler = newProfiler()
+ 
 end
 
 
@@ -58,7 +59,10 @@ deltatime=dt
 if deck_loaded == true then
   get_current_mouse_tile_coordinates()
 instances_update()
+
 end
+
+
   -- required stuff
   loveframes.update(dt)
 
@@ -82,7 +86,7 @@ function love.draw ()
     love.graphics.print(current_deck, 0, 0) --shows current deck on screen
     love.graphics.draw(atlases["A2x2.png"], quads["A2x2.png21"], 50, 50) --ejemplo de como dibujar un tile
     instances_draw()
-     
+   runtime_tests()
      
   end
   --draw the grid if necesary
