@@ -44,7 +44,10 @@ local function open_properties_window (object)
 end
 
 local function  build_object_on_next_click() --spawns an object on next click
-  build_objects(mouse_x_position,mouse_y_position,object_to_build_on_next_click,current_deck) 
+  if object_to_build_on_next_click then
+  
+  build_objects(mouse_x_tile,mouse_y_tile,object_to_build_on_next_click,current_deck) 
+  end
 end
 
 

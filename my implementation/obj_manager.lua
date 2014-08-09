@@ -174,13 +174,14 @@ function get_current_mouse_tile_coordinates()
   return x,y
 end
 
-function build_objects (x, y,object,deck) --spawns an instance of object in x and y coordinates
+function build_objects (xtile, ytile,object,deck) --spawns an instance of object in x and y coordinates
 
   if object_to_build_on_next_click then
-    tilex,tiley = transform_into_grid_coordinates(x,y)
-    tilex = (tilex) * tilewidth
-    tiley = (tiley) * tileheight
-    clases[object]:create(tilex,tiley,deck)
+     --////-----------------------DIRTY BUG PATCH!!!!----------------------
+     xtile = (xtile-1) * tilewidth ---- EL -1 NO DEBERIA HACER FALTA!
+    ytile = (ytile-1) * tileheight ---- EL -1 NO DEBERIA HACER FALTA!
+    -------------------------DIRTY BUG PATCH!!!!-------------------\\\\\\---
+    clases[object]:create(xtile,ytile,deck)
   end
 
 end

@@ -36,8 +36,10 @@ function clases.crewman:create (x,y,deck)
   function self:set_destination(endx, endy)
     if endx and endy then
       --print("destination",endx,endy)
-      self.xdestination = endx
-      self.ydestination = endy
+      --////-----------------------DIRTY BUG PATCH!!!!----------------------
+      self.xdestination = endx -1 ---- EL -1 NO DEBERIA HACER FALTA!
+      self.ydestination = endy -1 ---- EL -1 NO DEBERIA HACER FALTA!
+      -------------------------DIRTY BUG PATCH!!!!-------------------\\\\\\---
       self.step = 1
       self.path = nil 
     end
@@ -62,7 +64,7 @@ function clases.crewman:create (x,y,deck)
   function self:determine_current_tile ()
 
     self.xtile,self.ytile = transform_into_grid_coordinates(self.x,self.y)
-
+    
   end
 
 
@@ -71,7 +73,7 @@ function clases.crewman:create (x,y,deck)
     assert (self.speed > 0, "speed in 0 or negative! >:C")
     --determino si llegue a mi destino
     --print (self.x,self.y,endx*tilewidth,endy*tileheight)
-    if self.x ~= endx*tilewidth or self.y ~= endy*tileheight then 
+    if self.x ~= (endx)*tilewidth or self.y ~= (endy)*tileheight then 
       --si no llegue, determino si ya arme un path
       if self.path == nil then 
         --print ("arming path!")
