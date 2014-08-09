@@ -1,3 +1,6 @@
+9/8/2012
+-LOTS OF STUFF MISSING
+-PATHFINDING DONE
 -25/7*2014
 -ADDED move_to(), analize_path() get_if_currently_inside_node()
 -FIXED pathfinding bug where objects would stand in a line

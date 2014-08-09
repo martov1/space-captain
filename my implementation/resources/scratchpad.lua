@@ -1,71 +1,17 @@
-  function self:get_if_currently_inside_node(node)
-    local A
-    if node:getX() ==self.xtile and node:getY() ==self.ytile then 
-      A = true
+ function find_lift_to_deck()
+if self.deck != final_deck then 
 
-    else A = false 
-      --  print (node:getX(), self.xtile,node:getY(),self.ytile , A)
+navegate_to()
 
-    end 
+end
+end
 
-    return A
-  end
+function find_closest_instance_of(object)
+ for i,k in pairs (active_instances.furniture) do
 
-function self:move_to(startx, starty, endx, endy,start_deck,end_deck, speed)
-    --print (startx, starty,endx,endy)
-    if self.xtile == endx and self.ytile == endy then 
-      print("endtile")
-      self.end_reached = true 
-      if self.y < (endy * tilewidth) then self.y=self.y + tilewidth*self.speed end
-      if self.y > (endy * tilewidth) then self.y=self.y - tilewidth*self.speed end
-      if self.x < (endx * tilewidth) then self.x= self.x + tilewidth*self.speed end
-      if self.x > (endx * tilewidth) then self.x=self.x - tilewidth*self.speed end
---      http://gamedev.stackexchange.com/questions/31410/keeping-player-aligned-to-grid-in-pacman
-      if self.x==endx*tilewidth and self.y==endy*tilewidth then 
-        self.end_reached = false
-        self.xdestination = nil
-        self.ydestination = nil
-        self.path = nil
-        self.timer = 0
-  print("ended")
-      end
-    else self.end_reached = false  end
+ end
 
-
-
-      if self.end_reached == false  and self.path == nil and endx and endy then
-        print("making path!")
-        self.path = find_path(startx,starty,endx,endy,start_deck, end_deck)
-        self:analize_path(self.path)
-        self.step = 1
-
-      end
-
-      if self.end_reached == false and self.path ~= nil then
-        print("there is a path")
-        if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) == false then
-          
-          self:move_towards(self.step,self.speed)
-        end
-        end
-        if self:get_if_currently_inside_node( self.navegation_nodes[self.step]) and self.number_of_steps > self.step
-
-        then self.step = self.step + 1 end
-      end
-  function self:move_towards(A,Speed)
-
-
-    if self.y < (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y + Speed end
-    if self.y > (self.navegation_nodes[A]:getY() * tilewidth) then self.y=self.y - Speed end
-    if self.x < (self.navegation_nodes[A]:getX() * tilewidth) then self.x= self.x + Speed end
-    if self.x > (self.navegation_nodes[A]:getX() * tilewidth) then self.x=self.x - Speed end
-    --    if self.y < (((self.navegation_nodes[A]:getY() -1) * tileheight)) then self.y=self.y + Speed end
-    --    if self.y > (((self.navegation_nodes[A]:getY()-1) * tileheight)) then self.y=self.y - Speed end
-    --    if self.x < (((self.navegation_nodes[A]:getX()-1) * tilewidth)) then self.x= self.x + Speed end
-    --    if self.x > (((self.navegation_nodes[A]:getX() -1)* tilewidth)) then self.x=self.x - Speed end
-  end
-
- 
+end
  
  
 --scratch

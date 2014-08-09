@@ -1,6 +1,7 @@
 <map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="GAME" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1406777306275"><hook NAME="MapStyle">
+    <properties show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node">
@@ -75,7 +76,30 @@
 <node TEXT="pathfinding" ID="ID_1925619123" CREATED="1406772838004" MODIFIED="1406772845437">
 <node TEXT="between decks" ID="ID_20381959" CREATED="1406773333347" MODIFIED="1406773338083"/>
 <node TEXT="in dinamic environment" ID="ID_1155111950" CREATED="1406773338696" MODIFIED="1406773345082"/>
-<node TEXT="between decks" ID="ID_1238748995" CREATED="1407612046705" MODIFIED="1407612050058"/>
+<node TEXT="between decks" ID="ID_1238748995" CREATED="1407612046705" MODIFIED="1407613039155"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      until self.deck == self.destination_deck
+    </p>
+    <p>
+      find closest lift that goes UP
+    </p>
+    <p>
+      use it
+    </p>
+    <p>
+      end
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="inside the current deck" ID="ID_630655937" CREATED="1406773347590" MODIFIED="1407612017212">
 <icon BUILTIN="button_ok"/>
 <node TEXT="check if it works with obstacles" ID="ID_512328704" CREATED="1406774784076" MODIFIED="1407612013221">
@@ -122,10 +146,10 @@
 </node>
 <node TEXT="infrastructure" ID="ID_1654027282" CREATED="1406773600300" MODIFIED="1406776058657">
 <icon BUILTIN="full-2"/>
-<node TEXT="wall" ID="ID_344905645" CREATED="1406773665572" MODIFIED="1406777325105">
-<icon BUILTIN="yes"/>
-<node TEXT="change pathfinding map" ID="ID_863292424" CREATED="1406773790290" MODIFIED="1407039302657">
+<node TEXT="wall" ID="ID_344905645" CREATED="1406773665572" MODIFIED="1407612237916">
 <icon BUILTIN="bookmark"/>
+<node TEXT="change pathfinding map" ID="ID_863292424" CREATED="1406773790290" MODIFIED="1407612234054">
+<icon BUILTIN="button_ok"/>
 </node>
 <node TEXT="collision with debries?" ID="ID_1643223281" CREATED="1406774640975" MODIFIED="1406774648139"/>
 <node TEXT="art" ID="ID_1172497861" CREATED="1406774607627" MODIFIED="1406774609058"/>
