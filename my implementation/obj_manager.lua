@@ -113,14 +113,6 @@ function load_decks (ship) -- loads all files in  decks(maps) of the selected sh
   return (A)
 end
 
-function determine_grid_coordinates(instance_or_object) --determines in what grid coordinates is an object based on it's current x,y 
-  local grid_coordinates_x = math.ceil(instance_or_object.x
-    / decks[instance_or_object.deck].tilewidth) --derermines X grid coordinate by dividing the current x coordinate of the object by the tilewidth of the current deck and then taking the whole number only
-  local grid_coordinates_y = math.ceil(instance_or_object.y / decks[instance_or_object.deck].tileheight)  --here, but for Y
-  return grid_coordinates_x,grid_coordinates_y
-end
-
-
 function load_atlases () -- here I load all the atlases in resources/tilemaps/atlases
   for i,k in pairs (atlas_loader) do 
     atlases[k] = love.graphics.newImage("resources/tilemaps/atlases/".. k )
@@ -166,8 +158,8 @@ end
 
 function transform_into_grid_coordinates(x,y)
   local tileX,tileY
-  tileX = math.floor(x/tilewidth) 
-  tileY = math.floor(y/tileheight) 
+  tileX = math.ceil(x/tilewidth) 
+  tileY = math.ceil(y/tileheight) 
   return tileX,tileY
 end
 
@@ -175,6 +167,8 @@ end
 function get_current_mouse_tile_coordinates()
   local x,y
   x,y = transform_into_grid_coordinates(mouse_x_position,mouse_y_position)
+  
+  
   mouse_x_tile = x 
   mouse_y_tile = y 
   return x,y
@@ -184,8 +178,8 @@ function build_objects (x, y,object,deck) --spawns an instance of object in x an
 
   if object_to_build_on_next_click then
     tilex,tiley = transform_into_grid_coordinates(x,y)
-    tilex = tilex * tilewidth
-    tiley = tiley * tileheight
+    tilex = (tilex) * tilewidth
+    tiley = (tiley) * tileheight
     clases[object]:create(tilex,tiley,deck)
   end
 

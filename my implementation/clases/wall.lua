@@ -19,7 +19,7 @@ function clases.wall:create (x,y,deck)
   self.y = y
   self.deck = deck
   self.id = active_instances_counter --unique ID of this instance
-  self.xtile,self.ytile = determine_grid_coordinates(self)
+  self.xtile,self.ytile = transform_into_grid_coordinates(self.x,self.y)
   
   self.quad = quads["A1x1.png11"]
   self.atlas = atlases["A1x1.png"]
