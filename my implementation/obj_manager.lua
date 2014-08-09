@@ -193,7 +193,9 @@ function instances_draw () --draws all the objects in the current deck (for now)
   end  
   --draw crewmen on top of furniture
   for k,i in pairs (active_instances.crewmen) do
+    if i.deck == current_deck then
     if i.draw then i:draw() end 
+    end
   end  
 end
 
